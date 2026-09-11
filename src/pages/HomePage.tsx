@@ -79,10 +79,6 @@ export default function HomePage() {
       <Link to="/services" className="scroll-cue relative z-10"><span>Scroll to explore</span><ArrowDownRight size={17} /></Link>
 </section>
 
-      {/* <section className="intro-band" id="intro">
-        <div className="container intro-grid"><div className="intro-number">01 <span /></div><p>Digital work should do more than look good. It should make the next step clearer, the daily work lighter, and the business <strong>easier to grow.</strong></p><ArrowDownRight className="intro-arrow" size={36} /></div>
-      </section> */}
-
       <StatsCounter/>
 
       <section className="section services-section" id="services">
