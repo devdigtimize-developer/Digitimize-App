@@ -1313,6 +1313,25 @@ button,
     font-size: 23px;
 }
 
+.logo-image-wrap {
+    width: 33px;
+    height: 33px;
+    display: block;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+}
+
+.logo-image {
+    width: 145px;
+    height: 33px;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: left center;
+}
+
 .logo-mark {
     width: 33px;
     height: 33px;
