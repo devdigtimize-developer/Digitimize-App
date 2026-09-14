@@ -35,8 +35,12 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  // The home hero is a dark photo slider, so the bar cannot go transparent
+  // there: the logo is an opaque JPEG and the nav links are near-black.
+  const solid = scrolled || location.pathname === '/';
+
   return (
-    <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
+    <nav className={`nav ${solid ? 'nav-scrolled' : ''}`}>
       <div className="container nav-inner">
         <Logo />
         <div className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>

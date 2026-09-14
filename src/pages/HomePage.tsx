@@ -1,13 +1,12 @@
+import { useEffect, useState, type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
   Bot,
   Check,
   Code2,
   Command,
-  Database,
   Globe2,
   Layers3,
   LifeBuoy,
@@ -18,8 +17,36 @@ import {
   Zap,
 } from 'lucide-react';
 import { SectionLabel } from '@/components/shared';
-import heroImage from '@/assets/digital-transformation-hero-bg.DE3Zqn52_1LodS7.webp';
+import heroSlideOne from '@/assets/home-hero-slide1-bg.DhF3_89m_m8g8W.webp';
+import heroSlideTwo from '@/assets/digital-transformation-hero-bg.DE3Zqn52_1LodS7.webp';
 import StatsCounter from './StatsCounter';
+
+/* Slide interval. The dot progress bar reads this via a CSS custom property,
+   so changing it here keeps the animation in sync. */
+const HERO_SLIDE_MS = 2000;
+
+const heroSlides = [
+  {
+    image: heroSlideOne,
+    eyebrow: 'Web development & automation agency',
+    titleStart: 'Websites and automations that ',
+    titleAccent: 'actually',
+    titleEnd: ' grow your business.',
+    sub: 'Digtimize builds GoHighLevel automations, custom WordPress and Shopify sites, and AI-powered web solutions for businesses and agencies who need work done right the first time.',
+    primary: { label: 'Get a free project quote', to: '/contact' },
+    secondary: { label: 'See our work', to: '/work' },
+  },
+  {
+    image: heroSlideTwo,
+    eyebrow: 'AI, automation & custom software',
+    titleStart: 'Systems that ',
+    titleAccent: 'do more',
+    titleEnd: ' of the work for you.',
+    sub: 'From CRM pipelines and follow-up sequences to chatbots, smart search, and internal dashboards, we wire intelligent automation into the tools your team already uses every day.',
+    primary: { label: 'Explore an AI project', to: '/contact' },
+    secondary: { label: 'See our services', to: '/services' },
+  },
+];
 
 const services = [
   { number: '01', icon: Workflow, title: 'GoHighLevel Automation & Integration', text: 'CRM setup, pipelines, funnels, and follow-up sequences that keep every opportunity moving.' },
@@ -52,37 +79,67 @@ const faqs = [
 ];
 
 export default function HomePage() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [slidesPaused, setSlidesPaused] = useState(false);
+
+  useEffect(() => {
+    if (slidesPaused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const timer = window.setTimeout(
+      () => setActiveSlide((current) => (current + 1) % heroSlides.length),
+      HERO_SLIDE_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [activeSlide, slidesPaused]);
+
+  const slide = heroSlides[activeSlide];
+
   return (
     <>
-      <section className="hero" id="home">
-        <div className="hero-image-layer" aria-hidden="true" style={{ backgroundImage: `url(${heroImage})` }} />
-        <div className="hero-glow glow-one" aria-hidden="true" />
-        <div className="hero-glow glow-two" aria-hidden="true" />
-        <div className="hero-glow glow-three" aria-hidden="true" />
+      <section
+        className={`hero hero-slider ${slidesPaused ? 'is-paused' : ''}`}
+        id="home"
+        style={{ '--hero-slide-duration': `${HERO_SLIDE_MS}ms` } as CSSProperties}
+        onMouseEnter={() => setSlidesPaused(true)}
+        onMouseLeave={() => setSlidesPaused(false)}
+      >
+        <div className="hero-slide-track" aria-hidden="true">
+          {heroSlides.map((item, index) => (
+            <div
+              key={item.image}
+              className={`hero-slide-bg ${index === activeSlide ? 'is-active' : ''}`}
+              style={{ backgroundImage: `url(${item.image})` }}
+            />
+          ))}
+        </div>
+        <div className="hero-scrim" aria-hidden="true" />
 
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <div className="eyebrow"><span className="eyebrow-dot" />Web development & automation agency</div>
-            <h1>Websites and automations that <em>actually</em> grow your business.</h1>
-            <p className="hero-sub">Digtimize builds GoHighLevel automations, custom WordPress and Shopify sites, and AI-powered web solutions for businesses and agencies who need work done right the first time.</p>
+        <div className="container hero-slider-inner">
+          <div className="hero-copy hero-slide-copy" key={activeSlide}>
+            <div className="eyebrow"><span className="eyebrow-dot" />{slide.eyebrow}</div>
+            <h1>{slide.titleStart}<span className="hero-accent">{slide.titleAccent}</span>{slide.titleEnd}</h1>
+            <p className="hero-sub">{slide.sub}</p>
             <div className="hero-actions">
-              <Link className="button button-primary" to="/contact">Get a free project quote <ArrowUpRight size={17} /></Link>
-              <Link className="text-link" to="/work">See our work <ArrowRight size={16} /></Link>
+              <Link className="button button-primary" to={slide.primary.to}>{slide.primary.label} <ArrowUpRight size={17} /></Link>
+              <Link className="text-link" to={slide.secondary.to}>{slide.secondary.label} <ArrowRight size={16} /></Link>
             </div>
             <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
           </div>
 
-          <div className="hero-visual" aria-label="Automation systems visualization">
-            <div className="visual-orbit orbit-a" /><div className="visual-orbit orbit-b" /><div className="visual-orbit orbit-c" />
-            <div className="visual-core"><span className="core-spark"><Sparkles size={25} /></span><b>systems<br /><strong>that move</strong></b></div>
-            <div className="float-card card-crm"><span className="mini-icon purple"><Workflow size={16} /></span><span><small>Lead workflow</small><b>Running smoothly</b></span><span className="status-dot" /></div>
-            <div className="float-card card-ai"><span className="mini-icon blue"><Bot size={16} /></span><span><small>AI assistant</small><b>Ready to help</b></span><span className="signal"><i /><i /><i /></span></div>
-            <div className="float-card card-data"><span className="mini-icon pink"><Database size={16} /></span><span><small>Connected data</small><b>Always in sync</b></span></div>
-            <div className="visual-caption"><span>01</span><span>Automate the ordinary.<br /><b>Build the remarkable.</b></span></div>
+          <div className="hero-dots">
+            {heroSlides.map((item, index) => (
+              <button
+                key={item.image}
+                type="button"
+                className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
+                aria-label={`Show slide ${index + 1}`}
+                aria-current={index === activeSlide}
+                onClick={() => setActiveSlide(index)}
+              >
+                <span className="hero-dot-fill" />
+              </button>
+            ))}
           </div>
         </div>
-
-        <Link to="/services" className="scroll-cue"><span>Scroll to explore</span><ArrowDownRight size={17} /></Link>
       </section>
 
       <StatsCounter/>
