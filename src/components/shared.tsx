@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
+import logoImage from '@/assets/Digtimizelogo.jpeg';
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Link to="/" className={`logo ${light ? 'logo-light' : ''}`} aria-label="Digitimize home">
-      <span className="logo-mark" aria-hidden="true"><span /><i /><b /></span>
-      <span className="logo-word">digitimize</span>
+      <span className="logo-image-wrap"><img className="logo-image" src={logoImage} alt="Digtimize" /></span>
     </Link>
   );
 }

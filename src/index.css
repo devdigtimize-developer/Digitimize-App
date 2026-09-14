@@ -1313,9 +1313,101 @@ button,
     font-size: 23px;
 }
 
+.logo-image-wrap {
+    width: 145px;
+    height: 43px;
+    display: block;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
 .logo-mark {
     width: 33px;
     height: 33px;
+}
+
+.tech-pill {
+    white-space: nowrap;
+}
+
+.tech-9 {
+    left: auto;
+    right: 4%;
+    top: 50%;
+}
+
+.tech-7 {
+    left: auto;
+    right: 5%;
+    top: 67%;
+}
+
+@media (max-width: 640px) {
+    .tech-9 {
+        right: 2%;
+        top: 49%;
+    }
+
+    .tech-7 {
+        right: 2%;
+        top: 66%;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .logo {
+        min-width: 0;
+        gap: 7px;
+        font-size: 19px;
+    }
+
+    .logo-image-wrap {
+        width: 125px;
+        height: 37px;
+    }
+
+    .logo-image {
+        width: 125px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+    }
+
+    .nav-links-open {
+        left: 16px;
+        right: 16px;
+        top: 64px;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-links-open .nav-services-menu,
+    .nav-links-open > a:not(.mobile-cta) {
+        width: 100%;
+    }
+
+    .nav-links-open .nav-services-menu > a,
+    .nav-links-open > a:not(.mobile-cta) {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .eyebrow,
@@ -1328,6 +1420,29 @@ button,
 .page-hero-content p {
     font-size: clamp(17px, 1.35vw, 20px);
     line-height: 1.7;
+}
+
+.nav-links a,
+.nav-services-menu > a,
+.logo,
+.menu-toggle {
+    color: #000;
+}
+
+.nav-links a:hover,
+.nav-services-menu > a:hover,
+.nav-links a.nav-active {
+    color: #000;
+}
+
+.nav-cta {
+    background: #000;
+    color: #fff;
+}
+
+.nav-cta:hover {
+    background: #000;
+    color: #fff;
 }
 
 .trust-line {
@@ -1732,5 +1847,29 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+/* Keep route typography aligned with the home page and give inner-page heroes room to breathe. */
+html,
+body,
+body *,
+button,
+input,
+textarea,
+select {
+    font-family: 'Hikasami', sans-serif !important;
+}
+
+.page-hero-content h1 {
+    font-family: 'Hikasami', sans-serif !important;
+    font-size: clamp(42px, 4.5vw, 58px);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .page-hero-content h1 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
 }
 }
