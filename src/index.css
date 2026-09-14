@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-/* Hikasami Sans (SIL OFL 1.1) — variable file covers 400-700, static files
+/* Hikasami Sans (SIL OFL 1.1) â variable file covers 400-700, static files
    cover browsers without variable font support. Licence: public/fonts/OFL.txt */
 @font-face {
     font-family: 'Hikasami';
@@ -81,7 +81,7 @@
 @media(max-width:640px){.container{padding:0 20px}.nav{height:70px}.nav-inner{padding:0 20px}.desktop-cta,.nav-links{display:none}.nav-links-open{position:absolute;display:flex;flex-direction:column;align-items:stretch;gap:0;left:12px;right:12px;top:67px;padding:10px 18px;background:rgba(250,249,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:15px;box-shadow:0 20px 35px rgba(60,50,100,1)}.nav-links-open a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-links-open .mobile-cta{display:flex;border:0;margin:8px 0 4px;justify-content:center;background:var(--gradient);color:#fff;border-radius:100px}.menu-toggle{display:grid;place-items:center;color:var(--ink)}.menu-toggle svg{width:23px}.hero{min-height:auto;padding:130px 0 80px}.hero-grid{gap:55px}.eyebrow{font-size:9px}.hero h1{font-size:48px}.hero-sub{font-size:13px}.hero-actions{align-items:start;flex-direction:column;gap:21px}.trust-line{font-size:9px;gap:6px;flex-wrap:wrap}.trust-line i{display:none}.hero-visual{height:380px;transform:scale(.9);transform-origin:center}.card-crm{left:-8px}.card-ai{right:-15px}.card-data{left:15px}.visual-caption{right:16px}.scroll-cue{display:none}.intro-grid{grid-template-columns:1fr;gap:15px}.intro-grid p{font-size:18px}.intro-arrow{display:none}.intro-number{margin-bottom:5px}.section{padding:85px 0}.section-head{display:block;margin-bottom:45px}.section-head>p{margin-top:22px;font-size:12px}.section-head h2{font-size:39px}.service-grid{grid-template-columns:1fr}.service-item{min-height:255px}.capabilities-grid{gap:45px}.dark-section h2{font-size:43px}.process-line{display:block}.process-item{display:grid;grid-template-columns:55px 1fr;column-gap:18px;padding-bottom:35px}.process-marker{height:auto;grid-row:span 2;margin:0;align-items:start}.process-marker i{position:absolute;left:20px;top:41px;bottom:0;height:auto;border-left:1px solid rgba(134,137,233,.3);border-top:0;width:0}.process-item h3{margin:7px 0 8px}.process-item p{grid-column:2;max-width:none;padding:0}.centered{margin-bottom:55px}.work-feature{min-height:360px}.work-browser{height:210px;margin-top:27px}.browser-content{padding:26px 20px}.browser-content strong{font-size:22px;margin-top:21px}.flow-preview{padding:55px 25px 20px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:340px}.faq-grid{gap:45px}.faq-item button{grid-template-columns:29px 1fr 18px}.faq-item button b{font-size:12px}.faq-answer p{padding-left:41px}.contact-grid{gap:45px}.contact-form{padding:21px 17px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:65px}.footer-top{display:block;padding-bottom:55px}.footer-links{grid-template-columns:1fr 1fr;gap:40px 25px;margin-top:50px}.footer-links div:last-child{grid-column:span 2}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px}.tech-ecosystem{height:360px}.tech-pill{font-size:9px;padding:8px 9px}.tech-1{left:7%}.tech-2{right:4%}.tech-4{right:5%}.tech-6{left:-3%}.tech-8{left:19%}.tech-center{width:105px;height:105px}.ai-panel{min-height:390px}.ai-grid{gap:45px}.page-hero{min-height:360px;padding-top:110px}.page-hero-content h1{font-size:42px}.page-hero-content p{font-size:13px}.process-detail-item{grid-template-columns:1fr;gap:16px}.process-detail-marker span{width:48px;height:48px;font-size:12px}.process-detail-content h3{font-size:19px}.about-card{padding:22px}.value-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Brand tokens ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ purple ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
+/* Brand tokens ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
 :root {
     --ink: #0a0b10;
     --muted: #555863;
@@ -1832,7 +1832,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     }
 }
 
-/* Dark stats band ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
+/* Dark stats band ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
 .stats-section {
     padding: 56px 0 72px;
     background: var(--wash);
@@ -2026,7 +2026,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     color: var(--subtle);
 }
 
-/* Process markers: circle on the left, connector through the row ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ not centered-over */
+/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
 .process-item {
     text-align: left;
 }
@@ -2413,7 +2413,7 @@ h1 em {
     }
 }
 
-/* Single page scroll only ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
+/* Single page scroll only ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2784,7 +2784,7 @@ body {
     color: var(--ink);
 }
 
-/* Kill pastel lilac washes ÃÂÃÂ crisp white / cool gray / deep charcoal */
+/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
 .hero,
 .page-hero,
 .about-section,
@@ -2881,7 +2881,7 @@ body {
     color: #b4bac8 !important;
 }
 
-/* Soften decorative blobs ÃÂÃÂ accents, not fog */
+/* Soften decorative blobs ÃÂÃÂÃÂÃÂ accents, not fog */
 .section:before,
 .section:after,
 .page-hero:before,
@@ -3040,7 +3040,7 @@ body {
     color: #8b91a1 !important;
 }
 
-/* Visual core / tech center ÃÂÃÂ richer */
+/* Visual core / tech center ÃÂÃÂÃÂÃÂ richer */
 .visual-core {
     background: rgba(255,255,255,.85) !important;
     border: 1px solid rgba(12, 14, 22, .08) !important;
@@ -3460,6 +3460,256 @@ select,
     /* The subject fills a portrait viewport, so text needs an even scrim. */
     .hero-scrim {
         background: linear-gradient(180deg, rgba(5, 10, 18, .78) 0%, rgba(5, 10, 18, .6) 45%, rgba(5, 10, 18, .8) 100%);
+    }
+}
+
+/* ========== The shift: grey rounded panel with two model cards ========== */
+.shift-section {
+    margin: 12px;
+    padding: 84px 0;
+    border-radius: 30px;
+    background: #f4f4f5 !important;
+    background-image: none !important;
+}
+
+/* A flat grey panel reads cleaner than the inherited decorative blobs. */
+.shift-section:before,
+.shift-section:after {
+    display: none;
+}
+
+.shift-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    align-items: center;
+    gap: 76px;
+}
+
+.shift-copy .section-label {
+    color: #6c6d78;
+    margin-bottom: 24px;
+}
+
+.shift-copy h2 {
+    max-width: 460px;
+    margin: 0 0 24px;
+    color: #14151c;
+    font-size: clamp(32px, 3.2vw, 44px);
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: -.025em;
+}
+
+/* SectionLabel also renders a <p>, so it must be excluded here. */
+.shift-copy p:not(.section-label) {
+    max-width: 470px;
+    margin: 0;
+    color: #55575f;
+    font-size: clamp(15px, 1.1vw, 17px);
+    line-height: 1.72;
+}
+
+.shift-models {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 30px;
+}
+
+.shift-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 26px 32px;
+    border-radius: 18px;
+    transition: transform .35s var(--motion-ease), box-shadow .35s var(--motion-ease);
+}
+
+/* "Light black" backdrop that fades in behind the card on hover. */
+.shift-card:after {
+    content: '';
+    position: absolute;
+    inset: -13px;
+    z-index: -1;
+    border-radius: 26px;
+    background: rgba(17, 18, 26, .55);
+    opacity: 0;
+    transition: opacity .35s var(--motion-ease);
+}
+
+.shift-card:hover {
+    transform: translateY(-5px);
+}
+
+.shift-card:hover:after {
+    opacity: 1;
+}
+
+.shift-card-legacy {
+    background: #ffffff;
+    box-shadow: 0 16px 38px rgba(20, 21, 28, .1);
+}
+
+.shift-card-legacy:before,
+.shift-card-native:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 26px;
+    right: 26px;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+}
+
+.shift-card-legacy:before {
+    background: #d3d4da;
+}
+
+.shift-card-native {
+    /* Sits slightly proud of the legacy card, as in the reference. */
+    margin-top: -14px;
+    color: #ffffff;
+    background: #0b0d16;
+    box-shadow: 0 22px 46px rgba(11, 13, 22, .32);
+}
+
+.shift-card-native:before {
+    background: linear-gradient(90deg, #dcc9ff, #ab8df0);
+}
+
+.shift-card-label {
+    display: block;
+    margin-bottom: 26px;
+    color: #7d7f8a;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.shift-card-native .shift-card-label {
+    color: #bda6f5;
+}
+
+.shift-card h3 {
+    margin: 0 0 26px;
+    color: #14151c;
+    font-size: clamp(21px, 1.7vw, 25px);
+    font-weight: 600;
+    letter-spacing: -.025em;
+}
+
+.shift-card-native h3 {
+    color: #ffffff;
+}
+
+.shift-points {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.shift-points li {
+    display: grid;
+    grid-template-columns: 19px minmax(0, 1fr);
+    gap: 12px;
+    color: #55575f;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.shift-card-native .shift-points li {
+    color: #c3c6d2;
+}
+
+.shift-bullet {
+    display: grid;
+    place-items: center;
+    width: 19px;
+    height: 19px;
+    margin-top: 2px;
+    border-radius: 50%;
+    color: #8b8d98;
+    background: #e8e9ed;
+}
+
+.shift-card-native .shift-bullet {
+    color: #ffffff;
+    background: linear-gradient(135deg, #b79bf5, #8a6ae8);
+}
+
+.shift-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    transform: translate(-50%, -50%);
+    color: #8a6ae8;
+    pointer-events: none;
+}
+
+@media (max-width: 1080px) {
+    .shift-grid {
+        gap: 48px;
+    }
+
+    .shift-models {
+        gap: 22px;
+    }
+
+    .shift-card {
+        padding: 26px 20px 28px;
+    }
+
+    .shift-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .shift-section {
+        padding: 68px 0;
+        border-radius: 26px;
+    }
+
+    .shift-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .shift-copy h2,
+    .shift-copy p:not(.section-label) {
+        max-width: 620px;
+    }
+
+    .shift-card-native {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .shift-section {
+        margin: 10px;
+        padding: 52px 0;
+        border-radius: 20px;
+    }
+
+    .shift-models {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    /* Inset rather than outset, so the halo cannot spill off a narrow screen. */
+    .shift-card:after {
+        inset: -8px;
+        border-radius: 22px;
     }
 }
 

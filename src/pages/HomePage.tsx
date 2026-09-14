@@ -11,6 +11,7 @@ import {
   Globe2,
   Layers3,
   LifeBuoy,
+  Minus,
   Network,
   Sparkles,
   Store,
@@ -63,6 +64,29 @@ const platforms = [
   { name: 'WordPress', icon: Globe2, count: '80+', metric: 'Sites shipped', text: 'Custom themes and blocks shaped around your goals — never a generic template.' },
   { name: 'Shopify', icon: Store, count: '35+', metric: 'Stores built', text: 'Conversion-focused storefronts with clean checkout and useful integrations.' },
   { name: 'AI / LLMs', icon: Bot, count: '25+', metric: 'Tools deployed', text: 'Chatbots, RAG search, and smart features wired into the systems you already run.' },
+];
+
+const shiftModels = [
+  {
+    variant: 'legacy',
+    label: 'Traditional model',
+    title: 'Buy deliverables',
+    points: [
+      'Timelines set by headcount, not by systems',
+      'Each vendor delivers a slice, never the integration',
+      'Disconnected tools that cannot feed each other',
+    ],
+  },
+  {
+    variant: 'native',
+    label: 'Digtimize model',
+    title: 'Buy outcomes',
+    points: [
+      'Automation embedded in delivery cuts timelines in half',
+      'One team across strategy, build, and ongoing support',
+      'Priced and measured against the business outcome',
+    ],
+  },
 ];
 
 const process = [
@@ -165,6 +189,36 @@ export default function HomePage() {
       </section>
 
       <StatsCounter/>
+
+      <section className="section shift-section">
+        <div className="container shift-grid">
+          <div className="shift-copy">
+            <SectionLabel>The shift</SectionLabel>
+            <h2>The shift to automated operations is already here.</h2>
+            <p>Most agencies still sell deliverables. We build the people, tooling, and operating model around your business so automation is owned across the company, embedded in delivery, and ultimately tied to measurable outcomes.</p>
+          </div>
+
+          <div className="shift-models">
+            {shiftModels.map(({ variant, label, title, points }) => (
+              <article className={`shift-card shift-card-${variant}`} key={variant}>
+                <span className="shift-card-label">{label}</span>
+                <h3>{title}</h3>
+                <ul className="shift-points">
+                  {points.map((point) => (
+                    <li key={point}>
+                      <span className="shift-bullet">
+                        {variant === 'native' ? <Check size={11} /> : <Minus size={11} />}
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+            <span className="shift-arrow" aria-hidden="true"><ArrowRight size={17} /></span>
+          </div>
+        </div>
+      </section>
 
       <section className="section why-platforms-section" id="why-digtimize">
         <div className="container">
