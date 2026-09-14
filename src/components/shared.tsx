@@ -5,7 +5,7 @@ export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Link to="/" className={`logo ${light ? 'logo-light' : ''}`} aria-label="Digitimize home">
       <span className="logo-image-wrap" aria-hidden="true"><img className="logo-image" src={logoImage} alt="" /></span>
-      <span className="logo-word">digitimize</span>
+      <span className="logo-word">Digtimize</span>
     </Link>
   );
 }

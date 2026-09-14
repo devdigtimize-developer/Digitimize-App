@@ -1428,6 +1428,29 @@ button,
     line-height: 1.7;
 }
 
+.nav-links a,
+.nav-services-menu > a,
+.logo,
+.menu-toggle {
+    color: #0b0b0d;
+}
+
+.nav-links a:hover,
+.nav-services-menu > a:hover,
+.nav-links a.nav-active {
+    color: #000;
+}
+
+.nav-cta {
+    background: #0b0b0d;
+    color: #fff;
+}
+
+.nav-cta:hover {
+    background: #000;
+    color: #fff;
+}
+
 .trust-line {
     font-size: 12px;
     gap: 11px;
