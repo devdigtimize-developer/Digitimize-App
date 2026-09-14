@@ -1,6 +1,7 @@
 import { useEffect, useState, type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   Bot,
@@ -23,7 +24,7 @@ import StatsCounter from './StatsCounter';
 
 /* Slide interval. The dot progress bar reads this via a CSS custom property,
    so changing it here keeps the animation in sync. */
-const HERO_SLIDE_MS = 2000;
+const HERO_SLIDE_MS = 6000;
 
 const heroSlides = [
   {
@@ -125,19 +126,40 @@ export default function HomePage() {
             <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
           </div>
 
-          <div className="hero-dots">
-            {heroSlides.map((item, index) => (
+          <div className="hero-controls">
+            <div className="hero-dots">
+              {heroSlides.map((item, index) => (
+                <button
+                  key={item.image}
+                  type="button"
+                  className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
+                  aria-label={`Show slide ${index + 1}`}
+                  aria-current={index === activeSlide}
+                  onClick={() => setActiveSlide(index)}
+                >
+                  <span className="hero-dot-fill" />
+                </button>
+              ))}
+            </div>
+
+            <div className="hero-arrows">
               <button
-                key={item.image}
                 type="button"
-                className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
-                aria-label={`Show slide ${index + 1}`}
-                aria-current={index === activeSlide}
-                onClick={() => setActiveSlide(index)}
+                className="hero-arrow"
+                aria-label="Previous slide"
+                onClick={() => setActiveSlide((current) => (current - 1 + heroSlides.length) % heroSlides.length)}
               >
-                <span className="hero-dot-fill" />
+                <ArrowLeft size={18} />
               </button>
-            ))}
+              <button
+                type="button"
+                className="hero-arrow"
+                aria-label="Next slide"
+                onClick={() => setActiveSlide((current) => (current + 1) % heroSlides.length)}
+              >
+                <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
         </div>
       </section>

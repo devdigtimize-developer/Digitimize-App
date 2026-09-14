@@ -1,8 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Hikasami Sans (SIL OFL 1.1) — variable file covers 400-700, static files
+   cover browsers without variable font support. Licence: public/fonts/OFL.txt */
 @font-face {
     font-family: 'Hikasami';
-    src: url('/fonts/Hikasami.woff2') format('woff2');
-    font-weight: 100 900;
+    src: url('/fonts/Hikasami-VF.woff2') format('woff2-variations'),
+         url('/fonts/Hikasami-VF.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hikasami Static';
+    src: url('/fonts/Hikasami-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hikasami Static';
+    src: url('/fonts/Hikasami-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hikasami Static';
+    src: url('/fonts/Hikasami-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hikasami Static';
+    src: url('/fonts/Hikasami-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -46,7 +81,7 @@
 @media(max-width:640px){.container{padding:0 20px}.nav{height:70px}.nav-inner{padding:0 20px}.desktop-cta,.nav-links{display:none}.nav-links-open{position:absolute;display:flex;flex-direction:column;align-items:stretch;gap:0;left:12px;right:12px;top:67px;padding:10px 18px;background:rgba(250,249,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:15px;box-shadow:0 20px 35px rgba(60,50,100,1)}.nav-links-open a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-links-open .mobile-cta{display:flex;border:0;margin:8px 0 4px;justify-content:center;background:var(--gradient);color:#fff;border-radius:100px}.menu-toggle{display:grid;place-items:center;color:var(--ink)}.menu-toggle svg{width:23px}.hero{min-height:auto;padding:130px 0 80px}.hero-grid{gap:55px}.eyebrow{font-size:9px}.hero h1{font-size:48px}.hero-sub{font-size:13px}.hero-actions{align-items:start;flex-direction:column;gap:21px}.trust-line{font-size:9px;gap:6px;flex-wrap:wrap}.trust-line i{display:none}.hero-visual{height:380px;transform:scale(.9);transform-origin:center}.card-crm{left:-8px}.card-ai{right:-15px}.card-data{left:15px}.visual-caption{right:16px}.scroll-cue{display:none}.intro-grid{grid-template-columns:1fr;gap:15px}.intro-grid p{font-size:18px}.intro-arrow{display:none}.intro-number{margin-bottom:5px}.section{padding:85px 0}.section-head{display:block;margin-bottom:45px}.section-head>p{margin-top:22px;font-size:12px}.section-head h2{font-size:39px}.service-grid{grid-template-columns:1fr}.service-item{min-height:255px}.capabilities-grid{gap:45px}.dark-section h2{font-size:43px}.process-line{display:block}.process-item{display:grid;grid-template-columns:55px 1fr;column-gap:18px;padding-bottom:35px}.process-marker{height:auto;grid-row:span 2;margin:0;align-items:start}.process-marker i{position:absolute;left:20px;top:41px;bottom:0;height:auto;border-left:1px solid rgba(134,137,233,.3);border-top:0;width:0}.process-item h3{margin:7px 0 8px}.process-item p{grid-column:2;max-width:none;padding:0}.centered{margin-bottom:55px}.work-feature{min-height:360px}.work-browser{height:210px;margin-top:27px}.browser-content{padding:26px 20px}.browser-content strong{font-size:22px;margin-top:21px}.flow-preview{padding:55px 25px 20px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:340px}.faq-grid{gap:45px}.faq-item button{grid-template-columns:29px 1fr 18px}.faq-item button b{font-size:12px}.faq-answer p{padding-left:41px}.contact-grid{gap:45px}.contact-form{padding:21px 17px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:65px}.footer-top{display:block;padding-bottom:55px}.footer-links{grid-template-columns:1fr 1fr;gap:40px 25px;margin-top:50px}.footer-links div:last-child{grid-column:span 2}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px}.tech-ecosystem{height:360px}.tech-pill{font-size:9px;padding:8px 9px}.tech-1{left:7%}.tech-2{right:4%}.tech-4{right:5%}.tech-6{left:-3%}.tech-8{left:19%}.tech-center{width:105px;height:105px}.ai-panel{min-height:390px}.ai-grid{gap:45px}.page-hero{min-height:360px;padding-top:110px}.page-hero-content h1{font-size:42px}.page-hero-content p{font-size:13px}.process-detail-item{grid-template-columns:1fr;gap:16px}.process-detail-marker span{width:48px;height:48px;font-size:12px}.process-detail-content h3{font-size:19px}.about-card{padding:22px}.value-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Brand tokens ÃÂ¢ÃÂÃÂ logo magenta ÃÂ¢ÃÂÃÂ purple ÃÂ¢ÃÂÃÂ electric blue, used as accents not washes */
+/* Brand tokens ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ purple ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
 :root {
     --ink: #0a0b10;
     --muted: #555863;
@@ -1797,7 +1832,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     }
 }
 
-/* Dark stats band ÃÂ¢ÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
+/* Dark stats band ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
 .stats-section {
     padding: 56px 0 72px;
     background: var(--wash);
@@ -1991,7 +2026,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     color: var(--subtle);
 }
 
-/* Process markers: circle on the left, connector through the row ÃÂ¢ÃÂÃÂ not centered-over */
+/* Process markers: circle on the left, connector through the row ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ not centered-over */
 .process-item {
     text-align: left;
 }
@@ -2378,7 +2413,7 @@ h1 em {
     }
 }
 
-/* Single page scroll only ÃÂ¢ÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
+/* Single page scroll only ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2749,7 +2784,7 @@ body {
     color: var(--ink);
 }
 
-/* Kill pastel lilac washes ÃÂ crisp white / cool gray / deep charcoal */
+/* Kill pastel lilac washes ÃÂÃÂ crisp white / cool gray / deep charcoal */
 .hero,
 .page-hero,
 .about-section,
@@ -2846,7 +2881,7 @@ body {
     color: #b4bac8 !important;
 }
 
-/* Soften decorative blobs ÃÂ accents, not fog */
+/* Soften decorative blobs ÃÂÃÂ accents, not fog */
 .section:before,
 .section:after,
 .page-hero:before,
@@ -3005,7 +3040,7 @@ body {
     color: #8b91a1 !important;
 }
 
-/* Visual core / tech center ÃÂ richer */
+/* Visual core / tech center ÃÂÃÂ richer */
 .visual-core {
     background: rgba(255,255,255,.85) !important;
     border: 1px solid rgba(12, 14, 22, .08) !important;
@@ -3123,14 +3158,40 @@ select:focus {
     }
 }
 
+/* ========== Hikasami is now the site typeface ==========
+   Earlier passes forced Plus Jakarta Sans with !important because the font
+   file was missing. These selectors match every one of those rules, so this
+   final block is what actually takes effect. */
+html,
+body,
+body *,
+button,
+input,
+textarea,
+select,
+.section-label,
+.eyebrow,
+.trust-line,
+.work-category,
+.price-tag,
+.service-number,
+.capability-index,
+.footer-links b,
+.footer-links a,
+.footer-links span,
+.footer-bottom {
+    font-family: 'Hikasami', 'Hikasami Static', 'Plus Jakarta Sans', sans-serif !important;
+}
+
 /* ========== Home hero slider (full-bleed photography, white type) ========== */
 .hero-slider {
     display: flex;
     align-items: center;
-    min-height: 680px;
-    padding: 158px 0 104px;
+    min-height: clamp(580px, 42vw, 760px);
+    padding: 132px 0 76px;
     color: #ffffff;
-    background: #06050d !important;
+    /* Matches the navy in the slide artwork so any edge is seamless. */
+    background: #071018 !important;
     background-image: none !important;
 }
 
@@ -3140,23 +3201,31 @@ select:focus {
     z-index: 0;
 }
 
-/* No blur, no mask, no wash: the photo renders at full clarity and the
-   scrim below carries all of the text contrast. */
+/* The artwork is 1920x843 with its subject on the right and empty navy on
+   the left, so anchoring right keeps the subject whole and trims only the
+   empty side. No blur and no wash: the scrim carries the text contrast. */
 .hero-slide-bg {
     position: absolute;
     inset: 0;
     opacity: 0;
-    background-position: center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: scale(1.07);
-    transition: opacity .9s var(--motion-ease), transform 1.2s var(--motion-ease);
+    transform: scale(1);
+    transform-origin: 78% center;
+    transition: opacity 1.4s ease-in-out;
     will-change: opacity, transform;
 }
 
 .hero-slide-bg.is-active {
     opacity: 1;
-    transform: scale(1);
+    /* One continuous drift across the whole slide rather than a quick snap. */
+    animation: heroDrift calc(var(--hero-slide-duration, 6000ms) + 1400ms) linear both;
+}
+
+@keyframes heroDrift {
+    from { transform: scale(1); }
+    to { transform: scale(1.035); }
 }
 
 .hero-scrim {
@@ -3164,9 +3233,11 @@ select:focus {
     inset: 0;
     z-index: 1;
     pointer-events: none;
+    /* Light touch: the artwork is already dark on the left, so this only
+       guarantees contrast and leaves the right side untouched. */
     background:
-        linear-gradient(96deg, rgba(6, 5, 14, .9) 0%, rgba(6, 5, 14, .74) 30%, rgba(6, 5, 14, .38) 57%, rgba(6, 5, 14, .12) 80%, rgba(6, 5, 14, 0) 100%),
-        linear-gradient(180deg, rgba(6, 5, 14, .5) 0%, rgba(6, 5, 14, 0) 26%, rgba(6, 5, 14, 0) 70%, rgba(6, 5, 14, .42) 100%);
+        linear-gradient(96deg, rgba(5, 10, 18, .82) 0%, rgba(5, 10, 18, .6) 28%, rgba(5, 10, 18, .22) 52%, rgba(5, 10, 18, 0) 74%),
+        linear-gradient(180deg, rgba(5, 10, 18, .34) 0%, rgba(5, 10, 18, 0) 24%, rgba(5, 10, 18, 0) 74%, rgba(5, 10, 18, .34) 100%);
 }
 
 .hero-slider-inner {
@@ -3179,22 +3250,29 @@ select:focus {
 }
 
 .hero-slider .eyebrow {
-    color: rgba(255, 255, 255, .82);
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, .78);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .17em;
+    text-transform: uppercase;
 }
 
 .hero-slider .eyebrow-dot {
     box-shadow: 0 0 16px rgba(220, 201, 255, .8);
 }
 
+/* Hikasami is geometric and reads heavy at display sizes, so medium weight
+   with relaxed tracking holds together far better than the old 800. */
 .hero-slider h1 {
-    max-width: 760px;
-    margin: 0 0 26px;
+    max-width: 700px;
+    margin: 0 0 24px;
     color: #ffffff;
-    font-size: clamp(46px, 5.4vw, 74px);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -.045em;
-    text-shadow: 0 2px 34px rgba(0, 0, 0, .5);
+    font-size: clamp(38px, 4.4vw, 60px);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -.022em;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, .45);
 }
 
 .hero-slider h1 .hero-accent {
@@ -3242,11 +3320,43 @@ select:focus {
     to { opacity: 1; transform: none; }
 }
 
+.hero-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 42px;
+}
+
 .hero-dots {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 46px;
+}
+
+.hero-arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-arrow {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(6px);
+    transition: background .3s var(--motion-ease), border-color .3s var(--motion-ease), transform .3s var(--motion-ease);
+}
+
+.hero-arrow:hover {
+    border-color: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .16);
+    transform: translateY(-2px);
 }
 
 .hero-dot {
@@ -3293,52 +3403,63 @@ select:focus {
 
 @media (max-width: 900px) {
     .hero-slider {
-        min-height: 600px;
-        padding: 140px 0 88px;
+        min-height: 560px;
+        padding: 124px 0 68px;
     }
 
     .hero-slider .hero-sub {
         max-width: 520px;
     }
 
+    /* Less empty navy to hide behind, so the scrim reaches further right. */
     .hero-scrim {
         background:
-            linear-gradient(96deg, rgba(6, 5, 14, .92) 0%, rgba(6, 5, 14, .8) 40%, rgba(6, 5, 14, .5) 72%, rgba(6, 5, 14, .3) 100%),
-            linear-gradient(180deg, rgba(6, 5, 14, .5) 0%, rgba(6, 5, 14, 0) 30%, rgba(6, 5, 14, .45) 100%);
+            linear-gradient(96deg, rgba(5, 10, 18, .88) 0%, rgba(5, 10, 18, .74) 42%, rgba(5, 10, 18, .42) 74%, rgba(5, 10, 18, .18) 100%),
+            linear-gradient(180deg, rgba(5, 10, 18, .4) 0%, rgba(5, 10, 18, 0) 30%, rgba(5, 10, 18, .4) 100%);
     }
 }
 
 @media (max-width: 640px) {
     .hero-slider {
-        min-height: 540px;
-        padding: 116px 0 64px;
+        min-height: 500px;
+        padding: 104px 0 56px;
     }
 
     .hero-slider h1 {
-        font-size: clamp(34px, 10vw, 46px);
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+        font-size: clamp(30px, 8.4vw, 40px);
+    }
+
+    .hero-slider .eyebrow {
+        margin-bottom: 18px;
+        font-size: 11px;
+        letter-spacing: .14em;
     }
 
     .hero-slider .hero-sub {
-        margin-bottom: 30px;
+        margin-bottom: 28px;
         font-size: 16px !important;
     }
 
     .hero-slider .trust-line {
-        margin-top: 26px;
+        margin-top: 24px;
     }
 
-    .hero-dots {
-        margin-top: 34px;
+    .hero-controls {
+        margin-top: 30px;
     }
 
-    .hero-dot { width: 38px; }
-    .hero-dot.is-active { width: 62px; }
+    .hero-dot { width: 34px; }
+    .hero-dot.is-active { width: 56px; }
 
-    /* Text sits over the middle of the photo on narrow screens. */
+    .hero-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* The subject fills a portrait viewport, so text needs an even scrim. */
     .hero-scrim {
-        background:
-            linear-gradient(180deg, rgba(6, 5, 14, .72) 0%, rgba(6, 5, 14, .58) 45%, rgba(6, 5, 14, .78) 100%);
+        background: linear-gradient(180deg, rgba(5, 10, 18, .78) 0%, rgba(5, 10, 18, .6) 45%, rgba(5, 10, 18, .8) 100%);
     }
 }
 
