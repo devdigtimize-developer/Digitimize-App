@@ -1314,22 +1314,17 @@ button,
 }
 
 .logo-image-wrap {
-    width: 33px;
-    height: 33px;
+    width: 145px;
+    height: 43px;
     display: block;
     overflow: hidden;
     flex-shrink: 0;
-    border-radius: 50%;
-    mix-blend-mode: multiply;
 }
 
 .logo-image {
     width: 145px;
-    height: 33px;
-    max-width: none;
+    height: auto;
     display: block;
-    object-fit: cover;
-    object-position: left center;
 }
 
 .logo-mark {
@@ -1378,13 +1373,12 @@ button,
     }
 
     .logo-image-wrap {
-        width: 29px;
-        height: 29px;
+        width: 125px;
+        height: 37px;
     }
 
     .logo-image {
-        width: 128px;
-        height: 29px;
+        width: 125px;
     }
 
     .menu-toggle {
@@ -1432,7 +1426,7 @@ button,
 .nav-services-menu > a,
 .logo,
 .menu-toggle {
-    color: #0b0b0d;
+    color: #000;
 }
 
 .nav-links a:hover,
@@ -1442,7 +1436,7 @@ button,
 }
 
 .nav-cta {
-    background: #0b0b0d;
+    background: #000;
     color: #fff;
 }
 
@@ -1853,5 +1847,29 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+/* Keep route typography aligned with the home page and give inner-page heroes room to breathe. */
+html,
+body,
+body *,
+button,
+input,
+textarea,
+select {
+    font-family: 'Hikasami', sans-serif !important;
+}
+
+.page-hero-content h1 {
+    font-family: 'Hikasami', sans-serif !important;
+    font-size: clamp(42px, 4.5vw, 58px);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .page-hero-content h1 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
 }
 }
