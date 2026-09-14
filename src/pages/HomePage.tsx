@@ -30,6 +30,13 @@ const services = [
   { number: '06', icon: Sparkles, title: 'Digital Marketing Support', text: 'SEO, funnel copy, campaign support, and conversion tracking for the next stage of growth.' },
 ];
 
+const platforms = [
+  { name: 'GoHighLevel', icon: Workflow, count: '60+', metric: 'Systems live', text: 'CRM, pipelines, and follow-up automation built to keep every lead moving.' },
+  { name: 'WordPress', icon: Globe2, count: '80+', metric: 'Sites shipped', text: 'Custom themes and blocks shaped around your goals — never a generic template.' },
+  { name: 'Shopify', icon: Store, count: '35+', metric: 'Stores built', text: 'Conversion-focused storefronts with clean checkout and useful integrations.' },
+  { name: 'AI / LLMs', icon: Bot, count: '25+', metric: 'Tools deployed', text: 'Chatbots, RAG search, and smart features wired into the systems you already run.' },
+];
+
 const process = [
   ['01', 'Discovery Call', 'Understand the business, goals, and definition of success.'],
   ['02', 'Plan & Proposal', 'Clear scope, timeline, and fixed pricing before work begins.'],
@@ -47,39 +54,62 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <section className="hero relative overflow-hidden" id="home">
-      <div className="hero-image-layer" aria-hidden="true" style={{ backgroundImage: `url(${heroImage})` }} />
-      <div className="hero-glow glow-one relative z-10" />
-      <div className="hero-glow glow-two relative z-10" />
-      <div className="hero-glow glow-three relative z-10" />
+      <section className="hero" id="home">
+        <div className="hero-image-layer" aria-hidden="true" style={{ backgroundImage: `url(${heroImage})` }} />
+        <div className="hero-glow glow-one" aria-hidden="true" />
+        <div className="hero-glow glow-two" aria-hidden="true" />
+        <div className="hero-glow glow-three" aria-hidden="true" />
 
-      {/* Main Content Grid (z-10 ensures it sits above the video and overlay) */}
-      <div className="container hero-grid relative z-10">
-        <div className="hero-copy">
-          <div className="eyebrow"><span className="eyebrow-dot" />Web development & automation agency</div>
-          <h1>Websites and automations that <em>actually</em> grow your business.</h1>
-          <p className="hero-sub">Digtimize builds GoHighLevel automations, custom WordPress and Shopify sites, and AI-powered web solutions for businesses and agencies who need work done right the first time.</p>
-          <div className="hero-actions">
-            <Link className="button button-primary" to="/contact">Get a free project quote <ArrowUpRight size={17} /></Link>
-            <Link className="text-link" to="/work">See our work <ArrowRight size={16} /></Link>
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="eyebrow"><span className="eyebrow-dot" />Web development & automation agency</div>
+            <h1>Websites and automations that <em>actually</em> grow your business.</h1>
+            <p className="hero-sub">Digtimize builds GoHighLevel automations, custom WordPress and Shopify sites, and AI-powered web solutions for businesses and agencies who need work done right the first time.</p>
+            <div className="hero-actions">
+              <Link className="button button-primary" to="/contact">Get a free project quote <ArrowUpRight size={17} /></Link>
+              <Link className="text-link" to="/work">See our work <ArrowRight size={16} /></Link>
+            </div>
+            <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
           </div>
-          <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
+
+          <div className="hero-visual" aria-label="Automation systems visualization">
+            <div className="visual-orbit orbit-a" /><div className="visual-orbit orbit-b" /><div className="visual-orbit orbit-c" />
+            <div className="visual-core"><span className="core-spark"><Sparkles size={25} /></span><b>systems<br /><strong>that move</strong></b></div>
+            <div className="float-card card-crm"><span className="mini-icon purple"><Workflow size={16} /></span><span><small>Lead workflow</small><b>Running smoothly</b></span><span className="status-dot" /></div>
+            <div className="float-card card-ai"><span className="mini-icon blue"><Bot size={16} /></span><span><small>AI assistant</small><b>Ready to help</b></span><span className="signal"><i /><i /><i /></span></div>
+            <div className="float-card card-data"><span className="mini-icon pink"><Database size={16} /></span><span><small>Connected data</small><b>Always in sync</b></span></div>
+            <div className="visual-caption"><span>01</span><span>Automate the ordinary.<br /><b>Build the remarkable.</b></span></div>
+          </div>
         </div>
 
-        <div className="hero-visual" aria-label="Automation systems visualization">
-          <div className="visual-orbit orbit-a" /><div className="visual-orbit orbit-b" /><div className="visual-orbit orbit-c" />
-          <div className="visual-core"><span className="core-spark"><Sparkles size={25} /></span><b>systems<br /><strong>that move</strong></b></div>
-          <div className="float-card card-crm"><span className="mini-icon purple"><Workflow size={16} /></span><span><small>Lead workflow</small><b>Running smoothly</b></span><span className="status-dot" /></div>
-          <div className="float-card card-ai"><span className="mini-icon blue"><Bot size={16} /></span><span><small>AI assistant</small><b>Ready to help</b></span><span className="signal"><i /><i /><i /></span></div>
-          <div className="float-card card-data"><span className="mini-icon pink"><Database size={16} /></span><span><small>Connected data</small><b>Always in sync</b></span></div>
-          <div className="visual-caption"><span>01</span><span>Automate the ordinary.<br /><b>Build the remarkable.</b></span></div>
-        </div>
-      </div>
-
-      <Link to="/services" className="scroll-cue relative z-10"><span>Scroll to explore</span><ArrowDownRight size={17} /></Link>
-</section>
+        <Link to="/services" className="scroll-cue"><span>Scroll to explore</span><ArrowDownRight size={17} /></Link>
+      </section>
 
       <StatsCounter/>
+
+      <section className="section why-platforms-section" id="why-digtimize">
+        <div className="container">
+          <div className="why-platforms-head">
+            <div className="why-platforms-copy">
+              <SectionLabel>Why Digtimize</SectionLabel>
+              <h2>Built on the platforms.<br /><span>Backed by the bench.</span></h2>
+              <p>A senior team across the platforms your business already runs on.</p>
+            </div>
+            <Link className="why-platforms-cta" to="/contact"><ArrowUpRight size={16} />Let's Work Together</Link>
+          </div>
+          <div className="why-platforms-grid">
+            {platforms.map(({ name, icon: Icon, count, metric, text }) => (
+              <article className="why-platform-card" key={name}>
+                <div className="why-platform-top">
+                  <span className="why-platform-badge"><Icon size={16} />{name}</span>
+                  <span className="why-platform-count"><b>{count}</b><small>{metric}</small></span>
+                </div>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section services-section" id="services">
         <div className="container">

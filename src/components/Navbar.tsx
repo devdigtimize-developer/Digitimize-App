@@ -71,10 +71,9 @@ export default function Navbar() {
             <Link 
               key={item.path} 
               to={item.path} 
-              className={`flex items-center gap-1.5 group ${location.pathname === item.path ? 'nav-active' : ''}`}
+              className={location.pathname === item.path ? 'nav-active' : ''}
             >
-              <span>{item.label}</span>
-              <ChevronDown size={14} className="text-slate-400 transition-transform duration-300 group-hover:rotate-180 group-hover:text-slate-950" />
+              {item.label}
             </Link>
           ))}
           <Link className="nav-cta mobile-cta" to="/contact">Get a free quote <ArrowUpRight size={15} /></Link>

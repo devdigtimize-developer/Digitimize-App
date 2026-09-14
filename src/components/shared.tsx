@@ -3,8 +3,10 @@ import logoImage from '@/assets/Digtimizelogo.jpeg';
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className={`logo ${light ? 'logo-light' : ''}`} aria-label="Digitimize home">
-      <span className="logo-image-wrap"><img className="logo-image" src={logoImage} alt="Digtimize" /></span>
+    <Link to="/" className={`logo ${light ? 'logo-light' : ''}`} aria-label="Digtimize home">
+      <span className="logo-image-wrap">
+        <img className="logo-image" src={logoImage} alt="Digtimize" />
+      </span>
     </Link>
   );
 }

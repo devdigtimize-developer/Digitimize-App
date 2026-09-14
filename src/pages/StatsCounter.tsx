@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const statsData = [
-  { value: 3000, suffix: '+', label: 'Successful Projects', comma: true },
-  { value: 1200, suffix: '+', label: 'Global Experts', comma: true },
-  { value: 15, suffix: '+', label: 'Years of Excellence', comma: false },
-  { value: 250, suffix: '+', label: 'Happy Clients', comma: false },
-  { value: 23, suffix: '+', label: 'Countries', comma: false },
+  { value: 6, suffix: '', label: 'Core capabilities', comma: false },
+  { value: 3, suffix: '', label: 'Markets served', comma: false },
+  { value: 4, suffix: '', label: 'Step delivery process', comma: false },
+  { value: 100, suffix: '%', label: 'Fixed scope before build', comma: false },
 ];
 
 type CounterItemProps = {
@@ -18,7 +17,7 @@ type CounterItemProps = {
 function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
-  const itemRef = useRef(null);
+  const itemRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,8 +40,8 @@ function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
     if (!hasStarted) return;
 
     let start = 0;
-    const duration = 2000; // Animation duration in milliseconds (2 seconds)
-    const incrementTime = 30; // Update interval
+    const duration = 1600;
+    const incrementTime = 30;
     const steps = duration / incrementTime;
     const incrementValue = target / steps;
 
@@ -59,9 +58,7 @@ function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
     return () => clearInterval(timer);
   }, [hasStarted, target]);
 
-  const formattedCount = comma 
-    ? count.toLocaleString() 
-    : count;
+  const formattedCount = comma ? count.toLocaleString() : count;
 
   return (
     <div ref={itemRef} className="stat-card">
@@ -78,13 +75,13 @@ export default function StatsCounter() {
     <section className="section stats-section">
       <div className="container">
         <div className="stats-box">
-          {statsData.map((stat, index) => (
-            <CounterItem 
-              key={index} 
-              target={stat.value} 
-              suffix={stat.suffix} 
-              label={stat.label} 
-              comma={stat.comma} 
+          {statsData.map((stat) => (
+            <CounterItem
+              key={stat.label}
+              target={stat.value}
+              suffix={stat.suffix}
+              label={stat.label}
+              comma={stat.comma}
             />
           ))}
         </div>
