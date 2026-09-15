@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-/* Hikasami Sans (SIL OFL 1.1) ÃÂ¢ÃÂÃÂ variable file covers 400-700, static files
+/* Hikasami Sans (SIL OFL 1.1) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ variable file covers 400-700, static files
    cover browsers without variable font support. Licence: public/fonts/OFL.txt */
 @font-face {
     font-family: 'Hikasami';
@@ -81,7 +81,7 @@
 @media(max-width:640px){.container{padding:0 20px}.nav{height:70px}.nav-inner{padding:0 20px}.desktop-cta,.nav-links{display:none}.nav-links-open{position:absolute;display:flex;flex-direction:column;align-items:stretch;gap:0;left:12px;right:12px;top:67px;padding:10px 18px;background:rgba(250,249,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:15px;box-shadow:0 20px 35px rgba(60,50,100,1)}.nav-links-open a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-links-open .mobile-cta{display:flex;border:0;margin:8px 0 4px;justify-content:center;background:var(--gradient);color:#fff;border-radius:100px}.menu-toggle{display:grid;place-items:center;color:var(--ink)}.menu-toggle svg{width:23px}.hero{min-height:auto;padding:130px 0 80px}.hero-grid{gap:55px}.eyebrow{font-size:9px}.hero h1{font-size:48px}.hero-sub{font-size:13px}.hero-actions{align-items:start;flex-direction:column;gap:21px}.trust-line{font-size:9px;gap:6px;flex-wrap:wrap}.trust-line i{display:none}.hero-visual{height:380px;transform:scale(.9);transform-origin:center}.card-crm{left:-8px}.card-ai{right:-15px}.card-data{left:15px}.visual-caption{right:16px}.scroll-cue{display:none}.intro-grid{grid-template-columns:1fr;gap:15px}.intro-grid p{font-size:18px}.intro-arrow{display:none}.intro-number{margin-bottom:5px}.section{padding:85px 0}.section-head{display:block;margin-bottom:45px}.section-head>p{margin-top:22px;font-size:12px}.section-head h2{font-size:39px}.service-grid{grid-template-columns:1fr}.service-item{min-height:255px}.capabilities-grid{gap:45px}.dark-section h2{font-size:43px}.process-line{display:block}.process-item{display:grid;grid-template-columns:55px 1fr;column-gap:18px;padding-bottom:35px}.process-marker{height:auto;grid-row:span 2;margin:0;align-items:start}.process-marker i{position:absolute;left:20px;top:41px;bottom:0;height:auto;border-left:1px solid rgba(134,137,233,.3);border-top:0;width:0}.process-item h3{margin:7px 0 8px}.process-item p{grid-column:2;max-width:none;padding:0}.centered{margin-bottom:55px}.work-feature{min-height:360px}.work-browser{height:210px;margin-top:27px}.browser-content{padding:26px 20px}.browser-content strong{font-size:22px;margin-top:21px}.flow-preview{padding:55px 25px 20px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:340px}.faq-grid{gap:45px}.faq-item button{grid-template-columns:29px 1fr 18px}.faq-item button b{font-size:12px}.faq-answer p{padding-left:41px}.contact-grid{gap:45px}.contact-form{padding:21px 17px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:65px}.footer-top{display:block;padding-bottom:55px}.footer-links{grid-template-columns:1fr 1fr;gap:40px 25px;margin-top:50px}.footer-links div:last-child{grid-column:span 2}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px}.tech-ecosystem{height:360px}.tech-pill{font-size:9px;padding:8px 9px}.tech-1{left:7%}.tech-2{right:4%}.tech-4{right:5%}.tech-6{left:-3%}.tech-8{left:19%}.tech-center{width:105px;height:105px}.ai-panel{min-height:390px}.ai-grid{gap:45px}.page-hero{min-height:360px;padding-top:110px}.page-hero-content h1{font-size:42px}.page-hero-content p{font-size:13px}.process-detail-item{grid-template-columns:1fr;gap:16px}.process-detail-marker span{width:48px;height:48px;font-size:12px}.process-detail-content h3{font-size:19px}.about-card{padding:22px}.value-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Brand tokens ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
+/* Brand tokens ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
 :root {
     --ink: #0a0b10;
     --muted: #555863;
@@ -1832,7 +1832,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     }
 }
 
-/* Dark stats band ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
+/* Dark stats band ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
 .stats-section {
     padding: 56px 0 72px;
     background: var(--wash);
@@ -2026,7 +2026,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     color: var(--subtle);
 }
 
-/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
+/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
 .process-item {
     text-align: left;
 }
@@ -2413,7 +2413,7 @@ h1 em {
     }
 }
 
-/* Single page scroll only ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
+/* Single page scroll only ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2784,7 +2784,7 @@ body {
     color: var(--ink);
 }
 
-/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
+/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
 .hero,
 .page-hero,
 .about-section,
@@ -2881,7 +2881,7 @@ body {
     color: #b4bac8 !important;
 }
 
-/* Soften decorative blobs ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ accents, not fog */
+/* Soften decorative blobs ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ accents, not fog */
 .section:before,
 .section:after,
 .page-hero:before,
@@ -3040,7 +3040,7 @@ body {
     color: #8b91a1 !important;
 }
 
-/* Visual core / tech center ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ richer */
+/* Visual core / tech center ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ richer */
 .visual-core {
     background: rgba(255,255,255,.85) !important;
     border: 1px solid rgba(12, 14, 22, .08) !important;
@@ -3464,6 +3464,167 @@ select,
 
     .hero-media {
         --hero-media-opacity: .34;
+    }
+}
+
+/* ========== Services: white cards with an accent bar ========== */
+.service-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 44px;
+}
+
+.service-head .section-label {
+    margin-bottom: 22px;
+}
+
+.service-head h2 {
+    max-width: 640px;
+    margin: 0 0 16px;
+    color: #14151c;
+    font-size: clamp(30px, 3.1vw, 42px);
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: -.025em;
+}
+
+/* SectionLabel also renders a <p>, so it must be excluded here. */
+.service-head p:not(.section-label) {
+    max-width: 540px;
+    margin: 0;
+    color: #55575f;
+    font-size: clamp(15px, 1.05vw, 16px);
+    line-height: 1.7;
+}
+
+.service-head-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    min-height: 50px;
+    padding: 14px 22px;
+    border: 1px solid rgba(12, 14, 22, .14);
+    border-radius: 100px;
+    background: #ffffff;
+    color: #14151c;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(20, 21, 28, .06);
+    transition: transform .3s var(--motion-ease), box-shadow .3s var(--motion-ease), border-color .3s var(--motion-ease);
+}
+
+.service-head-cta:hover {
+    transform: translateY(-2px);
+    border-color: rgba(12, 14, 22, .3);
+    box-shadow: 0 12px 26px rgba(20, 21, 28, .1);
+}
+
+.service-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 32px 26px 30px;
+    border: 1px solid rgba(12, 14, 22, .09);
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(20, 21, 28, .05);
+    transition: transform .32s var(--motion-ease), box-shadow .32s var(--motion-ease), border-color .32s var(--motion-ease);
+    animation: riseIn .7s var(--motion-ease) both;
+}
+
+.service-card:nth-child(2) { animation-delay: .07s; }
+.service-card:nth-child(3) { animation-delay: .14s; }
+.service-card:nth-child(4) { animation-delay: .21s; }
+.service-card:nth-child(5) { animation-delay: .28s; }
+.service-card:nth-child(6) { animation-delay: .35s; }
+
+/* Accent bar across the top edge, clipped by the card's radius. */
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(12, 14, 22, .16);
+    box-shadow: 0 20px 44px rgba(20, 21, 28, .12);
+}
+
+.service-card-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 22px;
+    border-radius: 13px;
+    color: #5b6bf5;
+    background: #f1f2f6;
+}
+
+.service-card h3 {
+    margin: 0 0 11px;
+    color: #14151c;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -.02em;
+}
+
+.service-card p {
+    margin: 0;
+    color: #55575f;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+@media (max-width: 1080px) {
+    .service-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .service-head {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 26px;
+        margin-bottom: 34px;
+    }
+
+    .service-head-cta {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .service-card {
+        padding: 26px 20px 24px;
+    }
+
+    .service-head-cta {
+        width: 100%;
+        justify-content: center;
     }
 }
 

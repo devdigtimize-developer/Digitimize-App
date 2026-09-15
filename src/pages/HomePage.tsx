@@ -196,8 +196,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <StatsCounter/>
-
       <section className="section shift-section">
         <div className="container shift-grid">
           <div className="shift-copy">
@@ -228,6 +226,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <StatsCounter/>
+
       <section className="section why-platforms-section" id="why-digtimize">
         <div className="container">
           <div className="why-platforms-head">
@@ -254,18 +254,21 @@ export default function HomePage() {
 
       <section className="section services-section" id="services">
         <div className="container">
-          <div className="section-head services-head">
-            <div><SectionLabel>What we do</SectionLabel><h2>Everything you need to <span>build, automate,</span> and grow online.</h2></div>
-            <p>From the first idea to the systems running behind it, we bring strategy, design, and technical execution together.</p>
+          <div className="service-head">
+            <div>
+              <SectionLabel>What we do</SectionLabel>
+              <h2>Everything you need to <span>build, automate,</span> and grow online.</h2>
+              <p>From the first idea to the systems running behind it, we bring strategy, design, and technical execution together.</p>
+            </div>
+            <Link className="service-head-cta" to="/services"><ArrowUpRight size={16} />View all services</Link>
           </div>
-          <div className="service-grid">
-            {services.map(({ number, icon: Icon, title, text }) => (
-              <Link to="/services" className="service-item" key={title}>
-                <span className="service-number">{number}</span>
-                <span className="service-icon"><Icon size={21} /></span>
+
+          <div className="service-card-grid">
+            {services.map(({ icon: Icon, title, text }) => (
+              <Link to="/services" className="service-card" key={title}>
+                <span className="service-card-icon"><Icon size={20} /></span>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <span className="service-arrow"><ArrowUpRight size={18} /></span>
               </Link>
             ))}
           </div>
