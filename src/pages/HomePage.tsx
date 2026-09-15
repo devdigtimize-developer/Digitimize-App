@@ -133,6 +133,17 @@ export default function HomePage() {
         onMouseEnter={() => setSlidesPaused(true)}
         onMouseLeave={() => setSlidesPaused(false)}
       >
+        <div className="hero-media" aria-hidden="true">
+          {heroSlides.map((item, index) => (
+            <img
+              key={item.image}
+              src={item.image}
+              alt=""
+              className={`hero-media-img ${index === activeSlide ? 'is-active' : ''}`}
+            />
+          ))}
+        </div>
+
         <div className="container hero-slider-inner">
           <div className="hero-lead">
             <div className="hero-copy hero-slide-copy" key={activeSlide}>
@@ -181,17 +192,6 @@ export default function HomePage() {
                 </button>
               </div>
             </div>
-          </div>
-
-          <div className="hero-media" aria-hidden="true">
-            {heroSlides.map((item, index) => (
-              <img
-                key={item.image}
-                src={item.image}
-                alt=""
-                className={`hero-media-img ${index === activeSlide ? 'is-active' : ''}`}
-              />
-            ))}
           </div>
         </div>
       </section>

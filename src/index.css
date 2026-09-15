@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-/* Hikasami Sans (SIL OFL 1.1) Ã¢ÂÂ variable file covers 400-700, static files
+/* Hikasami Sans (SIL OFL 1.1) ÃÂ¢ÃÂÃÂ variable file covers 400-700, static files
    cover browsers without variable font support. Licence: public/fonts/OFL.txt */
 @font-face {
     font-family: 'Hikasami';
@@ -81,7 +81,7 @@
 @media(max-width:640px){.container{padding:0 20px}.nav{height:70px}.nav-inner{padding:0 20px}.desktop-cta,.nav-links{display:none}.nav-links-open{position:absolute;display:flex;flex-direction:column;align-items:stretch;gap:0;left:12px;right:12px;top:67px;padding:10px 18px;background:rgba(250,249,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:15px;box-shadow:0 20px 35px rgba(60,50,100,1)}.nav-links-open a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-links-open .mobile-cta{display:flex;border:0;margin:8px 0 4px;justify-content:center;background:var(--gradient);color:#fff;border-radius:100px}.menu-toggle{display:grid;place-items:center;color:var(--ink)}.menu-toggle svg{width:23px}.hero{min-height:auto;padding:130px 0 80px}.hero-grid{gap:55px}.eyebrow{font-size:9px}.hero h1{font-size:48px}.hero-sub{font-size:13px}.hero-actions{align-items:start;flex-direction:column;gap:21px}.trust-line{font-size:9px;gap:6px;flex-wrap:wrap}.trust-line i{display:none}.hero-visual{height:380px;transform:scale(.9);transform-origin:center}.card-crm{left:-8px}.card-ai{right:-15px}.card-data{left:15px}.visual-caption{right:16px}.scroll-cue{display:none}.intro-grid{grid-template-columns:1fr;gap:15px}.intro-grid p{font-size:18px}.intro-arrow{display:none}.intro-number{margin-bottom:5px}.section{padding:85px 0}.section-head{display:block;margin-bottom:45px}.section-head>p{margin-top:22px;font-size:12px}.section-head h2{font-size:39px}.service-grid{grid-template-columns:1fr}.service-item{min-height:255px}.capabilities-grid{gap:45px}.dark-section h2{font-size:43px}.process-line{display:block}.process-item{display:grid;grid-template-columns:55px 1fr;column-gap:18px;padding-bottom:35px}.process-marker{height:auto;grid-row:span 2;margin:0;align-items:start}.process-marker i{position:absolute;left:20px;top:41px;bottom:0;height:auto;border-left:1px solid rgba(134,137,233,.3);border-top:0;width:0}.process-item h3{margin:7px 0 8px}.process-item p{grid-column:2;max-width:none;padding:0}.centered{margin-bottom:55px}.work-feature{min-height:360px}.work-browser{height:210px;margin-top:27px}.browser-content{padding:26px 20px}.browser-content strong{font-size:22px;margin-top:21px}.flow-preview{padding:55px 25px 20px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:340px}.faq-grid{gap:45px}.faq-item button{grid-template-columns:29px 1fr 18px}.faq-item button b{font-size:12px}.faq-answer p{padding-left:41px}.contact-grid{gap:45px}.contact-form{padding:21px 17px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:65px}.footer-top{display:block;padding-bottom:55px}.footer-links{grid-template-columns:1fr 1fr;gap:40px 25px;margin-top:50px}.footer-links div:last-child{grid-column:span 2}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px}.tech-ecosystem{height:360px}.tech-pill{font-size:9px;padding:8px 9px}.tech-1{left:7%}.tech-2{right:4%}.tech-4{right:5%}.tech-6{left:-3%}.tech-8{left:19%}.tech-center{width:105px;height:105px}.ai-panel{min-height:390px}.ai-grid{gap:45px}.page-hero{min-height:360px;padding-top:110px}.page-hero-content h1{font-size:42px}.page-hero-content p{font-size:13px}.process-detail-item{grid-template-columns:1fr;gap:16px}.process-detail-marker span{width:48px;height:48px;font-size:12px}.process-detail-content h3{font-size:19px}.about-card{padding:22px}.value-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Brand tokens ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
+/* Brand tokens ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
 :root {
     --ink: #0a0b10;
     --muted: #555863;
@@ -1832,7 +1832,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     }
 }
 
-/* Dark stats band ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
+/* Dark stats band ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
 .stats-section {
     padding: 56px 0 72px;
     background: var(--wash);
@@ -2026,7 +2026,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     color: var(--subtle);
 }
 
-/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
+/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
 .process-item {
     text-align: left;
 }
@@ -2413,7 +2413,7 @@ h1 em {
     }
 }
 
-/* Single page scroll only ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
+/* Single page scroll only ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2784,7 +2784,7 @@ body {
     color: var(--ink);
 }
 
-/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
+/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
 .hero,
 .page-hero,
 .about-section,
@@ -2881,7 +2881,7 @@ body {
     color: #b4bac8 !important;
 }
 
-/* Soften decorative blobs ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ accents, not fog */
+/* Soften decorative blobs ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ accents, not fog */
 .section:before,
 .section:after,
 .page-hero:before,
@@ -3040,7 +3040,7 @@ body {
     color: #8b91a1 !important;
 }
 
-/* Visual core / tech center ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ richer */
+/* Visual core / tech center ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ richer */
 .visual-core {
     background: rgba(255,255,255,.85) !important;
     border: 1px solid rgba(12, 14, 22, .08) !important;
@@ -3187,7 +3187,7 @@ select,
 .hero-slider {
     display: flex;
     align-items: center;
-    min-height: 0;
+    min-height: clamp(560px, 38vw, 730px);
     padding: 124px 0 84px;
     color: #ffffff;
     /* Per-slide colour comes from the artwork's own edges (set inline as a
@@ -3197,27 +3197,31 @@ select,
     transition: background-color 1.4s ease-in-out;
 }
 
-/* Text column left, artwork column right. */
 .hero-slider-inner {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
-    align-items: center;
-    gap: 52px;
+}
+
+.hero-lead {
+    max-width: 560px;
 }
 
 .hero-slider .hero-copy {
-    max-width: 620px;
+    max-width: 560px;
 }
 
-/* The artwork is 1920x843 with its subject on the right, so a near-square
-   box cropped from the right edge frames the subject and drops the empty
-   navy. A fixed aspect ratio keeps that crop identical at every width. */
+/* Artwork bleeds off the right edge and fills the hero's full height, with
+   its left side dissolving into the flat backdrop rather than ending on an
+   edge. Text sits clear of it in the left column. */
 .hero-media {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.2 / 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 60%;
+    pointer-events: none;
+    --hero-media-opacity: 1;
 }
 
 .hero-media-img {
@@ -3230,13 +3234,12 @@ select,
     opacity: 0;
     transition: opacity 1.4s ease-in-out;
     will-change: opacity, transform;
-    /* Feathered edges melt the photo into the flat panel behind it. */
-    -webkit-mask-image: radial-gradient(115% 112% at 52% 50%, #000 54%, rgba(0, 0, 0, .55) 79%, transparent 100%);
-    mask-image: radial-gradient(115% 112% at 52% 50%, #000 54%, rgba(0, 0, 0, .55) 79%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .14) 16%, rgba(0, 0, 0, .55) 30%, #000 46%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .14) 16%, rgba(0, 0, 0, .55) 30%, #000 46%, #000 100%);
 }
 
 .hero-media-img.is-active {
-    opacity: 1;
+    opacity: var(--hero-media-opacity);
     /* One continuous drift across the slide rather than a quick snap. */
     animation: heroDrift calc(var(--hero-slide-duration, 6000ms) + 1400ms) linear both;
 }
@@ -3397,24 +3400,28 @@ select,
 }
 
 @media (max-width: 900px) {
-    /* Artwork moves below the copy, so it can run wider and shorter. */
     .hero-slider {
         padding: 118px 0 64px;
     }
 
-    .hero-slider-inner {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 34px;
+    /* Too narrow for side-by-side, so the artwork becomes a faded backdrop
+       behind the copy and the fade turns vertical. */
+    .hero-media {
+        width: 100%;
+        --hero-media-opacity: .42;
     }
 
+    .hero-media-img {
+        object-position: 74% center;
+        -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .4) 34%, #000 100%);
+        mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .4) 34%, #000 100%);
+    }
+
+    .hero-lead,
     .hero-slider .hero-copy,
     .hero-slider h1,
     .hero-slider .hero-sub {
         max-width: 640px;
-    }
-
-    .hero-media {
-        aspect-ratio: 1.75 / 1;
     }
 }
 
@@ -3456,7 +3463,7 @@ select,
     }
 
     .hero-media {
-        aspect-ratio: 1.45 / 1;
+        --hero-media-opacity: .34;
     }
 }
 
