@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-/* Hikasami Sans (SIL OFL 1.1) â variable file covers 400-700, static files
+/* Hikasami Sans (SIL OFL 1.1) Ã¢ÂÂ variable file covers 400-700, static files
    cover browsers without variable font support. Licence: public/fonts/OFL.txt */
 @font-face {
     font-family: 'Hikasami';
@@ -81,7 +81,7 @@
 @media(max-width:640px){.container{padding:0 20px}.nav{height:70px}.nav-inner{padding:0 20px}.desktop-cta,.nav-links{display:none}.nav-links-open{position:absolute;display:flex;flex-direction:column;align-items:stretch;gap:0;left:12px;right:12px;top:67px;padding:10px 18px;background:rgba(250,249,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:15px;box-shadow:0 20px 35px rgba(60,50,100,1)}.nav-links-open a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-links-open .mobile-cta{display:flex;border:0;margin:8px 0 4px;justify-content:center;background:var(--gradient);color:#fff;border-radius:100px}.menu-toggle{display:grid;place-items:center;color:var(--ink)}.menu-toggle svg{width:23px}.hero{min-height:auto;padding:130px 0 80px}.hero-grid{gap:55px}.eyebrow{font-size:9px}.hero h1{font-size:48px}.hero-sub{font-size:13px}.hero-actions{align-items:start;flex-direction:column;gap:21px}.trust-line{font-size:9px;gap:6px;flex-wrap:wrap}.trust-line i{display:none}.hero-visual{height:380px;transform:scale(.9);transform-origin:center}.card-crm{left:-8px}.card-ai{right:-15px}.card-data{left:15px}.visual-caption{right:16px}.scroll-cue{display:none}.intro-grid{grid-template-columns:1fr;gap:15px}.intro-grid p{font-size:18px}.intro-arrow{display:none}.intro-number{margin-bottom:5px}.section{padding:85px 0}.section-head{display:block;margin-bottom:45px}.section-head>p{margin-top:22px;font-size:12px}.section-head h2{font-size:39px}.service-grid{grid-template-columns:1fr}.service-item{min-height:255px}.capabilities-grid{gap:45px}.dark-section h2{font-size:43px}.process-line{display:block}.process-item{display:grid;grid-template-columns:55px 1fr;column-gap:18px;padding-bottom:35px}.process-marker{height:auto;grid-row:span 2;margin:0;align-items:start}.process-marker i{position:absolute;left:20px;top:41px;bottom:0;height:auto;border-left:1px solid rgba(134,137,233,.3);border-top:0;width:0}.process-item h3{margin:7px 0 8px}.process-item p{grid-column:2;max-width:none;padding:0}.centered{margin-bottom:55px}.work-feature{min-height:360px}.work-browser{height:210px;margin-top:27px}.browser-content{padding:26px 20px}.browser-content strong{font-size:22px;margin-top:21px}.flow-preview{padding:55px 25px 20px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:340px}.faq-grid{gap:45px}.faq-item button{grid-template-columns:29px 1fr 18px}.faq-item button b{font-size:12px}.faq-answer p{padding-left:41px}.contact-grid{gap:45px}.contact-form{padding:21px 17px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:65px}.footer-top{display:block;padding-bottom:55px}.footer-links{grid-template-columns:1fr 1fr;gap:40px 25px;margin-top:50px}.footer-links div:last-child{grid-column:span 2}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block}.footer-bottom span:last-child{margin-top:7px}.tech-ecosystem{height:360px}.tech-pill{font-size:9px;padding:8px 9px}.tech-1{left:7%}.tech-2{right:4%}.tech-4{right:5%}.tech-6{left:-3%}.tech-8{left:19%}.tech-center{width:105px;height:105px}.ai-panel{min-height:390px}.ai-grid{gap:45px}.page-hero{min-height:360px;padding-top:110px}.page-hero-content h1{font-size:42px}.page-hero-content p{font-size:13px}.process-detail-item{grid-template-columns:1fr;gap:16px}.process-detail-marker span{width:48px;height:48px;font-size:12px}.process-detail-content h3{font-size:19px}.about-card{padding:22px}.value-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Brand tokens ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
+/* Brand tokens ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ logo magenta ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ purple ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ electric blue, used as accents not washes */
 :root {
     --ink: #0a0b10;
     --muted: #555863;
@@ -1832,7 +1832,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     }
 }
 
-/* Dark stats band ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
+/* Dark stats band ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ intentional contrast block (not nested in mobile-only rules). */
 .stats-section {
     padding: 56px 0 72px;
     background: var(--wash);
@@ -2026,7 +2026,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
     color: var(--subtle);
 }
 
-/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
+/* Process markers: circle on the left, connector through the row ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ not centered-over */
 .process-item {
     text-align: left;
 }
@@ -2413,7 +2413,7 @@ h1 em {
     }
 }
 
-/* Single page scroll only ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
+/* Single page scroll only ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ do NOT set overflow-x on body/main/sections with visible-y */
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -2784,7 +2784,7 @@ body {
     color: var(--ink);
 }
 
-/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
+/* Kill pastel lilac washes ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ crisp white / cool gray / deep charcoal */
 .hero,
 .page-hero,
 .about-section,
@@ -2881,7 +2881,7 @@ body {
     color: #b4bac8 !important;
 }
 
-/* Soften decorative blobs ÃÂÃÂÃÂÃÂ accents, not fog */
+/* Soften decorative blobs ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ accents, not fog */
 .section:before,
 .section:after,
 .page-hero:before,
@@ -3040,7 +3040,7 @@ body {
     color: #8b91a1 !important;
 }
 
-/* Visual core / tech center ÃÂÃÂÃÂÃÂ richer */
+/* Visual core / tech center ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ richer */
 .visual-core {
     background: rgba(255,255,255,.85) !important;
     border: 1px solid rgba(12, 14, 22, .08) !important;
@@ -3187,66 +3187,63 @@ select,
 .hero-slider {
     display: flex;
     align-items: center;
-    min-height: clamp(580px, 42vw, 760px);
-    padding: 132px 0 76px;
+    min-height: 0;
+    padding: 124px 0 84px;
     color: #ffffff;
-    /* Matches the navy in the slide artwork so any edge is seamless. */
-    background: #071018 !important;
+    /* Per-slide colour comes from the artwork's own edges (set inline as a
+       custom property) so the flat panel and the image are the same navy. */
+    background-color: var(--hero-backdrop, #000c26) !important;
     background-image: none !important;
+    transition: background-color 1.4s ease-in-out;
 }
 
-.hero-slide-track {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+/* Text column left, artwork column right. */
+.hero-slider-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+    align-items: center;
+    gap: 52px;
 }
 
-/* The artwork is 1920x843 with its subject on the right and empty navy on
-   the left, so anchoring right keeps the subject whole and trims only the
-   empty side. No blur and no wash: the scrim carries the text contrast. */
-.hero-slide-bg {
+.hero-slider .hero-copy {
+    max-width: 620px;
+}
+
+/* The artwork is 1920x843 with its subject on the right, so a near-square
+   box cropped from the right edge frames the subject and drops the empty
+   navy. A fixed aspect ratio keeps that crop identical at every width. */
+.hero-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.2 / 1;
+}
+
+.hero-media-img {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
     opacity: 0;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: scale(1);
-    transform-origin: 78% center;
     transition: opacity 1.4s ease-in-out;
     will-change: opacity, transform;
+    /* Feathered edges melt the photo into the flat panel behind it. */
+    -webkit-mask-image: radial-gradient(115% 112% at 52% 50%, #000 54%, rgba(0, 0, 0, .55) 79%, transparent 100%);
+    mask-image: radial-gradient(115% 112% at 52% 50%, #000 54%, rgba(0, 0, 0, .55) 79%, transparent 100%);
 }
 
-.hero-slide-bg.is-active {
+.hero-media-img.is-active {
     opacity: 1;
-    /* One continuous drift across the whole slide rather than a quick snap. */
+    /* One continuous drift across the slide rather than a quick snap. */
     animation: heroDrift calc(var(--hero-slide-duration, 6000ms) + 1400ms) linear both;
 }
 
 @keyframes heroDrift {
     from { transform: scale(1); }
-    to { transform: scale(1.035); }
-}
-
-.hero-scrim {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    /* Light touch: the artwork is already dark on the left, so this only
-       guarantees contrast and leaves the right side untouched. */
-    background:
-        linear-gradient(96deg, rgba(5, 10, 18, .82) 0%, rgba(5, 10, 18, .6) 28%, rgba(5, 10, 18, .22) 52%, rgba(5, 10, 18, 0) 74%),
-        linear-gradient(180deg, rgba(5, 10, 18, .34) 0%, rgba(5, 10, 18, 0) 24%, rgba(5, 10, 18, 0) 74%, rgba(5, 10, 18, .34) 100%);
-}
-
-.hero-slider-inner {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-slider .hero-copy {
-    max-width: 720px;
+    to { transform: scale(1.045); }
 }
 
 .hero-slider .eyebrow {
@@ -3265,14 +3262,13 @@ select,
 /* Hikasami is geometric and reads heavy at display sizes, so medium weight
    with relaxed tracking holds together far better than the old 800. */
 .hero-slider h1 {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 0 24px;
     color: #ffffff;
-    font-size: clamp(38px, 4.4vw, 60px);
+    font-size: clamp(34px, 3.7vw, 54px);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: -.022em;
-    text-shadow: 0 2px 30px rgba(0, 0, 0, .45);
 }
 
 .hero-slider h1 .hero-accent {
@@ -3284,12 +3280,11 @@ select,
 }
 
 .hero-slider .hero-sub {
-    max-width: 560px;
-    margin-bottom: 38px;
-    color: rgba(255, 255, 255, .87) !important;
-    font-size: clamp(17px, 1.35vw, 19px) !important;
+    max-width: 520px;
+    margin-bottom: 36px;
+    color: rgba(255, 255, 255, .84) !important;
+    font-size: clamp(16px, 1.2vw, 18px) !important;
     line-height: 1.7;
-    text-shadow: 0 1px 18px rgba(0, 0, 0, .45);
 }
 
 .hero-slider .text-link {
@@ -3391,7 +3386,7 @@ select,
     animation: heroDotFill var(--hero-slide-duration, 2000ms) linear forwards;
 }
 
-.hero-slider.is-paused .hero-slide-bg,
+.hero-slider.is-paused .hero-media-img,
 .hero-slider.is-paused .hero-dot-fill {
     animation-play-state: paused;
 }
@@ -3402,27 +3397,30 @@ select,
 }
 
 @media (max-width: 900px) {
+    /* Artwork moves below the copy, so it can run wider and shorter. */
     .hero-slider {
-        min-height: 560px;
-        padding: 124px 0 68px;
+        padding: 118px 0 64px;
     }
 
+    .hero-slider-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+    }
+
+    .hero-slider .hero-copy,
+    .hero-slider h1,
     .hero-slider .hero-sub {
-        max-width: 520px;
+        max-width: 640px;
     }
 
-    /* Less empty navy to hide behind, so the scrim reaches further right. */
-    .hero-scrim {
-        background:
-            linear-gradient(96deg, rgba(5, 10, 18, .88) 0%, rgba(5, 10, 18, .74) 42%, rgba(5, 10, 18, .42) 74%, rgba(5, 10, 18, .18) 100%),
-            linear-gradient(180deg, rgba(5, 10, 18, .4) 0%, rgba(5, 10, 18, 0) 30%, rgba(5, 10, 18, .4) 100%);
+    .hero-media {
+        aspect-ratio: 1.75 / 1;
     }
 }
 
 @media (max-width: 640px) {
     .hero-slider {
-        min-height: 500px;
-        padding: 104px 0 56px;
+        padding: 100px 0 52px;
     }
 
     .hero-slider h1 {
@@ -3457,9 +3455,8 @@ select,
         height: 40px;
     }
 
-    /* The subject fills a portrait viewport, so text needs an even scrim. */
-    .hero-scrim {
-        background: linear-gradient(180deg, rgba(5, 10, 18, .78) 0%, rgba(5, 10, 18, .6) 45%, rgba(5, 10, 18, .8) 100%);
+    .hero-media {
+        aspect-ratio: 1.45 / 1;
     }
 }
 

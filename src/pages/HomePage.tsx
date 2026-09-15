@@ -30,6 +30,8 @@ const HERO_SLIDE_MS = 6000;
 const heroSlides = [
   {
     image: heroSlideOne,
+    /* Sampled from each image's own edges so the panel blends into the page. */
+    backdrop: '#000c26',
     eyebrow: 'Web development & automation agency',
     titleStart: 'Websites and automations that ',
     titleAccent: 'actually',
@@ -40,6 +42,7 @@ const heroSlides = [
   },
   {
     image: heroSlideTwo,
+    backdrop: '#02070f',
     eyebrow: 'AI, automation & custom software',
     titleStart: 'Systems that ',
     titleAccent: 'do more',
@@ -123,67 +126,72 @@ export default function HomePage() {
       <section
         className={`hero hero-slider ${slidesPaused ? 'is-paused' : ''}`}
         id="home"
-        style={{ '--hero-slide-duration': `${HERO_SLIDE_MS}ms` } as CSSProperties}
+        style={{
+          '--hero-slide-duration': `${HERO_SLIDE_MS}ms`,
+          '--hero-backdrop': slide.backdrop,
+        } as CSSProperties}
         onMouseEnter={() => setSlidesPaused(true)}
         onMouseLeave={() => setSlidesPaused(false)}
       >
-        <div className="hero-slide-track" aria-hidden="true">
-          {heroSlides.map((item, index) => (
-            <div
-              key={item.image}
-              className={`hero-slide-bg ${index === activeSlide ? 'is-active' : ''}`}
-              style={{ backgroundImage: `url(${item.image})` }}
-            />
-          ))}
-        </div>
-        <div className="hero-scrim" aria-hidden="true" />
-
         <div className="container hero-slider-inner">
-          <div className="hero-copy hero-slide-copy" key={activeSlide}>
-            <div className="eyebrow"><span className="eyebrow-dot" />{slide.eyebrow}</div>
-            <h1>{slide.titleStart}<span className="hero-accent">{slide.titleAccent}</span>{slide.titleEnd}</h1>
-            <p className="hero-sub">{slide.sub}</p>
-            <div className="hero-actions">
-              <Link className="button button-primary" to={slide.primary.to}>{slide.primary.label} <ArrowUpRight size={17} /></Link>
-              <Link className="text-link" to={slide.secondary.to}>{slide.secondary.label} <ArrowRight size={16} /></Link>
+          <div className="hero-lead">
+            <div className="hero-copy hero-slide-copy" key={activeSlide}>
+              <div className="eyebrow"><span className="eyebrow-dot" />{slide.eyebrow}</div>
+              <h1>{slide.titleStart}<span className="hero-accent">{slide.titleAccent}</span>{slide.titleEnd}</h1>
+              <p className="hero-sub">{slide.sub}</p>
+              <div className="hero-actions">
+                <Link className="button button-primary" to={slide.primary.to}>{slide.primary.label} <ArrowUpRight size={17} /></Link>
+                <Link className="text-link" to={slide.secondary.to}>{slide.secondary.label} <ArrowRight size={16} /></Link>
+              </div>
+              <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
             </div>
-            <div className="trust-line">Based in Pakistan <i /> Serving clients across the US, UK & beyond</div>
+
+            <div className="hero-controls">
+              <div className="hero-dots">
+                {heroSlides.map((item, index) => (
+                  <button
+                    key={item.image}
+                    type="button"
+                    className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
+                    aria-label={`Show slide ${index + 1}`}
+                    aria-current={index === activeSlide}
+                    onClick={() => setActiveSlide(index)}
+                  >
+                    <span className="hero-dot-fill" />
+                  </button>
+                ))}
+              </div>
+
+              <div className="hero-arrows">
+                <button
+                  type="button"
+                  className="hero-arrow"
+                  aria-label="Previous slide"
+                  onClick={() => setActiveSlide((current) => (current - 1 + heroSlides.length) % heroSlides.length)}
+                >
+                  <ArrowLeft size={18} />
+                </button>
+                <button
+                  type="button"
+                  className="hero-arrow"
+                  aria-label="Next slide"
+                  onClick={() => setActiveSlide((current) => (current + 1) % heroSlides.length)}
+                >
+                  <ArrowRight size={18} />
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="hero-controls">
-            <div className="hero-dots">
-              {heroSlides.map((item, index) => (
-                <button
-                  key={item.image}
-                  type="button"
-                  className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
-                  aria-label={`Show slide ${index + 1}`}
-                  aria-current={index === activeSlide}
-                  onClick={() => setActiveSlide(index)}
-                >
-                  <span className="hero-dot-fill" />
-                </button>
-              ))}
-            </div>
-
-            <div className="hero-arrows">
-              <button
-                type="button"
-                className="hero-arrow"
-                aria-label="Previous slide"
-                onClick={() => setActiveSlide((current) => (current - 1 + heroSlides.length) % heroSlides.length)}
-              >
-                <ArrowLeft size={18} />
-              </button>
-              <button
-                type="button"
-                className="hero-arrow"
-                aria-label="Next slide"
-                onClick={() => setActiveSlide((current) => (current + 1) % heroSlides.length)}
-              >
-                <ArrowRight size={18} />
-              </button>
-            </div>
+          <div className="hero-media" aria-hidden="true">
+            {heroSlides.map((item, index) => (
+              <img
+                key={item.image}
+                src={item.image}
+                alt=""
+                className={`hero-media-img ${index === activeSlide ? 'is-active' : ''}`}
+              />
+            ))}
           </div>
         </div>
       </section>
