@@ -2,9 +2,9 @@ export const FOUNDER = {
   name: 'Manam Shahid',
   role: 'CEO & Founder, Digtimize',
   shortRole: 'CEO, Digtimize',
-  /** Drop the photo at public/images/founder.jpg and set photoReady to true */
-  image: '/images/founder.jpg',
-  photoReady: false,
+  image: '/images/cofounder.png',
+  photoReady: true,
+  linkedin: 'https://www.linkedin.com/in/manambhatti/',
   initials: 'MS',
   shortBio:
     'Manam Shahid is the founder and CEO of Digtimize. He helps businesses turn ideas into practical digital solutions — from websites and stores to automation and custom software.',

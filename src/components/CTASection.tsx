@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { SectionLabel } from './shared';
+import { CONTACT } from '@/lib/contact';
 
 export default function CTASection() {
   return (
@@ -12,9 +13,13 @@ export default function CTASection() {
           <h2>Ready to take the <span>next clear step?</span></h2>
           <p>Tell us about your business goals. We will reply with a simple next step — no pressure, no technical homework required.</p>
           <div className="contact-details">
-            <a href="mailto:info@digtimize.com">info@digtimize.com</a>
-            <a href="tel:+923220739653">+92 322 0739653</a>
-            <span>Pakistan · Working worldwide</span>
+            {CONTACT.emails.map((email) => (
+              <a key={email} href={`mailto:${email}`}>
+                {email}
+              </a>
+            ))}
+            <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phoneDisplay}</a>
+            <span>{CONTACT.location} · Working worldwide</span>
           </div>
         </div>
         <div className="cta-actions">

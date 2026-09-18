@@ -5,7 +5,7 @@ export default function TeamProfileCard({ profile }: { profile: SeniorProfile })
   return (
     <article className="about-person">
       <div className="about-person-media">
-        {profile.photo ? <img src={profile.photo} alt="" /> : <span>{profile.initials}</span>}
+        {profile.photo ? <img src={profile.photo} alt={profile.name} /> : <span>{profile.initials}</span>}
       </div>
       <div>
         <div className="about-person-row">

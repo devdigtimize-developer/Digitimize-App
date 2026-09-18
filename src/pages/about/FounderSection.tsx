@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Linkedin } from 'lucide-react';
 import { SectionLabel } from '@/components/shared';
 import { FOUNDER } from './founderData';
 
@@ -14,20 +14,20 @@ export default function FounderSection() {
 
       <div className="container about-founder-wrap">
         <div className="about-founder-head">
-          <SectionLabel>The founder</SectionLabel>
+          <SectionLabel>The co-founder</SectionLabel>
           <h2>
-            Meet the founder behind{' '}
+            Meet the co-founder behind{' '}
             <span className="hero-story-accent">Digtimize.</span>
           </h2>
         </div>
 
         <div className="about-founder-feature">
-          <Link
-            to={FOUNDER.profilePath}
-            className="about-founder-card"
-            aria-label={`View ${FOUNDER.name}'s founder profile`}
-          >
-            <div className="about-founder-photo">
+          <article className="about-founder-card">
+            <Link
+              to={FOUNDER.profilePath}
+              className="about-founder-photo"
+              aria-label={`View ${FOUNDER.name}'s founder profile`}
+            >
               {FOUNDER.photoReady ? (
                 <img src={FOUNDER.image} alt={FOUNDER.name} />
               ) : (
@@ -36,22 +36,33 @@ export default function FounderSection() {
                 </span>
               )}
               <i className="about-founder-photo-ring" aria-hidden="true" />
-            </div>
+            </Link>
 
             <div className="about-founder-card-body">
-              <p className="about-founder-kicker">Founder</p>
-              <h3>{FOUNDER.name}</h3>
+              <p className="about-founder-kicker">Co-founder</p>
+              <div className="about-founder-name-row">
+                <h3>{FOUNDER.name}</h3>
+                <a
+                  className="about-founder-linkedin"
+                  href={FOUNDER.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${FOUNDER.name} on LinkedIn`}
+                >
+                  <Linkedin size={16} />
+                </a>
+              </div>
               <p className="about-founder-role">{FOUNDER.shortRole}</p>
               <ul className="about-founder-tags">
                 {FOUNDER.expertise.slice(0, 3).map((tag) => (
                   <li key={tag}>{tag}</li>
                 ))}
               </ul>
-              <span className="about-founder-card-cta">
+              <Link className="about-founder-card-cta" to={FOUNDER.profilePath}>
                 View profile <ArrowUpRight size={15} />
-              </span>
+              </Link>
             </div>
-          </Link>
+          </article>
 
           <div className="about-founder-copy">
             <p>{FOUNDER.shortBio}</p>

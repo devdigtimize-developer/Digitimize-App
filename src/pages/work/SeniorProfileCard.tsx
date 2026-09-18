@@ -6,7 +6,7 @@ export default function SeniorProfileCard({ profile }: { profile: SeniorProfile 
     <article className="work-profile">
       <div className="work-profile-media">
         {profile.photo ? (
-          <img src={profile.photo} alt="" />
+          <img src={profile.photo} alt={profile.name} />
         ) : (
           <span>{profile.initials}</span>
         )}

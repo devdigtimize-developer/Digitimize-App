@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Logo } from './shared';
+import { CONTACT } from '@/lib/contact';
 
 export default function Footer() {
   return (
@@ -31,10 +32,13 @@ export default function Footer() {
             </div>
             <div>
               <b>Contact</b>
-              <a href="mailto:info@digtimize.com">info@digtimize.com</a>
-              <span>+92 322 0739653</span>
-              <span>+92 309 8180851</span>
-              <span>Pakistan</span>
+              {CONTACT.emails.map((email) => (
+                <a key={email} href={`mailto:${email}`}>
+                  {email}
+                </a>
+              ))}
+              <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phoneDisplay}</a>
+              <span>{CONTACT.location}</span>
             </div>
           </div>
         </div>

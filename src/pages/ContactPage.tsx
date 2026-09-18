@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { ArrowLeft, ArrowRight, Check, Globe2, Mail, Phone } from 'lucide-react';
 import { sendQuoteEmails } from '@/lib/sendQuoteEmails';
+import { CONTACT } from '@/lib/contact';
 
 const services = [
   'Website / WordPress',
@@ -244,10 +245,15 @@ export default function ContactPage() {
           </ol>
 
           <div className="quote-details">
-            <a href="mailto:info@digtimize.com"><Mail size={16} /> info@digtimize.com</a>
-            <a href="tel:+923220739653"><Phone size={16} /> +92 322 0739653</a>
-            <a href="tel:+923098180851"><Phone size={16} /> +92 309 8180851</a>
-            <span><Globe2 size={16} /> Pakistan · Working worldwide</span>
+            {CONTACT.emails.map((email) => (
+              <a key={email} href={`mailto:${email}`}>
+                <Mail size={16} /> {email}
+              </a>
+            ))}
+            <a href={`tel:${CONTACT.phoneTel}`}>
+              <Phone size={16} /> {CONTACT.phoneDisplay}
+            </a>
+            <span><Globe2 size={16} /> {CONTACT.location} · Working worldwide</span>
           </div>
         </div>
 

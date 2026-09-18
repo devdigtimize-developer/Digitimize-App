@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Linkedin } from 'lucide-react';
 import { SectionLabel } from '@/components/shared';
 import { FOUNDER } from './about/founderData';
 
@@ -28,7 +28,18 @@ export default function FounderPage() {
                 Meet the person behind{' '}
                 <span className="hero-story-accent">Digtimize.</span>
               </h1>
-              <p className="founder-hero-name">{FOUNDER.name}</p>
+              <div className="founder-hero-name-row">
+                <p className="founder-hero-name">{FOUNDER.name}</p>
+                <a
+                  className="about-founder-linkedin"
+                  href={FOUNDER.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${FOUNDER.name} on LinkedIn`}
+                >
+                  <Linkedin size={18} />
+                </a>
+              </div>
               <p className="founder-hero-role">{FOUNDER.role}</p>
               <p>{FOUNDER.shortBio}</p>
             </div>
