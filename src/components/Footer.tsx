@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Logo light />
-            <p>Web development, automation, AI, and custom digital solutions for growing businesses.</p>
+            <p>Web development, automation, AI helpers, and custom digital solutions for growing businesses.</p>
           </div>
           <div className="footer-links">
             <div>
@@ -22,12 +22,12 @@ export default function Footer() {
             </div>
             <div>
               <b>Services</b>
-              <Link to="/services">GoHighLevel</Link>
-              <Link to="/services">WordPress</Link>
-              <Link to="/services">Shopify</Link>
-              <Link to="/services">AI development</Link>
-              <Link to="/services">Custom coding</Link>
-              <Link to="/services">Digital marketing</Link>
+              <Link to="/services/gohighlevel-automation">GoHighLevel</Link>
+              <Link to="/services/web-development">Web development</Link>
+              <Link to="/services/shopify-development">Shopify</Link>
+              <Link to="/services/mobile-app-development">Mobile apps</Link>
+              <Link to="/services/custom-software">Custom software</Link>
+              <Link to="/services">All services</Link>
             </div>
             <div>
               <b>Contact</b>
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Digtimize. Built with intention.</span>
-          <span>Websites · Automations · AI</span>
+          <span>Websites · Automation · Growth</span>
         </div>
       </div>
     </footer>

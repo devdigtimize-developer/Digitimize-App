@@ -9,8 +9,8 @@ export default function CTASection() {
       <div className="container contact-grid contact-grid-cta">
         <div>
           <SectionLabel>Let's build something useful</SectionLabel>
-          <h2>Ready to build something that <span>actually works?</span></h2>
-          <p>Book a free discovery call. No pressure, no obligation — just a clear picture of what is possible.</p>
+          <h2>Ready to take the <span>next clear step?</span></h2>
+          <p>Tell us about your business goals. We will reply with a simple next step — no pressure, no technical homework required.</p>
           <div className="contact-details">
             <a href="mailto:info@digtimize.com">info@digtimize.com</a>
             <a href="tel:+923220739653">+92 322 0739653</a>
@@ -18,8 +18,8 @@ export default function CTASection() {
           </div>
         </div>
         <div className="cta-actions">
-          <Link className="button button-primary" to="/contact">Book a free call <ArrowUpRight size={17} /></Link>
-          <Link className="button button-outline-light" to="/contact">Get a project quote <ArrowUpRight size={17} /></Link>
+          <Link className="button button-primary" to="/contact">Tell us about your business <ArrowUpRight size={17} /></Link>
+          <Link className="button button-outline-light" to="/services">Explore our services <ArrowUpRight size={17} /></Link>
         </div>
       </div>
     </section>

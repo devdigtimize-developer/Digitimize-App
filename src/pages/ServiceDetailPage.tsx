@@ -1,7 +1,19 @@
-import { ArrowRight, ArrowUpRight, Check, Code2, Globe2, Smartphone, Store, Workflow } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import { Check, Code2, Globe2, Smartphone, Store, Workflow } from 'lucide-react';
+import { useParams } from 'react-router-dom';
 import { SectionLabel } from '@/components/shared';
 import CTASection from '@/components/CTASection';
+import WebsiteStory from '@/components/web-story/WebsiteStory';
+import WebDevHero from '@/components/web-story/WebDevHero';
+import MobileAppHero from '@/components/web-story/MobileAppHero';
+import WebDevStats from '@/components/web-story/WebDevStats';
+import MobileStoryVisual from '@/components/web-story/MobileStoryVisual';
+import { mobileStorySlides } from '@/components/web-story/mobileStorySlides';
+import ServiceHero from '@/components/web-story/ServiceHero';
+import FieldStoryVisual from '@/components/web-story/FieldStoryVisual';
+import { ghlStorySlides } from '@/components/web-story/ghlStorySlides';
+import { ecomStorySlides } from '@/components/web-story/ecomStorySlides';
+import { shopifyStorySlides } from '@/components/web-story/shopifyStorySlides';
+import { softwareStorySlides } from '@/components/web-story/softwareStorySlides';
 
 type ServiceContent = {
   icon: typeof Workflow;
@@ -19,6 +31,55 @@ const steps = [
   ['Build and validate', 'We work in visible stages, testing the important details before launch.'],
   ['Launch and improve', 'The first release gives us a foundation to measure, learn, and keep improving.'],
 ];
+
+const fieldLayouts = {
+  'gohighlevel-automation': {
+    theme: 'default' as const,
+    processClass: 'webdev-process',
+    storyClass: 'webstory-mid',
+    slides: ghlStorySlides,
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80',
+    heading: (
+      <>
+        Lead systems<br />
+        built to keep<br />
+        <span className="hero-story-accent">every conversation moving.</span>
+      </>
+    ),
+    lede: 'GoHighLevel pipelines, follow-up, funnels, and calendars set up around how you actually sell — so leads stop stalling after the first message.',
+  },
+  'ecommerce-development': {
+    theme: 'default' as const,
+    processClass: 'webdev-process',
+    storyClass: 'webstory-mid',
+    slides: ecomStorySlides,
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=80',
+    heading: (
+      <>
+        Commerce built<br />
+        to turn browsing<br />
+        <span className="hero-story-accent">into buying.</span>
+      </>
+    ),
+    lede: 'Storefront, product journey, checkout, and operations connected so customers can buy with confidence on desktop and mobile.',
+  },
+  'shopify-development': {
+    theme: 'default' as const,
+    processClass: 'webdev-process',
+    storyClass: 'webstory-mid',
+    slides: shopifyStorySlides,
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=80',
+    brandMark: 'https://cdn.worldvectorlogo.com/logos/shopify.svg',
+    heading: (
+      <>
+        Shopify stores<br />
+        built for the<br />
+        <span className="hero-story-accent">next stage of growth.</span>
+      </>
+    ),
+    lede: 'Theme, sections, checkout, and apps shaped around your catalog so the team can merchandise in Shopify — not wait on a developer for every change.',
+  },
+};
 
 const images = [
   'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85',
@@ -38,14 +99,143 @@ const serviceDetails: Record<string, ServiceContent> = {
 export default function ServiceDetailPage() {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
   const service = serviceDetails[serviceSlug ?? ''] ?? serviceDetails['web-development'];
-  const Icon = service.icon;
+  const isWebDev = serviceSlug === 'web-development';
+  const isMobileApp = serviceSlug === 'mobile-app-development';
+
+  const field = fieldLayouts[serviceSlug as keyof typeof fieldLayouts];
+
+  if (field) {
+    return (
+      <div className="service-page">
+        <ServiceHero
+          theme={field.theme}
+          eyebrow={service.eyebrow}
+          heading={field.heading}
+          lede={field.lede}
+          image={field.image}
+          brandMark={'brandMark' in field ? field.brandMark : undefined}
+          brandMarkAlt={field.theme === 'shopify' ? 'Shopify' : ''}
+        />
+        <WebDevStats />
+        <WebsiteStory
+          className={field.storyClass}
+          slides={field.slides}
+          Visual={FieldStoryVisual}
+          ariaLabel={`${service.eyebrow} slides`}
+        />
+        <section className="section service-outcome-section"><div className="container service-outcome-grid"><div><SectionLabel>The outcome</SectionLabel><h2>{service.outcome}</h2></div><p>Good digital work is measured by what becomes clearer, faster, and more useful after launch. We connect the visible experience to the practical work behind it.</p></div></section>
+        <section className={`section service-process-section ${field.processClass}`}>
+          <div className="container">
+            <SectionLabel>Process</SectionLabel>
+            <h2>How we deliver <span>the work.</span></h2>
+            <div className="service-process-grid">
+              {steps.map(([title, text], index) => (
+                <article className="service-process-card" key={title}>
+                  <span>0{index + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="section service-tools-section"><div className="container service-tools-inner"><SectionLabel>Tools & technologies</SectionLabel><h2>The right tools for <span>the job.</span></h2><div className="service-tools-list">{service.tools.map((tool) => <span key={tool}><Check size={14} />{tool}</span>)}</div></div></section>
+        <section className="section service-cards-section"><div className="container"><div className="section-head"><div><SectionLabel>What good looks like</SectionLabel><h2>Designed for <span>real use.</span></h2></div><p>Every engagement is shaped around the people who use the system and the outcome the business needs.</p></div><div className="service-image-grid">{service.included.slice(0, 3).map((item, index) => <article className="service-image-card" key={item} style={{ backgroundImage: `linear-gradient(180deg, rgba(8,24,35,.02) 28%, rgba(8,24,35,.88) 100%), url(${images[index]})` }}><div><h3>{item}</h3><p>Built around the details that make the experience clearer, faster, and easier to use.</p></div></article>)}</div></div></section>
+        <section className="section service-included-section"><div className="container service-detail-layout"><div><SectionLabel>Included</SectionLabel><h2>A clear scope with <span>room to grow.</span></h2></div><div className="service-detail-checklist">{service.included.map((item) => <div className="service-detail-check" key={item}><span><Check size={16} /></span><p>{item}</p></div>)}</div></div></section>
+        <CTASection />
+      </div>
+    );
+  }
+
+  if (isMobileApp) {
+    return (
+      <div className="service-page">
+        <MobileAppHero />
+        <WebDevStats />
+        <WebsiteStory
+          className="webstory-mid"
+          slides={mobileStorySlides}
+          Visual={MobileStoryVisual}
+          ariaLabel="Mobile app development slides"
+        />
+        <section className="section service-outcome-section"><div className="container service-outcome-grid"><div><SectionLabel>The outcome</SectionLabel><h2>{service.outcome}</h2></div><p>Good digital work is measured by what becomes clearer, faster, and more useful after launch. We connect the visible experience to the practical work behind it.</p></div></section>
+        <section className="section service-process-section webdev-process">
+          <div className="container">
+            <SectionLabel>Process</SectionLabel>
+            <h2>How we deliver <span>the work.</span></h2>
+            <div className="service-process-grid">
+              {steps.map(([title, text], index) => (
+                <article className="service-process-card" key={title}>
+                  <span>0{index + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="section service-tools-section"><div className="container service-tools-inner"><SectionLabel>Tools & technologies</SectionLabel><h2>The right tools for <span>the job.</span></h2><div className="service-tools-list">{service.tools.map((tool) => <span key={tool}><Check size={14} />{tool}</span>)}</div></div></section>
+        <section className="section service-cards-section"><div className="container"><div className="section-head"><div><SectionLabel>What good looks like</SectionLabel><h2>Designed for <span>real use.</span></h2></div><p>Every engagement is shaped around the people who use the system and the outcome the business needs.</p></div><div className="service-image-grid">{service.included.slice(0, 3).map((item, index) => <article className="service-image-card" key={item} style={{ backgroundImage: `linear-gradient(180deg, rgba(8,24,35,.02) 28%, rgba(8,24,35,.88) 100%), url(${images[index]})` }}><div><h3>{item}</h3><p>Built around the details that make the experience clearer, faster, and easier to use.</p></div></article>)}</div></div></section>
+        <section className="section service-included-section"><div className="container service-detail-layout"><div><SectionLabel>Included</SectionLabel><h2>A clear scope with <span>room to grow.</span></h2></div><div className="service-detail-checklist">{service.included.map((item) => <div className="service-detail-check" key={item}><span><Check size={16} /></span><p>{item}</p></div>)}</div></div></section>
+        <CTASection />
+      </div>
+    );
+  }
+
+  if (isWebDev) {
+    return (
+      <div className="service-page">
+        <WebDevHero />
+        <WebDevStats />
+        <WebsiteStory className="webstory-mid" />
+        <section className="section service-outcome-section"><div className="container service-outcome-grid"><div><SectionLabel>The outcome</SectionLabel><h2>{service.outcome}</h2></div><p>Good digital work is measured by what becomes clearer, faster, and more useful after launch. We connect the visible experience to the practical work behind it.</p></div></section>
+        <section className="section service-process-section webdev-process">
+          <div className="container">
+            <SectionLabel>Process</SectionLabel>
+            <h2>How we deliver <span>the work.</span></h2>
+            <div className="service-process-grid">
+              {steps.map(([title, text], index) => (
+                <article className="service-process-card" key={title}>
+                  <span>0{index + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="section service-tools-section"><div className="container service-tools-inner"><SectionLabel>Tools & technologies</SectionLabel><h2>The right tools for <span>the job.</span></h2><div className="service-tools-list">{service.tools.map((tool) => <span key={tool}><Check size={14} />{tool}</span>)}</div></div></section>
+        <section className="section service-cards-section"><div className="container"><div className="section-head"><div><SectionLabel>What good looks like</SectionLabel><h2>Designed for <span>real use.</span></h2></div><p>Every engagement is shaped around the people who use the system and the outcome the business needs.</p></div><div className="service-image-grid">{service.included.slice(0, 3).map((item, index) => <article className="service-image-card" key={item} style={{ backgroundImage: `linear-gradient(180deg, rgba(8,24,35,.02) 28%, rgba(8,24,35,.88) 100%), url(${images[index]})` }}><div><h3>{item}</h3><p>Built around the details that make the experience clearer, faster, and easier to use.</p></div></article>)}</div></div></section>
+        <section className="section service-included-section"><div className="container service-detail-layout"><div><SectionLabel>Included</SectionLabel><h2>A clear scope with <span>room to grow.</span></h2></div><div className="service-detail-checklist">{service.included.map((item) => <div className="service-detail-check" key={item}><span><Check size={16} /></span><p>{item}</p></div>)}</div></div></section>
+        <CTASection />
+      </div>
+    );
+  }
 
   return (
-    <>
-      <section className="page-hero service-detail-hero"><div className="page-hero-glow" /><div className="container page-hero-content"><SectionLabel>{service.eyebrow}</SectionLabel><div className="service-detail-hero-icon"><Icon size={30} /></div><h1>{service.title}</h1><p>{service.description}</p><div className="hero-actions"><Link className="button button-primary" to="/contact">Talk about your project <ArrowUpRight size={17} /></Link><Link className="text-link" to="/services">All services <ArrowRight size={16} /></Link></div></div></section>
+    <div className="service-page">
+      <ServiceHero
+        eyebrow={service.eyebrow}
+        heading={
+          <>
+            Tools and workflows<br />
+            built for the work<br />
+            <span className="hero-story-accent">nobody else sees.</span>
+          </>
+        }
+        lede={service.description}
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80"
+      />
+      <WebDevStats />
+      <WebsiteStory
+        className="webstory-mid"
+        slides={softwareStorySlides}
+        Visual={FieldStoryVisual}
+        ariaLabel="Custom software slides"
+      />
       <section className="section service-outcome-section"><div className="container service-outcome-grid"><div><SectionLabel>The outcome</SectionLabel><h2>{service.outcome}</h2></div><p>Good digital work is measured by what becomes clearer, faster, and more useful after launch. We connect the visible experience to the practical work behind it.</p></div></section>
 
-      <section className="section service-process-section"><div className="container"><SectionLabel>Process</SectionLabel><h2>How we deliver <span>the work.</span></h2><div className="service-process-grid">{steps.map(([title, text], index) => <article className="service-process-card" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+      <section className="section service-process-section webdev-process"><div className="container"><SectionLabel>Process</SectionLabel><h2>How we deliver <span>the work.</span></h2><div className="service-process-grid">{steps.map(([title, text], index) => <article className="service-process-card" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
       <section className="section service-tools-section"><div className="container service-tools-inner"><SectionLabel>Tools & technologies</SectionLabel><h2>The right tools for <span>the job.</span></h2><div className="service-tools-list">{service.tools.map((tool) => <span key={tool}><Check size={14} />{tool}</span>)}</div></div></section>
 
@@ -53,6 +243,6 @@ export default function ServiceDetailPage() {
 
       <section className="section service-included-section"><div className="container service-detail-layout"><div><SectionLabel>Included</SectionLabel><h2>A clear scope with <span>room to grow.</span></h2></div><div className="service-detail-checklist">{service.included.map((item) => <div className="service-detail-check" key={item}><span><Check size={16} /></span><p>{item}</p></div>)}</div></div></section>
       <CTASection />
-    </>
+    </div>
   );
 }

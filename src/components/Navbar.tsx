@@ -37,7 +37,7 @@ export default function Navbar() {
 
   // The home hero is a dark photo slider, so the bar cannot go transparent
   // there: the logo is an opaque JPEG and the nav links are near-black.
-  const solid = scrolled || location.pathname === '/';
+  const solid = scrolled || location.pathname === '/' || location.pathname.startsWith('/services/') || location.pathname.startsWith('/case-studies') || location.pathname === '/contact' || location.pathname === '/founder';
 
   return (
     <nav className={`nav ${solid ? 'nav-scrolled' : ''}`}>
@@ -51,22 +51,22 @@ export default function Navbar() {
                 className={`flex items-center gap-1.5 group ${location.pathname.startsWith('/services') ? 'nav-active' : ''}`}
               >
                 <span>{item.label}</span>
-                <ChevronDown size={14} className="text-slate-400 transition-transform duration-300 group-hover:rotate-180 group-hover:text-slate-950" />
+                <ChevronDown size={14} className="text-slate-400 transition-transform duration-300 group-hover:rotate-180 group-hover:text-[#ab8df0]" />
               </Link>
               <div className="services-dropdown">
                 {serviceItems.map((service) => (
                   <Link 
                     key={service.path} 
                     to={service.path} 
-                    className={`flex items-center justify-between group/item p-2 rounded-lg hover:bg-slate-100 transition-colors ${location.pathname === service.path ? 'dropdown-active bg-slate-100' : ''}`}
+                    className={location.pathname === service.path ? 'dropdown-active' : ''}
                   >
-                    <div className="flex items-center gap-2.5">
-                      <span className="p-1.5 rounded-md bg-indigo-50 text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className="service-drop-icon">
                         {service.icon}
                       </span>
-                      <span className="font-medium">{service.label}</span>
+                      <span>{service.label}</span>
                     </div>
-                    <ArrowUpRight size={14} className="text-slate-400 group-hover/item:text-indigo-600 group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition-all" />
+                    <ArrowUpRight size={15} />
                   </Link>
                 ))}
               </div>

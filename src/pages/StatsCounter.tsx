@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 const statsData = [
-  { value: 6, suffix: '', label: 'Core capabilities', comma: false },
+  { value: 6, suffix: '+', label: 'Core capabilities', comma: false },
   { value: 3, suffix: '', label: 'Markets served', comma: false },
   { value: 4, suffix: '', label: 'Step delivery process', comma: false },
   { value: 100, suffix: '%', label: 'Fixed scope before build', comma: false },
@@ -73,7 +73,11 @@ function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
 export default function StatsCounter() {
   return (
     <section className="section stats-section">
-      <div className="container">
+      <div className="container stats-layout">
+        <div className="stats-copy">
+          <h2>Partnering in your <span>automation-first</span> transformation</h2>
+          <p>Automation is not another tool on the stack. It is a new way of operating. Digtimize helps businesses modernize their websites, unify lead flow, automate follow-up, and ship the systems that keep growth moving.</p>
+        </div>
         <div className="stats-box">
           {statsData.map((stat) => (
             <CounterItem

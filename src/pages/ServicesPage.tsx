@@ -13,12 +13,12 @@ import { SectionLabel } from '@/components/shared';
 import CTASection from '@/components/CTASection';
 
 const services = [
-  { number: '01', icon: Workflow, title: 'GoHighLevel Automation & Integration', text: 'CRM setup, pipelines, funnels, and follow-up sequences that keep every opportunity moving.', included: ['CRM setup', 'Custom sales pipelines', 'Automated SMS/email follow-ups', 'Funnels & landing pages', 'Calendar automation', 'Integrations'] },
-  { number: '02', icon: Globe2, title: 'Custom WordPress Development', text: 'Fast, flexible websites shaped around your business goals — never a generic template.', included: ['Custom theme design', 'Performance optimization', 'SEO foundations', 'Plugin configuration', 'WooCommerce setup', 'Ongoing maintenance'] },
-  { number: '03', icon: Store, title: 'Shopify Store Development', text: 'Conversion-focused stores with clean checkout experiences and useful integrations.', included: ['Store design', 'Checkout optimization', 'App integrations', 'Product page design', 'Theme customization', 'Speed optimization'] },
-  { number: '04', icon: Bot, title: 'AI Website Development', text: 'Chatbots, smart search, RAG tools, and intelligent features that make your site work harder.', included: ['AI chatbots', 'Lead qualification', 'RAG systems', 'LLM integrations', 'Smart search', 'Product recommendations'] },
-  { number: '05', icon: Code2, title: 'Custom Software & Coding', text: 'Dashboards, internal tools, integrations, and automation systems built around your workflow.', included: ['Custom dashboards', 'Internal tools', 'API integrations', 'Automation systems', 'Database design', 'Cloud deployment'] },
-  { number: '06', icon: Sparkles, title: 'Digital Marketing Support', text: 'SEO, funnel copy, campaign support, and conversion tracking for the next stage of growth.', included: ['SEO strategy', 'Funnel copy', 'Campaign support', 'Conversion tracking', 'Analytics setup', 'A/B testing'] },
+  { number: '01', icon: Workflow, title: 'GoHighLevel Automation & Integration', text: 'Set up lead capture and automatic follow-up so enquiries get a timely response and fewer opportunities are missed.', included: ['CRM setup', 'Custom sales pipelines', 'Automated SMS/email follow-ups', 'Funnels & landing pages', 'Calendar automation', 'Integrations'] },
+  { number: '02', icon: Globe2, title: 'Custom WordPress Development', text: 'A business website that clearly explains what you offer and helps visitors contact you or take the next step.', included: ['Custom theme design', 'Performance optimization', 'SEO foundations', 'Plugin configuration', 'WooCommerce setup', 'Ongoing maintenance'] },
+  { number: '03', icon: Store, title: 'Shopify Store Development', text: 'An online store with clear product pages and a checkout experience that feels simple to use.', included: ['Store design', 'Checkout optimization', 'App integrations', 'Product page design', 'Theme customization', 'Speed optimization'] },
+  { number: '04', icon: Bot, title: 'AI Website Development', text: 'Helpful on-site assistants and smart search that answer common questions using your business information.', included: ['AI chatbots', 'Lead qualification', 'Smart search', 'Document-based answers', 'Website helpers', 'Product recommendations'] },
+  { number: '05', icon: Code2, title: 'Custom Software & Coding', text: 'Internal tools and dashboards built around how your team works — when generic software is not enough.', included: ['Custom dashboards', 'Internal tools', 'System connections', 'Automation systems', 'Database design', 'Cloud deployment'] },
+  { number: '06', icon: Sparkles, title: 'Digital Marketing Support', text: 'Support for SEO, messaging, and tracking so your website and campaigns keep improving after launch.', included: ['SEO strategy', 'Funnel copy', 'Campaign support', 'Conversion tracking', 'Analytics setup', 'A/B testing'] },
 ];
 
 const servicePaths: Record<string, string> = {
@@ -37,9 +37,9 @@ export default function ServicesPage() {
         <div className="page-hero-glow" />
         <div className="container page-hero-content">
           <SectionLabel>What we do</SectionLabel>
-          <h1>Everything you need to <span>build, automate,</span> and grow online.</h1>
-          <p>From the first idea to the systems running behind it, we bring strategy, design, and technical execution together — so your digital presence does real work, not just look good.</p>
-          <Link className="button button-primary" to="/contact">Get a free project quote <ArrowUpRight size={17} /></Link>
+          <h1>Everything you need to <span>show up, follow up,</span> and grow online.</h1>
+          <p>From a clearer website to better lead follow-up, online stores, apps, and custom tools — Digtimize helps you build digital solutions that support real business goals.</p>
+          <Link className="button button-primary" to="/contact">Tell us about your business <ArrowUpRight size={17} /></Link>
         </div>
       </section>
 
