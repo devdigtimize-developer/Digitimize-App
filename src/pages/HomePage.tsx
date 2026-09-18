@@ -250,7 +250,7 @@ export default function HomePage() {
       {/* 7: Work / proof */}
       <CaseStudies />
 
-      {/* 8: Expertise (secondary — after the story is clear) */}
+      {/* 8: secondary — after the story is clear) */}
       <section className="section tech-section" id="capabilities">
         <div className="container tech-grid">
           <div className="tech-copy">
