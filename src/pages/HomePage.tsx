@@ -22,19 +22,19 @@ import { SectionLabel } from '@/components/shared';
 import brandMark from '@/assets/Favicon.png';
 import HeroScrollSection from '@/components/hero/HeroScrollSection';
 import StatsCounter from './StatsCounter';
-import CaseStudies from '@/components/CaseStudies';
 import CTASection from '@/components/CTASection';
 import ConnectedCapabilities from '@/components/capabilities/ConnectedCapabilities';
+import TrustedBy from '@/components/TrustedBy';
 
 const services = [
-  { icon: Workflow, title: 'GoHighLevel Automation', text: 'Capture leads and follow up automatically — so fewer enquiries fall through the cracks.', to: '/services/gohighlevel-automation' },
-  { icon: Globe2, title: 'Web Development', text: 'A clear website that explains your business and helps visitors take the next step.', to: '/services/web-development' },
-  { icon: Smartphone, title: 'Mobile App Development', text: 'Phone apps for your customers or team, connected to the systems you already use.', to: '/services/mobile-app-development' },
-  { icon: ShoppingBag, title: 'Ecommerce Development', text: 'Online shops designed to make browsing and buying feel simple.', to: '/services/ecommerce-development' },
-  { icon: Store, title: 'Shopify Development', text: 'Shopify stores with clean product pages, smooth checkout, and room to grow.', to: '/services/shopify-development' },
-  { icon: Bot, title: 'AI Website Development', text: 'Helpful on-site assistants and smart search that answer common questions using your information.', to: '/services' },
-  { icon: Code2, title: 'Custom Software', text: 'Internal tools and dashboards built around how your team actually works.', to: '/services/custom-software' },
-  { icon: Sparkles, title: 'Digital Marketing Support', text: 'Support for SEO, funnel messaging, and tracking so your digital presence keeps improving.', to: '/services' },
+  { icon: Workflow, title: 'Leadflow Systems', text: 'Capture leads and follow up automatically — so fewer enquiries fall through the cracks.', to: '/services/gohighlevel-automation' },
+  { icon: Globe2, title: 'Web Experience Studio', text: 'A clear website that explains your business and helps visitors take the next step.', to: '/services/web-development' },
+  { icon: Smartphone, title: 'Mobile Product Lab', text: 'Phone apps for your customers or team, connected to the systems you already use.', to: '/services/mobile-app-development' },
+  { icon: ShoppingBag, title: 'Commerce Architecture', text: 'Online shops designed to make browsing and buying feel simple.', to: '/services/ecommerce-development' },
+  { icon: Store, title: 'Shopify Scale', text: 'Shopify stores with clean product pages, smooth checkout, and room to grow.', to: '/services/shopify-development' },
+  { icon: Bot, title: 'AI Site Agents', text: 'Helpful on-site assistants and smart search that answer common questions using your information.', to: '/services' },
+  { icon: Code2, title: 'Custom Systems', text: 'Internal tools and dashboards built around how your team actually works.', to: '/services/custom-software' },
+  { icon: Sparkles, title: 'Growth Ops', text: 'Support for SEO, funnel messaging, and tracking so your digital presence keeps improving.', to: '/services' },
 ];
 
 const shiftModels = [
@@ -247,8 +247,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7: Work / proof */}
-      <CaseStudies />
+      {/* 7: Trust / selected clients */}
+      <TrustedBy />
 
       {/* 8: secondary — after the story is clear) */}
       <section className="section tech-section" id="capabilities">

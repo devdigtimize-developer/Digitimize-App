@@ -13,21 +13,21 @@ import { SectionLabel } from '@/components/shared';
 import CTASection from '@/components/CTASection';
 
 const services = [
-  { number: '01', icon: Workflow, title: 'GoHighLevel Automation & Integration', text: 'Set up lead capture and automatic follow-up so enquiries get a timely response and fewer opportunities are missed.', included: ['CRM setup', 'Custom sales pipelines', 'Automated SMS/email follow-ups', 'Funnels & landing pages', 'Calendar automation', 'Integrations'] },
-  { number: '02', icon: Globe2, title: 'Custom WordPress Development', text: 'A business website that clearly explains what you offer and helps visitors contact you or take the next step.', included: ['Custom theme design', 'Performance optimization', 'SEO foundations', 'Plugin configuration', 'WooCommerce setup', 'Ongoing maintenance'] },
-  { number: '03', icon: Store, title: 'Shopify Store Development', text: 'An online store with clear product pages and a checkout experience that feels simple to use.', included: ['Store design', 'Checkout optimization', 'App integrations', 'Product page design', 'Theme customization', 'Speed optimization'] },
-  { number: '04', icon: Bot, title: 'AI Website Development', text: 'Helpful on-site assistants and smart search that answer common questions using your business information.', included: ['AI chatbots', 'Lead qualification', 'Smart search', 'Document-based answers', 'Website helpers', 'Product recommendations'] },
-  { number: '05', icon: Code2, title: 'Custom Software & Coding', text: 'Internal tools and dashboards built around how your team works — when generic software is not enough.', included: ['Custom dashboards', 'Internal tools', 'System connections', 'Automation systems', 'Database design', 'Cloud deployment'] },
-  { number: '06', icon: Sparkles, title: 'Digital Marketing Support', text: 'Support for SEO, messaging, and tracking so your website and campaigns keep improving after launch.', included: ['SEO strategy', 'Funnel copy', 'Campaign support', 'Conversion tracking', 'Analytics setup', 'A/B testing'] },
+  { number: '01', icon: Workflow, title: 'Leadflow Systems', text: 'Set up lead capture and automatic follow-up so enquiries get a timely response and fewer opportunities are missed.', included: ['CRM setup', 'Custom sales pipelines', 'Automated SMS/email follow-ups', 'Funnels & landing pages', 'Calendar automation', 'Integrations'] },
+  { number: '02', icon: Globe2, title: 'Web Experience Studio', text: 'A business website that clearly explains what you offer and helps visitors contact you or take the next step.', included: ['Custom theme design', 'Performance optimization', 'SEO foundations', 'Plugin configuration', 'WooCommerce setup', 'Ongoing maintenance'] },
+  { number: '03', icon: Store, title: 'Shopify Scale', text: 'An online store with clear product pages and a checkout experience that feels simple to use.', included: ['Store design', 'Checkout optimization', 'App integrations', 'Product page design', 'Theme customization', 'Speed optimization'] },
+  { number: '04', icon: Bot, title: 'AI Site Agents', text: 'Helpful on-site assistants and smart search that answer common questions using your business information.', included: ['AI chatbots', 'Lead qualification', 'Smart search', 'Document-based answers', 'Website helpers', 'Product recommendations'] },
+  { number: '05', icon: Code2, title: 'Custom Systems', text: 'Internal tools and dashboards built around how your team works — when generic software is not enough.', included: ['Custom dashboards', 'Internal tools', 'System connections', 'Automation systems', 'Database design', 'Cloud deployment'] },
+  { number: '06', icon: Sparkles, title: 'Growth Ops', text: 'Support for SEO, messaging, and tracking so your website and campaigns keep improving after launch.', included: ['SEO strategy', 'Funnel copy', 'Campaign support', 'Conversion tracking', 'Analytics setup', 'A/B testing'] },
 ];
 
 const servicePaths: Record<string, string> = {
-  'GoHighLevel Automation & Integration': '/services/gohighlevel-automation',
-  'Custom WordPress Development': '/services/web-development',
-  'Shopify Store Development': '/services/shopify-development',
-  'AI Website Development': '/services/ai-website-development',
-  'Custom Software & Coding': '/services/custom-software',
-  'Digital Marketing Support': '/services',
+  'Leadflow Systems': '/services/gohighlevel-automation',
+  'Web Experience Studio': '/services/web-development',
+  'Shopify Scale': '/services/shopify-development',
+  'AI Site Agents': '/services/ai-website-development',
+  'Custom Systems': '/services/custom-software',
+  'Growth Ops': '/services',
 };
 
 export default function ServicesPage() {
