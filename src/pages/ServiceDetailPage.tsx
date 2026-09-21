@@ -3,18 +3,22 @@ import { useParams } from 'react-router-dom';
 import { SectionLabel } from '@/components/shared';
 import CTASection from '@/components/CTASection';
 import WebsiteStory from '@/components/web-story/WebsiteStory';
-import WebDevHero from '@/components/web-story/WebDevHero';
-import MobileAppHero from '@/components/web-story/MobileAppHero';
 import WebDevStats from '@/components/web-story/WebDevStats';
 import MobileStoryVisual from '@/components/web-story/MobileStoryVisual';
 import { mobileStorySlides } from '@/components/web-story/mobileStorySlides';
-import ServiceHero from '@/components/web-story/ServiceHero';
 import FieldStoryVisual from '@/components/web-story/FieldStoryVisual';
 import { ghlStorySlides } from '@/components/web-story/ghlStorySlides';
 import { ecomStorySlides } from '@/components/web-story/ecomStorySlides';
 import { shopifyStorySlides } from '@/components/web-story/shopifyStorySlides';
 import { softwareStorySlides } from '@/components/web-story/softwareStorySlides';
 import { GhlWorkflowHero } from '@/components/ghl-workflow';
+import {
+  WebExperienceHero,
+  MobileProductHero,
+  CommerceHero,
+  ShopifyScaleHero,
+  CustomSystemsHero,
+} from '@/components/service-heroes';
 
 type ServiceContent = {
   icon: typeof Workflow;
@@ -112,16 +116,10 @@ export default function ServiceDetailPage() {
       <div className="service-page">
         {isGhl ? (
           <GhlWorkflowHero />
+        ) : serviceSlug === 'ecommerce-development' ? (
+          <CommerceHero />
         ) : (
-          <ServiceHero
-            theme={field.theme}
-            eyebrow={service.eyebrow}
-            heading={field.heading}
-            lede={field.lede}
-            image={field.image}
-            brandMark={'brandMark' in field ? field.brandMark : undefined}
-            brandMarkAlt={'brandMark' in field && field.brandMark ? 'Shopify' : ''}
-          />
+          <ShopifyScaleHero />
         )}
         <WebDevStats />
         <WebsiteStory
@@ -158,7 +156,7 @@ export default function ServiceDetailPage() {
   if (isMobileApp) {
     return (
       <div className="service-page">
-        <MobileAppHero />
+        <MobileProductHero />
         <WebDevStats />
         <WebsiteStory
           className="webstory-mid"
@@ -193,7 +191,7 @@ export default function ServiceDetailPage() {
   if (isWebDev) {
     return (
       <div className="service-page">
-        <WebDevHero />
+        <WebExperienceHero />
         <WebDevStats />
         <WebsiteStory className="webstory-mid" />
         <section className="section service-outcome-section"><div className="container service-outcome-grid"><div><SectionLabel>The outcome</SectionLabel><h2>{service.outcome}</h2></div><p>Good digital work is measured by what becomes clearer, faster, and more useful after launch. We connect the visible experience to the practical work behind it.</p></div></section>
@@ -222,18 +220,7 @@ export default function ServiceDetailPage() {
 
   return (
     <div className="service-page">
-      <ServiceHero
-        eyebrow={service.eyebrow}
-        heading={
-          <>
-            Tools and workflows<br />
-            built for the work<br />
-            <span className="hero-story-accent">nobody else sees.</span>
-          </>
-        }
-        lede={service.description}
-        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80"
-      />
+      <CustomSystemsHero />
       <WebDevStats />
       <WebsiteStory
         className="webstory-mid"

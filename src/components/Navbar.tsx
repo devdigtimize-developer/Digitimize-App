@@ -13,11 +13,11 @@ const navItems = [
 ];
 
 const serviceItems = [
-  { label: 'GoHighLevel Automation', path: '/services/gohighlevel-automation', icon: <Workflow size={16} /> },
-  { label: 'Web Development', path: '/services/web-development', icon: <Globe size={16} /> },
-  { label: 'Mobile App Development', path: '/services/mobile-app-development', icon: <Smartphone size={16} /> },
-  { label: 'Ecommerce Development', path: '/services/ecommerce-development', icon: <ShoppingBag size={16} /> },
-  { label: 'Shopify Development', path: '/services/shopify-development', icon: <Store size={16} /> },
+  { label: 'Leadflow Systems', path: '/services/gohighlevel-automation', icon: <Workflow size={16} /> },
+  { label: 'Web Experience Studio', path: '/services/web-development', icon: <Globe size={16} /> },
+  { label: 'Mobile Product Lab', path: '/services/mobile-app-development', icon: <Smartphone size={16} /> },
+  { label: 'Commerce Architecture', path: '/services/ecommerce-development', icon: <ShoppingBag size={16} /> },
+  { label: 'Shopify Scale', path: '/services/shopify-development', icon: <Store size={16} /> },
 ];
 
 export default function Navbar() {
