@@ -1,0 +1,613 @@
+/* Mobile App Development hero only */
+
+.svc-hero-mobile.mapp-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 126px 0 78px;
+  background:
+    radial-gradient(ellipse 58% 48% at 90% 12%, rgba(134, 137, 233, .18), transparent 58%),
+    radial-gradient(ellipse 50% 44% at 8% 88%, rgba(205, 142, 207, .14), transparent 60%),
+    linear-gradient(180deg, #fbfafd 0%, #f4f2fa 100%);
+}
+
+.mapp-hero-glow {
+  position: absolute;
+  width: min(480px, 52vw);
+  height: min(380px, 45vw);
+  left: -6%;
+  top: 28%;
+  border-radius: 50%;
+  background: var(--gradient);
+  filter: blur(110px);
+  opacity: .12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mapp-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 40%) minmax(0, 60%);
+  gap: 36px 44px;
+  align-items: center;
+}
+
+.mapp-hero-copy h1 {
+  font-family: 'Hikasami', sans-serif;
+  font-size: clamp(34px, 4.1vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin: 0 0 18px;
+  color: var(--ink);
+  max-width: 13ch;
+}
+
+.mapp-hero-copy h1 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mapp-hero-lede {
+  margin: 0 0 28px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.mapp-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.mapp-cta-primary {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: visible;
+  min-height: 48px;
+  padding: 12px 22px !important;
+  line-height: 1.25 !important;
+}
+
+.mapp-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(122, 92, 240, .34);
+  background: #fff;
+  color: #1b1233 !important;
+  font-size: 14px !important;
+  font-weight: 650;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: visible;
+  text-decoration: none;
+  transition: border-color .25s ease, color .25s ease, transform .25s var(--motion-ease), box-shadow .25s ease;
+}
+
+.mapp-cta-secondary:hover,
+.mapp-cta-secondary:focus-visible {
+  border-color: #7a5cf0;
+  color: #7a5cf0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(122, 92, 240, .12);
+  outline: none;
+}
+
+.mapp-workflow {
+  border-radius: 24px;
+  border: 1px solid rgba(74, 68, 111, .12);
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 24px 60px rgba(90, 74, 140, .11);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.mapp-workflow-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.mapp-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5a5870;
+}
+
+.mapp-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9aa0b4;
+}
+
+.mapp-live.is-live i {
+  background: var(--gradient);
+  animation: mappLivePulse 1.8s ease-out infinite;
+}
+
+.mapp-workflow-bar em {
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--gradient);
+}
+
+.mapp-stage-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.mapp-stage-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.mapp-pill {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f1f0f6;
+  border: 1px solid transparent;
+  opacity: .45;
+  transition: opacity .3s ease, background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.mapp-pill span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #8a8898;
+}
+
+.mapp-pill b {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5f5e6c;
+}
+
+.mapp-pill.is-done,
+.mapp-pill.is-active {
+  opacity: 1;
+}
+
+.mapp-pill.is-active {
+  background: #fff;
+  border-color: rgba(134, 137, 233, .35);
+  box-shadow: 0 8px 20px rgba(112, 91, 168, .12);
+}
+
+.mapp-pill.is-active span,
+.mapp-pill.is-active b {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mapp-body {
+  display: grid;
+  grid-template-columns: minmax(180px, 46%) minmax(0, 54%);
+  gap: 14px;
+  align-items: center;
+}
+
+.mapp-phone {
+  width: min(220px, 100%);
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 2px solid #1b1924;
+  background: #121219;
+  padding: 10px 8px 12px;
+  box-shadow: 0 22px 50px rgba(20, 18, 40, .28);
+}
+
+.mapp-phone-notch {
+  width: 76px;
+  height: 8px;
+  margin: 0 auto 8px;
+  border-radius: 999px;
+  background: #2a2834;
+}
+
+.mapp-phone-screen {
+  overflow: hidden;
+  border-radius: 20px;
+  background: #faf9fc;
+  min-height: 300px;
+  animation: mappScreenIn .35s cubic-bezier(.22, .8, .24, 1) both;
+}
+
+.mapp-phone-home {
+  width: 84px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: #3a3748;
+}
+
+.mapp-screen {
+  padding: 16px 14px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 300px;
+}
+
+.mapp-chip {
+  display: inline-flex;
+  width: fit-content;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #7a7888;
+}
+
+.mapp-screen h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.mapp-screen p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6a6780;
+}
+
+.mapp-screen ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.mapp-screen-brief li {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f4d5e;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: #f1f0f6;
+}
+
+.mapp-welcome-art {
+  height: 88px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(205, 142, 207, .3), rgba(98, 133, 246, .28));
+}
+
+.mapp-btn,
+.mapp-home-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--gradient);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mapp-home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3f3d4d;
+}
+
+.mapp-home-hero {
+  height: 78px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, rgba(134, 137, 233, .28), rgba(205, 142, 207, .22));
+}
+
+.mapp-home-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mapp-home-actions .is-ghost {
+  background: #eceaf3;
+  color: #5f5e6c;
+}
+
+.mapp-home-cards {
+  display: grid;
+  gap: 8px;
+}
+
+.mapp-home-cards i {
+  display: block;
+  height: 36px;
+  border-radius: 10px;
+  background: #eceaf3;
+}
+
+.mapp-sync-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f1f0f6;
+}
+
+.mapp-sync-visual span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b5890;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.mapp-sync-visual em {
+  flex: 1;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient);
+}
+
+.mapp-sync-list li,
+.mapp-screen-qa li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #3f3d4d;
+}
+
+.mapp-sync-list svg,
+.mapp-screen-qa svg {
+  color: #6285f6;
+}
+
+.mapp-launch-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--gradient);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mapp-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #1b1924;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.mapp-side {
+  border-radius: 16px;
+  border: 1px solid rgba(74, 68, 111, .1);
+  background: #f7f6fb;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.mapp-side-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mapp-side-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--gradient);
+  flex: 0 0 auto;
+}
+
+.mapp-side-head strong {
+  display: block;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.mapp-side-head small {
+  font-size: 11px;
+  color: #7a7888;
+}
+
+.mapp-side-status {
+  width: fit-content;
+  font-size: 10px;
+  font-weight: 700;
+  color: #5b5890;
+  background: rgba(134, 137, 233, .14);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.mapp-side-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.mapp-side-list li {
+  font-size: 12px;
+  color: #9a98a8;
+  padding-left: 14px;
+  position: relative;
+}
+
+.mapp-side-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d0ceda;
+}
+
+.mapp-side-list li.is-on {
+  color: #3f3d4d;
+  font-weight: 650;
+}
+
+.mapp-side-list li.is-on:before {
+  background: var(--gradient);
+}
+
+.mapp-workflow-progress {
+  display: grid;
+  gap: 6px;
+}
+
+.mapp-workflow-progress > span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5a5870;
+}
+
+.mapp-workflow-progress em {
+  font-style: normal;
+  color: #8a8898;
+}
+
+.mapp-workflow-track,
+.mapp-auto-track {
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(134, 137, 233, .14);
+  overflow: hidden;
+}
+
+.mapp-auto-track {
+  height: 2px;
+  opacity: .55;
+}
+
+.mapp-workflow-track i,
+.mapp-auto-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--gradient);
+  transition: width .4s cubic-bezier(.22, .8, .24, 1);
+}
+
+@keyframes mappLivePulse {
+  0% { box-shadow: 0 0 0 0 rgba(134, 137, 233, .45); }
+  70% { box-shadow: 0 0 0 8px rgba(134, 137, 233, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(134, 137, 233, 0); }
+}
+
+@keyframes mappScreenIn {
+  from { opacity: .35; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 980px) {
+  .mapp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .mapp-hero-copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .svc-hero-mobile.mapp-hero {
+    padding: 112px 0 56px;
+  }
+
+  .mapp-body {
+    grid-template-columns: 1fr;
+  }
+
+  .mapp-phone {
+    width: min(240px, 78%);
+  }
+
+  .mapp-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mapp-cta-primary,
+  .mapp-cta-secondary {
+    width: 100%;
+  }
+}
+
+.mapp-hero.is-reduced .mapp-live.is-live i,
+.mapp-hero.is-reduced .mapp-phone-screen {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mapp-live.is-live i,
+  .mapp-phone-screen {
+    animation: none !important;
+  }
+
+  .mapp-cta-secondary:hover {
+    transition: none !important;
+  }
+}
