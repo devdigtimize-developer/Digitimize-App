@@ -6,7 +6,7 @@ export const softwareStorySlides: WebStorySlide[] = [
     label: 'Audit',
     caption: 'See the work as it actually runs',
     title: 'Workflow audit',
-    lede: 'We map the hidden steps, handoffs, and tools so the software is built around real work — not a guessed process.',
+    lede: 'We map the hidden steps, handoffs, and tools so the software is built around real work not a guessed process.',
     points: [
       'Workflows documented with the people who run them',
       'Pain points ranked by time and risk',
@@ -58,7 +58,7 @@ export const softwareStorySlides: WebStorySlide[] = [
     label: 'Ship',
     caption: 'Live, measured, ready to improve',
     title: 'Launch and cloud',
-    lede: 'The first release is deployed, monitored, and owned — then we keep improving from what the team actually uses.',
+    lede: 'The first release is deployed, monitored, and owned then we keep improving from what the team actually uses.',
     points: [
       'Cloud deployment that the team can reach',
       'Logging for the failures that matter',

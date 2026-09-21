@@ -3,7 +3,7 @@ type TrustedBrand = {
   slug: string;
 };
 
-/** Platforms Digtimize builds with — shown as a selected-clients style grid. */
+/** Platforms Digtimize builds with shown as a selected-clients style grid. */
 const brands: TrustedBrand[] = [
   { name: 'Shopify', slug: 'shopify' },
   { name: 'WordPress', slug: 'wordpress' },

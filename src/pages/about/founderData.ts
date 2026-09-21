@@ -7,7 +7,7 @@ export const FOUNDER = {
   linkedin: 'https://www.linkedin.com/in/manambhatti/',
   initials: 'MS',
   shortBio:
-    'Manam Shahid is the founder and CEO of Digtimize. He helps businesses turn ideas into practical digital solutions — from websites and stores to automation and custom software.',
+    'Manam Shahid is the founder and CEO of Digtimize. He helps businesses turn ideas into practical digital solutions from websites and stores to automation and custom software.',
   biography:
     'The founder of Digtimize works at the intersection of technology, creativity, and business solutions. With a focus on digital innovation, he leads the development of web applications, automation systems, ecommerce platforms, and custom software. His goal is to help businesses transform ideas into practical, scalable digital experiences.',
   vision:

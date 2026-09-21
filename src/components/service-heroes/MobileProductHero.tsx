@@ -145,7 +145,7 @@ function PhoneScreen({ stage }: { stage: StageId }) {
         <Bell size={12} /> New update available
       </div>
       <h3>Improve</h3>
-      <p>Iterate on real usage — clearer flows and useful updates.</p>
+      <p>Iterate on real usage clearer flows and useful updates.</p>
     </div>
   );
 }
@@ -205,7 +205,7 @@ export default function MobileProductHero() {
             <span> the next action effortless.</span>
           </h1>
           <p className="mapp-hero-lede">
-            We design and build focused iOS and Android experiences around how people actually use your product —
+            We design and build focused iOS and Android experiences around how people actually use your product 
             then connect them to the systems your business already relies on.
           </p>
           <div className="mapp-hero-actions">

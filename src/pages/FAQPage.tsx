@@ -6,14 +6,14 @@ import { SectionLabel } from '@/components/shared';
 import CTASection from '@/components/CTASection';
 
 const faqs = [
-  ['What is Digtimize?', 'Digtimize helps businesses build websites, online stores, mobile apps, automation systems (including GoHighLevel), practical AI tools, and custom software — so your digital setup supports real growth.'],
+  ['What is Digtimize?', 'Digtimize helps businesses build websites, online stores, mobile apps, automation systems (including GoHighLevel), practical AI tools, and custom software so your digital setup supports real growth.'],
   ['Do I need technical knowledge to work with you?', 'No. You bring the business goals. We translate them into a clear plan and handle the technical work.'],
   ['How long does a project take?', 'Timelines depend on the scope. After the discovery call, you receive a clear plan with a realistic delivery window before work starts.'],
   ['How does your support work?', 'Post-launch support is available for troubleshooting, improvements, automation management, and ongoing guidance when it is part of your agreement.'],
   ['Do I need to renew anything?', 'Third-party platform costs (such as GoHighLevel, Shopify, or hosting) are separate from Digtimize fees and are explained before work begins.'],
   ['Can I change or expand later?', 'Yes. Solutions are built to grow with the business, so new pages, connections, automations, and support can be added as needs change.'],
-  ['What technologies do you work with?', 'We work with tools such as GoHighLevel, WordPress, Shopify, and modern web platforms. We choose what fits your goal — not the trend of the month.'],
-  ['How do I get started?', 'Share a few details through the contact form. You will get a clear next step without pressure — an honest conversation about what is possible.'],
+  ['What technologies do you work with?', 'We work with tools such as GoHighLevel, WordPress, Shopify, and modern web platforms. We choose what fits your goal not the trend of the month.'],
+  ['How do I get started?', 'Share a few details through the contact form. You will get a clear next step without pressure an honest conversation about what is possible.'],
 ];
 
 export default function FAQPage() {
@@ -26,7 +26,7 @@ export default function FAQPage() {
         <div className="container page-hero-content">
           <SectionLabel>Questions, answered</SectionLabel>
           <h1>Good work starts with <span>clarity.</span></h1>
-          <p>Everything you need to know before reaching out. If your question is not here, ask us directly — you do not need technical language.</p>
+          <p>Everything you need to know before reaching out. If your question is not here, ask us directly you do not need technical language.</p>
         </div>
       </section>
 

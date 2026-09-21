@@ -16,7 +16,7 @@ export default function AboutHero() {
             with <span className="hero-story-accent">purpose.</span>
           </h1>
           <p>
-            Digtimize brings together strategy, design, development, and automation to help businesses grow — explained clearly, built carefully, and focused on your goals.
+            Digtimize brings together strategy, design, development, and automation to help businesses grow explained clearly, built carefully, and focused on your goals.
           </p>
         </div>
         <div className="about-hero-visual" aria-hidden="true">

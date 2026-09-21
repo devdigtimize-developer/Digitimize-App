@@ -14,10 +14,10 @@ export default function CompanyStory() {
         </div>
         <div className="about-story-copy">
           <p>
-            Digtimize is a web development and automation agency for businesses and marketing agencies. We help you build the digital pieces you need to grow — websites, stores, apps, automation, and custom tools.
+            Digtimize is a web development and automation agency for businesses and marketing agencies. We help you build the digital pieces you need to grow websites, stores, apps, automation, and custom tools.
           </p>
           <p>
-            The work starts with your goals, then the solution that supports them. We focus on systems that stay useful as your business changes — not one-off patches that break the moment things move.
+            The work starts with your goals, then the solution that supports them. We focus on systems that stay useful as your business changes not one-off patches that break the moment things move.
           </p>
         </div>
       </div>

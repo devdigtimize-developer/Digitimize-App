@@ -101,7 +101,7 @@ export default function CommerceHero() {
             <span> browsing into buying.</span>
           </h1>
           <p className="ecom-hero-lede">
-            We plan, design, and build the full shopping journey — storefront, product pages, cart, and checkout —
+            We plan, design, and build the full shopping journey storefront, product pages, cart, and checkout 
             so customers can buy with confidence on desktop and mobile.
           </p>
           <div className="ecom-hero-actions">

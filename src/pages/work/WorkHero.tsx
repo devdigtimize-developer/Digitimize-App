@@ -6,19 +6,19 @@ const journey = [
     label: 'Strategy',
     title: 'Start with a clear plan.',
     accent: 'clear plan',
-    text: 'We agree what success looks like, what to build first, and how we will work together — so everyone is aligned before the build begins.',
+    text: 'We agree what success looks like, what to build first, and how we will work together so everyone is aligned before the build begins.',
   },
   {
     label: 'Design',
     title: 'Shape how it will feel.',
     accent: 'how it will feel',
-    text: 'We map the structure and look of your solution so it is easy for real people to use — before the full build is locked in.',
+    text: 'We map the structure and look of your solution so it is easy for real people to use before the full build is locked in.',
   },
   {
     label: 'Develop',
     title: 'Build it in clear stages.',
     accent: 'clear stages',
-    text: 'We create your website, store, automation, app, or custom tool with regular updates — not a long silent wait.',
+    text: 'We create your website, store, automation, app, or custom tool with regular updates not a long silent wait.',
   },
   {
     label: 'Launch',
@@ -37,7 +37,7 @@ const journey = [
 const overview = {
   title: 'From the first idea to the final launch.',
   accent: 'final launch',
-  text: 'We turn your goals into a clear plan, a thoughtful design, and a digital solution you can understand and use — step by step.',
+  text: 'We turn your goals into a clear plan, a thoughtful design, and a digital solution you can understand and use step by step.',
 };
 
 function Title({ title, accent }: { title: string; accent: string }) {

@@ -51,7 +51,7 @@ const fieldLayouts = {
         <span className="hero-story-accent">every conversation moving.</span>
       </>
     ),
-    lede: 'GoHighLevel pipelines, follow-up, funnels, and calendars set up around how you actually sell — so leads stop stalling after the first message.',
+    lede: 'GoHighLevel pipelines, follow-up, funnels, and calendars set up around how you actually sell so leads stop stalling after the first message.',
   },
   'ecommerce-development': {
     theme: 'default' as const,
@@ -82,7 +82,7 @@ const fieldLayouts = {
         <span className="hero-story-accent">next stage of growth.</span>
       </>
     ),
-    lede: 'Theme, sections, checkout, and apps shaped around your catalog so the team can merchandise in Shopify — not wait on a developer for every change.',
+    lede: 'Theme, sections, checkout, and apps shaped around your catalog so the team can merchandise in Shopify not wait on a developer for every change.',
   },
 };
 

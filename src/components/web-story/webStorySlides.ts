@@ -26,7 +26,7 @@ export const webStorySlides: WebStorySlide[] = [
     label: 'Architecture',
     caption: 'Pages, CMS, and data in layers',
     title: 'Website architecture',
-    lede: 'The stack is chosen for how you will edit and grow the site — frontend, CMS, and connections sitting in clear layers, not a tangle.',
+    lede: 'The stack is chosen for how you will edit and grow the site frontend, CMS, and connections sitting in clear layers, not a tangle.',
     points: [
       'Frontend, CMS, and data in clear layers',
       'WordPress or React chosen for how you edit',

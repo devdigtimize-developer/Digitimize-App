@@ -146,7 +146,7 @@ export default function NorthlineRetail() {
             <article id="solution">
               <h2>Solution</h2>
               <ul>
-                <li><b>Shopify storefront rebuild.</b> A custom theme shaped around Northline's catalog, photography, and brand — not a generic preset.</li>
+                <li><b>Shopify storefront rebuild.</b> A custom theme shaped around Northline's catalog, photography, and brand not a generic preset.</li>
                 <li><b>Collection and search overhaul.</b> Filters, merchandising, and navigation that stay usable as the product count grows.</li>
                 <li><b>Checkout UX.</b> A shorter, mobile-first checkout with clearer shipping, payment, and order review.</li>
                 <li><b>App and operations wiring.</b> Inventory, email, and fulfillment tools connected so the storefront stays in sync after the sale.</li>

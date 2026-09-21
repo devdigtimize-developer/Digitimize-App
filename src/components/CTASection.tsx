@@ -11,7 +11,7 @@ export default function CTASection() {
         <div>
           <SectionLabel>Let's build something useful</SectionLabel>
           <h2>Ready to take the <span>next clear step?</span></h2>
-          <p>Tell us about your business goals. We will reply with a simple next step — no pressure, no technical homework required.</p>
+          <p>Tell us about your business goals. We will reply with a simple next step no pressure, no technical homework required.</p>
           <div className="contact-details">
             {CONTACT.emails.map((email) => (
               <a key={email} href={`mailto:${email}`}>

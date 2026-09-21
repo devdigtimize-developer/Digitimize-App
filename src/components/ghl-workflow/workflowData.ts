@@ -158,7 +158,7 @@ export const workflows: WorkflowDef[] = [
     leftEyebrow: 'AI LEAD HANDLING',
     leftTitle: 'Let intelligent assistants handle first contact.',
     leftBody:
-      'Initial conversations, qualification, and appointment booking — shown here as a product demonstration of the workflow.',
+      'Initial conversations, qualification, and appointment booking shown here as a product demonstration of the workflow.',
     nodes: [
       { id: 'customer', title: 'Customer', icon: 'user', detail: 'A prospect reaches out asking to book a consultation.', kind: 'customer', x: 12, y: 12 },
       { id: 'ai', title: 'AI Agent', icon: 'bot', detail: 'An assistant qualifies the lead and helps book a time. Visual demo only.', kind: 'ai', x: 48, y: 12 },

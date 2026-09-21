@@ -13,7 +13,7 @@ export default function AllCaseStudies() {
         <div className="container page-hero-content">
           <SectionLabel>Case studies</SectionLabel>
           <h1>Work we have shipped for real teams.</h1>
-          <p>A look at the systems, sites, and automations we have delivered — from Shopify storefronts to CRM pipelines and custom WordPress builds.</p>
+          <p>A look at the systems, sites, and automations we have delivered from Shopify storefronts to CRM pipelines and custom WordPress builds.</p>
         </div>
       </section>
 

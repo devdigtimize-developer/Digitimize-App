@@ -1,7 +1,7 @@
 import type { MsgState } from './agentWorkflowData';
 import FollowUpPanel from './FollowUpPanel';
 
-/** @deprecated Prefer FollowUpPanel — kept for compatibility */
+/** @deprecated Prefer FollowUpPanel kept for compatibility */
 type Props = {
   sms: { state: MsgState; text: string };
   email: { state: MsgState; text: string };

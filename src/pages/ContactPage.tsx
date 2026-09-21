@@ -55,8 +55,8 @@ const COUNTRIES = [
 
 const budgets = [
   'Under $1,000',
-  '$2,000 – $3,000',
-  '$3,000 – $4,000',
+  '$2,000 to $3,000',
+  '$3,000 to $4,000',
   '$5,000+',
 ];
 
@@ -229,7 +229,7 @@ export default function ContactPage() {
             <span className="hero-story-accent">worth talking about.</span>
           </h1>
           <p>
-            You do not need technical language. Tell us what you want to achieve — a website, a store, better follow-up, an app, or a custom tool — and we will suggest a clear next step.
+            You do not need technical language. Tell us what you want to achieve a website, a store, better follow-up, an app, or a custom tool and we will suggest a clear next step.
           </p>
 
           <ol className="quote-process">

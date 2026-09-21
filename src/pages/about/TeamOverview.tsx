@@ -13,7 +13,7 @@ export default function TeamOverview() {
         <div className="about-block-head">
           <SectionLabel>Why trust us</SectionLabel>
           <h2>People behind the work.</h2>
-          <p>Different skills, shared direction. Names and photos are placeholders — replace them in the team data file. The full specialist grid lives on the Work page.</p>
+          <p>Different skills, shared direction. Names and photos are placeholders replace them in the team data file. The full specialist grid lives on the Work page.</p>
         </div>
         <div className="about-people-grid">
           {people.map((profile) => (
