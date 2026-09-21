@@ -1,31 +1,30 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import type { WorkflowDef } from './workflowData';
-import { DEFAULT_LEFT } from './workflowData';
+import type { AgentWorkflow } from './agentWorkflowData';
+import { DEFAULT_LEFT } from './agentWorkflowData';
 
 type Props = {
-  workflow: WorkflowDef | null;
-  showDefault: boolean;
+  workflow: AgentWorkflow;
   live: boolean;
 };
 
-export default function WorkflowDetails({ workflow, showDefault, live }: Props) {
-  const eyebrow = showDefault || !workflow ? DEFAULT_LEFT.eyebrow : workflow.leftEyebrow;
-  const title = showDefault || !workflow ? DEFAULT_LEFT.title : workflow.leftTitle;
-  const body = showDefault || !workflow ? DEFAULT_LEFT.body : workflow.leftBody;
-
+export default function WorkflowDetails({ workflow, live }: Props) {
   return (
     <div className="ghl-hero-copy">
       <div className={`ghl-live${live ? ' is-live' : ''}`} role="status">
         <span className="ghl-live-dot" aria-hidden="true" />
-        {live ? 'Live workflow' : 'Automation ready'}
+        {live ? 'Live AI automation' : 'Automation ready'}
       </div>
       <p className="eyebrow">
         <span className="eyebrow-dot" />
-        {eyebrow}
+        {DEFAULT_LEFT.eyebrow}
       </p>
-      <h1 id="ghl-hero-heading">{title}</h1>
-      <p className="ghl-hero-lede">{body}</p>
+      <h1 id="ghl-hero-heading">{DEFAULT_LEFT.title}</h1>
+      <p className="ghl-hero-lede">{DEFAULT_LEFT.body}</p>
+      <p className="ghl-mode-note">
+        <strong>{workflow.leftEyebrow}</strong>
+        <span>{workflow.leftBody}</span>
+      </p>
       <div className="hero-actions ghl-hero-actions ghl-hero-actions-desktop">
         <Link className="button button-primary" to="/contact">
           Get a Free GHL Audit <ArrowUpRight size={17} />

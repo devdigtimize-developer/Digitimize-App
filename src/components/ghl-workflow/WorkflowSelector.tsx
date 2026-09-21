@@ -1,5 +1,5 @@
-import type { WorkflowId } from './workflowData';
-import { workflows } from './workflowData';
+import type { WorkflowId } from './agentWorkflowData';
+import { agentWorkflows } from './agentWorkflowData';
 
 type Props = {
   activeId: WorkflowId;
@@ -9,7 +9,7 @@ type Props = {
 export default function WorkflowSelector({ activeId, onSelect }: Props) {
   return (
     <div className="ghl-selector" role="tablist" aria-label="Automation workflows">
-      {workflows.map((wf) => {
+      {agentWorkflows.map((wf) => {
         const selected = wf.id === activeId;
         return (
           <button

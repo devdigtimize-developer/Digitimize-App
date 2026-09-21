@@ -1,2 +1,2 @@
 export { default as GhlWorkflowHero } from './GhlWorkflowHero';
-export { workflows, getWorkflow, DEFAULT_LEFT } from './workflowData';
+export { agentWorkflows, getAgentWorkflow, DEFAULT_LEFT, AGENT_CATALOG } from './agentWorkflowData';
