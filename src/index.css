@@ -2632,7 +2632,11 @@ canvas {
 }
 
 .page-hero-content p {
-    margin-bottom: 0;
+    margin-bottom: 32px;
+}
+
+.page-hero-content > .button {
+    margin-top: 4px;
 }
 
 .stats-section {
@@ -2972,7 +2976,7 @@ body {
     color: #6f7380 !important;
 }
 
-/* CTAs: balanced padding, no JSX whitespace skew */
+/* CTAs: balanced padding — do not force mobile CTA visible on desktop */
 .button,
 .button-primary,
 .nav-cta {
@@ -2983,6 +2987,22 @@ body {
     line-height: 1 !important;
     box-sizing: border-box;
     white-space: nowrap;
+}
+
+/* Mobile quote button only appears inside the open mobile menu */
+.nav-links .mobile-cta,
+.mobile-cta {
+    display: none !important;
+}
+
+.nav-links-open .mobile-cta {
+    display: inline-flex !important;
+}
+
+@media (max-width: 640px) {
+    .desktop-cta {
+        display: none !important;
+    }
 }
 
 .button,
