@@ -129,7 +129,7 @@ export default function Brightpathagency() {
             <article id="overview">
               <h2>Overview</h2>
               <p>BrightPath Agency runs paid campaigns for local service businesses. Leads were landing in three inboxes, a spreadsheet, and a calendar tool that nobody fully owned. Follow-up happened when someone remembered, so warm leads went cold before a call was booked.</p>
-              <p>Digtimize built a GoHighLevel system around their actual sales motion: capture, qualify, book, and nurture with one pipeline the whole team can see.</p>
+              <p>Digtimize built a GoHighLevel system around their actual sales motion: capture, qualify, book, and nurture, with one pipeline the whole team can see.</p>
             </article>
 
             <article id="challenges">
@@ -157,7 +157,7 @@ export default function Brightpathagency() {
               <h2>Measurable Outcomes</h2>
               <ul>
                 <li>Booked discovery calls rose 41% in the first two months after launch.</li>
-                <li>Average time to first follow-up dropped from hours to minutes about 3.5 times faster.</li>
+                <li>Average time to first follow-up dropped from hours to minutes, about 3.5 times faster.</li>
                 <li>The team recovered roughly 18 hours a week that used to go into copying leads between tools.</li>
                 <li>No-show rate fell because reminders and calendar links live inside the same system.</li>
                 <li>Campaign reports now tie ad spend to booked calls instead of form fills.</li>

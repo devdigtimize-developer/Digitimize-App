@@ -6,7 +6,7 @@ export const ecomStorySlides: WebStorySlide[] = [
     label: 'Catalog',
     caption: 'Products arranged to sell',
     title: 'Catalog architecture',
-    lede: 'Collections, variants, and merchandising are shaped around what people actually buy not a dump of SKUs.',
+    lede: 'Collections, variants, and merchandising are shaped around what people actually buy, not a dump of SKUs.',
     points: [
       'Collections that match how people shop',
       'Variants that do not confuse checkout',

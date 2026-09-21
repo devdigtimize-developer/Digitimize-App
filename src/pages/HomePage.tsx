@@ -45,7 +45,7 @@ const shiftModels = [
     points: [
       'A website from one place, tools from another',
       'Vendors who never see the full picture',
-      'Systems that do not connect so work stays manual',
+      'Systems that do not connect, so work stays manual',
     ],
   },
   {
@@ -64,7 +64,7 @@ const process = [
   ['01', 'Discovery Call', 'We learn your goals and what success should look like.'],
   ['02', 'Plan & Proposal', 'Clear scope, timeline, and pricing before work begins.'],
   ['03', 'Build', 'We create your solution with regular progress updates.'],
-  ['04', 'Launch & Support', 'Go live then improve and support when agreed.'],
+  ['04', 'Launch & Support', 'Go live, then improve and support when agreed.'],
 ];
 
 const techOrbitInner = ['GoHighLevel', 'AI tools', 'React'];
@@ -76,10 +76,10 @@ const techPoints = [
 ];
 
 const faqs = [
-  ['What is Digtimize?', 'Digtimize helps businesses build websites, online stores, apps, automation, and custom software so your digital setup supports real growth.'],
+  ['What is Digtimize?', 'Digtimize helps businesses build websites, online stores, apps, automation, and custom software, so your digital setup supports real growth.'],
   ['Do I need technical knowledge?', 'No. You bring the business goals. We turn them into a clear plan and handle the technical work.'],
   ['How long does a project take?', 'It depends on the scope. After a discovery call, you receive a realistic timeline before work starts.'],
-  ['How do I get started?', 'Share a few details on the contact form. We review them and reply with a clear next step no pressure.'],
+  ['How do I get started?', 'Share a few details on the contact form. We review them and reply with a clear next step, no pressure.'],
 ];
 
 export default function HomePage() {
@@ -140,7 +140,7 @@ export default function HomePage() {
           <div className="shift-copy">
             <SectionLabel>A better way to work</SectionLabel>
             <h2>Stop buying disconnected pieces. Start building a system that works together.</h2>
-            <p>Many businesses end up with a website from one place, marketing tools from another, and no clear follow-up. Digtimize helps you connect the important pieces so your digital work supports real business goals.</p>
+            <p>Many businesses end up with a website from one place, marketing tools from another, and no clear follow-up. Digtimize helps you connect the important pieces, so your digital work supports real business goals.</p>
           </div>
 
           <div className="shift-models">
@@ -205,7 +205,7 @@ export default function HomePage() {
           <div className="capability-list">
             {[
               ['Direct communication', 'You work with the people building your project.', Network],
-              ['Built for growth', 'We design for enquiries, sales, and clearer day-to-day work not decoration alone.', Zap],
+              ['Built for growth', 'We design for enquiries, sales, and clearer day-to-day work, not decoration alone.', Zap],
               ['Clear pricing', 'You see scope and pricing before work begins.', Command],
               ['Post-launch support', 'When agreed, we stay on for fixes and improvements.', LifeBuoy],
             ].map(([title, text, Icon], index) => (
@@ -256,7 +256,7 @@ export default function HomePage() {
           <div className="tech-copy">
             <SectionLabel>Tools we use</SectionLabel>
             <h2>The right tools for your goal.<br /><span>Explained in plain language.</span></h2>
-            <p>You do not need to know every platform. We recommend what fits and we explain why.</p>
+            <p>You do not need to know every platform. We recommend what fits, and we explain why.</p>
             <ul className="tech-points">
               {techPoints.map((point) => (
                 <li key={point}><Check size={16} />{point}</li>

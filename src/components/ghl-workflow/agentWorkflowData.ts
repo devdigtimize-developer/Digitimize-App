@@ -168,7 +168,7 @@ export const agentWorkflows: AgentWorkflow[] = [
     leftEyebrow: 'BOOKING AUTOMATION',
     leftTitle: 'A customer books a call.',
     leftBody:
-      'Agents capture the lead, qualify intent, book the appointment, update the CRM, and start follow-up without manual chasing.',
+      'Agents capture the lead, qualify intent, book the appointment, update the CRM, and start follow-up, without manual chasing.',
     agents: ['customer', 'intake', 'qualify', 'calendar', 'crm', 'followup'],
     steps: [
       {
@@ -528,7 +528,7 @@ export const agentWorkflows: AgentWorkflow[] = [
     leftEyebrow: 'AI VOICE AGENT',
     leftTitle: 'Conversation handled by an intelligent agent.',
     leftBody:
-      'A visual demonstration of listening, understanding, qualifying, and booking shown as a product workflow, not a live call.',
+      'A visual demonstration of listening, understanding, qualifying, and booking, shown as a product workflow, not a live call.',
     agents: ['customer', 'voice', 'qualify', 'calendar', 'crm', 'followup'],
     steps: [
       {
@@ -732,7 +732,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         completedAgents: ['intake', 'crm'],
         preview: 'messages',
         messages: {
-          sms: { state: 'sent', text: 'Thanks for reaching out when works for a quick call?' },
+          sms: { state: 'sent', text: 'Thanks for reaching out. When works for a quick call?' },
           email: { state: 'preparing', text: 'Here is a short overview of how we can help.' },
         },
       },
@@ -745,7 +745,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         completedAgents: ['intake', 'crm'],
         preview: 'messages',
         messages: {
-          sms: { state: 'sent', text: 'Thanks for reaching out when works for a quick call?' },
+          sms: { state: 'sent', text: 'Thanks for reaching out. When works for a quick call?' },
           email: { state: 'sent', text: 'Here is a short overview of how we can help.' },
         },
       },

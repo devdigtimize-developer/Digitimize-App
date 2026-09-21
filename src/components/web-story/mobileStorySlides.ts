@@ -6,7 +6,7 @@ export const mobileStorySlides: WebStorySlide[] = [
     label: 'Flows',
     caption: 'Journeys mapped before screens',
     title: 'Product flows',
-    lede: 'We map how people move through the app open, act, return so every screen has a job before design or engineering starts.',
+    lede: 'We map how people move through the app: open, act, return, so every screen has a job before design or engineering starts.',
     points: [
       'Core journeys agreed before UI work',
       'Each screen has a job and a next step',
@@ -32,7 +32,7 @@ export const mobileStorySlides: WebStorySlide[] = [
     label: 'Platform',
     caption: 'iOS, Android, one product',
     title: 'Platform architecture',
-    lede: 'The app is wired to the systems you already run APIs, accounts, notifications so it feels like part of the business, not a sidecar.',
+    lede: 'The app is wired to the systems you already run: APIs, accounts, notifications, so it feels like part of the business, not a sidecar.',
     points: [
       'React Native for iOS and Android',
       'APIs and auth connected from the start',

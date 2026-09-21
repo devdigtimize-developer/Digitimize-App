@@ -17,7 +17,7 @@ const services = [
   { number: '02', icon: Globe2, title: 'Web Experience Studio', text: 'A business website that clearly explains what you offer and helps visitors contact you or take the next step.', included: ['Custom theme design', 'Performance optimization', 'SEO foundations', 'Plugin configuration', 'WooCommerce setup', 'Ongoing maintenance'] },
   { number: '03', icon: Store, title: 'Shopify Scale', text: 'An online store with clear product pages and a checkout experience that feels simple to use.', included: ['Store design', 'Checkout optimization', 'App integrations', 'Product page design', 'Theme customization', 'Speed optimization'] },
   { number: '04', icon: Bot, title: 'AI Site Agents', text: 'Helpful on-site assistants and smart search that answer common questions using your business information.', included: ['AI chatbots', 'Lead qualification', 'Smart search', 'Document-based answers', 'Website helpers', 'Product recommendations'] },
-  { number: '05', icon: Code2, title: 'Custom Systems', text: 'Internal tools and dashboards built around how your team works when generic software is not enough.', included: ['Custom dashboards', 'Internal tools', 'System connections', 'Automation systems', 'Database design', 'Cloud deployment'] },
+  { number: '05', icon: Code2, title: 'Custom Systems', text: 'Internal tools and dashboards built around how your team works, when generic software is not enough.', included: ['Custom dashboards', 'Internal tools', 'System connections', 'Automation systems', 'Database design', 'Cloud deployment'] },
   { number: '06', icon: Sparkles, title: 'Growth Ops', text: 'Support for SEO, messaging, and tracking so your website and campaigns keep improving after launch.', included: ['SEO strategy', 'Funnel copy', 'Campaign support', 'Conversion tracking', 'Analytics setup', 'A/B testing'] },
 ];
 
@@ -38,7 +38,7 @@ export default function ServicesPage() {
         <div className="container page-hero-content">
           <SectionLabel>What we do</SectionLabel>
           <h1>Everything you need to <span>show up, follow up,</span> and grow online.</h1>
-          <p>From a clearer website to better lead follow-up, online stores, apps, and custom tools Digtimize helps you build digital solutions that support real business goals.</p>
+          <p>From a clearer website to better lead follow-up, online stores, apps, and custom tools. Digtimize helps you build digital solutions that support real business goals.</p>
           <Link className="button button-primary" to="/contact"><span>Tell us about your business</span><ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
       </section>

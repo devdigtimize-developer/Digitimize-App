@@ -48,7 +48,7 @@ export default function Harbor() {
         <div className="container case-hero-grid">
           <div className="case-hero-copy">
             <h1>Harbor & Co replaces a stalled brochure site with a WordPress engine that actually converts</h1>
-            <p className="case-hero-lede">How Digtimize turned a slow, uneditable website into a fast WordPress build the Harbor team can update themselves with a clearer story and a path to enquiry.</p>
+            <p className="case-hero-lede">How Digtimize turned a slow, uneditable website into a fast WordPress build the Harbor team can update themselves, with a clearer story and a path to enquiry.</p>
             <div className="case-hero-client">
               <b>Harbor & Co</b>
               <span>Canada <i /> harborandco.com</span>
@@ -136,7 +136,7 @@ export default function Harbor() {
               <h2>Business Challenges</h2>
               <ul>
                 <li><b>A site nobody could edit.</b> Project photos, bios, and service copy sat in hardcoded templates, so the live site lagged months behind the work they were doing.</li>
-                <li><b>Weak first impression.</b> The homepage did not say who Harbor is for, what they deliver, or how to start only a slideshow and a contact email.</li>
+                <li><b>Weak first impression.</b> The homepage did not say who Harbor is for, what they deliver, or how to start: only a slideshow and a contact email.</li>
                 <li><b>SEO left on the table.</b> Pages had duplicate titles, thin copy, and no structure for the searches that actually bring design clients.</li>
                 <li><b>Performance drag.</b> Uncompressed galleries and leftover plugins made the site feel heavier than the brand.</li>
               </ul>
@@ -158,7 +158,7 @@ export default function Harbor() {
               <ul>
                 <li>Homepage load time sits around 2.1 seconds on a typical connection.</li>
                 <li>Organic enquiry form fills rose 64% in the quarter after launch.</li>
-                <li>The studio now updates projects and services themselves one CMS, no developer ticket for every change.</li>
+                <li>The studio now updates projects and services themselves: one CMS, no developer ticket for every change.</li>
                 <li>Bounce rate on mobile dropped once the first screen stated the offer and a next step.</li>
                 <li>Project pages rank for the neighbourhood and service terms Harbor actually wants to be found for.</li>
               </ul>

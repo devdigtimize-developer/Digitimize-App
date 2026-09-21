@@ -16,7 +16,7 @@ export default function ProcessRoadmap() {
             <br />
             to <span className="hero-story-accent">delivery.</span>
           </h2>
-          <p>Every project follows a simple sequence: understand the work, agree the plan, build in stages, then launch with support when it is part of the engagement.</p>
+          <p>Every project follows a simple sequence: understand the work, agree the plan, build in stages, then launch, with support when it is part of the engagement.</p>
         </div>
 
         <div className="work-roadmap-track">

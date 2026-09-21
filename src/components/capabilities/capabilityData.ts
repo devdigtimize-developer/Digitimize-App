@@ -54,7 +54,7 @@ export const CAPABILITY_HUB = {
 
 export const CAPABILITY_DEFAULT = {
   title: 'Connected Capabilities',
-  description: 'Digtimize connects AI, automation, web platforms, and custom software into one operating system for the business not a pile of disconnected tools.',
+  description: 'Digtimize connects AI, automation, web platforms, and custom software into one operating system for the business, not a pile of disconnected tools.',
   items: ['AI & machine learning', 'Web & app development', 'GoHighLevel automation', 'Custom software'],
   cta: { label: 'Get a free project quote', to: '/contact' } satisfies CapabilityCta,
 };
@@ -65,7 +65,7 @@ export const CAPABILITY_BRANCHES: CapabilityBranch[] = [
     label: 'AI / Machine Learning',
     lines: ['AI / MACHINE', 'LEARNING'],
     panelTitle: 'AI & Machine Learning',
-    description: 'Useful AI wired into the systems your team already runs not a demo chatbot sitting on the side of the site.',
+    description: 'Useful AI wired into the systems your team already runs, not a demo chatbot sitting on the side of the site.',
     cta: { label: 'Explore an AI project', to: '/contact' },
     items: ['AI Chatbots', 'RAG Systems', 'LLM Integrations', 'AI Agents', 'Smart Search', 'Recommendations'],
     ...pt(178, -90),
@@ -77,7 +77,7 @@ export const CAPABILITY_BRANCHES: CapabilityBranch[] = [
     label: 'Web & App Development',
     lines: ['WEB & APP', 'DEVELOPMENT'],
     panelTitle: 'Web & App Development',
-    description: 'Custom, responsive digital products shaped around the business never a generic template.',
+    description: 'Custom, responsive digital products shaped around the business, never a generic template.',
     cta: { label: 'Explore web & app', to: '/services/web-development' },
     items: ['React', 'Next.js', 'Responsive Web', 'Applications', 'API Integration'],
     ...pt(214, 6),

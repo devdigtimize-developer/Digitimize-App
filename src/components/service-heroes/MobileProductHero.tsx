@@ -145,7 +145,7 @@ function PhoneScreen({ stage }: { stage: StageId }) {
         <Bell size={12} /> New update available
       </div>
       <h3>Improve</h3>
-      <p>Iterate on real usage clearer flows and useful updates.</p>
+      <p>Iterate on real usage: clearer flows and useful updates.</p>
     </div>
   );
 }

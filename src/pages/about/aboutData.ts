@@ -2,12 +2,12 @@ export const ABOUT_VALUES = [
   {
     n: '01',
     title: 'Clarity',
-    text: 'You always know what is happening, why it matters, and what comes next before work starts and while it is underway.',
+    text: 'You always know what is happening, why it matters, and what comes next, before work starts and while it is underway.',
   },
   {
     n: '02',
     title: 'Purposeful design',
-    text: 'Technology should serve the business. We shape websites, stores, and systems around real goals not decoration alone.',
+    text: 'Technology should serve the business. We shape websites, stores, and systems around real goals, not decoration alone.',
   },
   {
     n: '03',
@@ -69,7 +69,7 @@ export const ABOUT_EXPERTISE = [
 export const ABOUT_WHY = [
   { title: 'Understand the context', text: 'We listen to your goals, your customers, and what success should look like.' },
   { title: 'Match the right approach', text: 'Not every problem needs a custom build. We recommend what fits.' },
-  { title: 'Keep communication direct', text: 'You talk with the people doing the work no confusing handoffs.' },
+  { title: 'Keep communication direct', text: 'You talk with the people doing the work, no confusing handoffs.' },
   { title: 'Think past launch day', text: 'We design for the next stage of your business, not only the go-live date.' },
 ];
 

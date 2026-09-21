@@ -250,10 +250,10 @@ export default function WebExperienceHero() {
           </p>
           <h1 id="web-hero-heading">
             Websites that make your offer clear
-            <span> and the next step easy.</span>
+            <span>, and the next step easy.</span>
           </h1>
           <p className="webx-hero-lede">
-            We plan, design, and build professional websites around how your customers decide so visitors
+            We plan, design, and build professional websites around how your customers decide, so visitors
             understand what you do and know exactly what to do next.
           </p>
           <div className="webx-hero-actions">

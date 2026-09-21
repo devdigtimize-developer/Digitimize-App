@@ -186,7 +186,7 @@ export default function ShopifyScaleHero() {
             <span> can buy from with confidence.</span>
           </h1>
           <p className="shopify-hero-lede">
-            We design and build the theme, product pages, checkout path, and apps around your catalog 
+            We design and build the theme, product pages, checkout path, and apps around your catalog,
             so your team can merchandise and grow without waiting on a developer for every change.
           </p>
           <div className="shopify-hero-actions">
