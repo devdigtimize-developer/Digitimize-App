@@ -11,6 +11,7 @@ type Props = {
   Visual?: ComponentType<{ slide: WebStorySlide }>;
   className?: string;
   ariaLabel?: string;
+  id?: string;
 };
 
 export default function WebsiteStory({
@@ -18,6 +19,7 @@ export default function WebsiteStory({
   Visual = WebsiteStoryVisual,
   className,
   ariaLabel = 'Website development slides',
+  id,
 }: Props) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -39,7 +41,7 @@ export default function WebsiteStory({
   }, [paused, slides.length]);
 
   return (
-    <section className={`section webstory-section${className ? ` ${className}` : ''}`} aria-labelledby="webstory-heading">
+    <section id={id} className={`section webstory-section${className ? ` ${className}` : ''}`} aria-labelledby="webstory-heading">
       <div className="container">
         <div
           className="webstory-shell"

@@ -14,6 +14,7 @@ import { ghlStorySlides } from '@/components/web-story/ghlStorySlides';
 import { ecomStorySlides } from '@/components/web-story/ecomStorySlides';
 import { shopifyStorySlides } from '@/components/web-story/shopifyStorySlides';
 import { softwareStorySlides } from '@/components/web-story/softwareStorySlides';
+import { GhlWorkflowHero } from '@/components/ghl-workflow';
 
 type ServiceContent = {
   icon: typeof Workflow;
@@ -105,19 +106,26 @@ export default function ServiceDetailPage() {
   const field = fieldLayouts[serviceSlug as keyof typeof fieldLayouts];
 
   if (field) {
+    const isGhl = serviceSlug === 'gohighlevel-automation';
+
     return (
       <div className="service-page">
-        <ServiceHero
-          theme={field.theme}
-          eyebrow={service.eyebrow}
-          heading={field.heading}
-          lede={field.lede}
-          image={field.image}
-          brandMark={'brandMark' in field ? field.brandMark : undefined}
-          brandMarkAlt={field.theme === 'shopify' ? 'Shopify' : ''}
-        />
+        {isGhl ? (
+          <GhlWorkflowHero />
+        ) : (
+          <ServiceHero
+            theme={field.theme}
+            eyebrow={service.eyebrow}
+            heading={field.heading}
+            lede={field.lede}
+            image={field.image}
+            brandMark={'brandMark' in field ? field.brandMark : undefined}
+            brandMarkAlt={field.theme === 'shopify' ? 'Shopify' : ''}
+          />
+        )}
         <WebDevStats />
         <WebsiteStory
+          id={isGhl ? 'ghl-story' : undefined}
           className={field.storyClass}
           slides={field.slides}
           Visual={FieldStoryVisual}
