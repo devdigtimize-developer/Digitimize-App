@@ -80,9 +80,9 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Link className="nav-cta mobile-cta" to="/contact">Get a free quote <ArrowUpRight size={15} /></Link>
+          <Link className="nav-cta mobile-cta" to="/contact"><span>Get a free quote</span><ArrowUpRight size={15} aria-hidden="true" /></Link>
         </div>
-        <Link className="nav-cta desktop-cta" to="/contact">Get a free quote <ArrowUpRight size={15} /></Link>
+        <Link className="nav-cta desktop-cta" to="/contact"><span>Get a free quote</span><ArrowUpRight size={15} aria-hidden="true" /></Link>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
       </div>
     </nav>

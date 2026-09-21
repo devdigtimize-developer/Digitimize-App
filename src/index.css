@@ -1578,13 +1578,34 @@ button {
 }
 
 .nav-cta {
-    padding: 15px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     min-height: 48px;
+    padding: 12px 28px;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .button {
-    min-height: 52px;
-    padding: 16px 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 54px;
+    padding: 15px 34px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.button svg,
+.nav-cta svg {
+    flex-shrink: 0;
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 0;
 }
 
 .section-label,
@@ -1704,7 +1725,9 @@ button {
     .nav-cta,
     .button {
         min-height: 50px;
-        padding: 15px 21px;
+        padding: 12px 28px;
+        gap: 10px;
+        line-height: 1;
     }
 
     .hero-sub,
@@ -2949,7 +2972,52 @@ body {
     color: #6f7380 !important;
 }
 
-/* CTAs: rich logo gradient, not washed pastel */
+/* CTAs: balanced padding, no JSX whitespace skew */
+.button,
+.button-primary,
+.nav-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    line-height: 1 !important;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.button,
+.button-primary {
+    min-height: 54px;
+    padding: 15px 34px !important;
+}
+
+.nav-cta {
+    min-height: 48px;
+    padding: 12px 28px !important;
+}
+
+.button > span,
+.button-primary > span,
+.nav-cta > span {
+    display: inline-block;
+    line-height: 1;
+}
+
+.button svg,
+.button-primary svg,
+.nav-cta svg {
+    flex-shrink: 0 !important;
+    display: block !important;
+    width: 17px !important;
+    height: 17px !important;
+    margin: 0 !important;
+}
+
+.nav-cta svg {
+    width: 15px !important;
+    height: 15px !important;
+}
+
 .button-primary {
     background: linear-gradient(100deg, #c4b0f4 0%, #9b7ae8 52%, #7a5cf0 100%) !important;
     box-shadow: 0 14px 34px rgba(171, 141, 240, .35) !important;

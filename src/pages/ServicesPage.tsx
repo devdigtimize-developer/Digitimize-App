@@ -39,7 +39,7 @@ export default function ServicesPage() {
           <SectionLabel>What we do</SectionLabel>
           <h1>Everything you need to <span>show up, follow up,</span> and grow online.</h1>
           <p>From a clearer website to better lead follow-up, online stores, apps, and custom tools — Digtimize helps you build digital solutions that support real business goals.</p>
-          <Link className="button button-primary" to="/contact">Tell us about your business <ArrowUpRight size={17} /></Link>
+          <Link className="button button-primary" to="/contact"><span>Tell us about your business</span><ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
       </section>
 
