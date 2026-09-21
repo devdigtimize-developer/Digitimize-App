@@ -26,8 +26,16 @@ export type PreviewKind =
   | 'messages'
   | 'voice'
   | 'chat'
+  | 'conversation'
   | 'complete'
   | null;
+
+export type ChatMessage = {
+  role: 'customer' | 'ai';
+  text: string;
+};
+
+export type MsgState = 'preparing' | 'sending' | 'sent' | 'scheduled';
 
 export type AgentDef = {
   id: AgentId;
@@ -37,24 +45,18 @@ export type AgentDef = {
   icon: string;
 };
 
-export type ActivityEvent = {
-  label: string;
-};
-
 export type AgentStep = {
-  /** Primary agent this step focuses on */
   agent: AgentId;
   status: AgentStatus;
   task: string;
   result?: string;
   duration: number;
   activity?: string;
-  /** Reset other agents to idle except those listed as completed */
   completedAgents?: AgentId[];
   handoffTo?: AgentId;
   handoffLabel?: string;
   preview?: PreviewKind;
-  calendarState?: 'idle' | 'checking' | 'selected' | 'booked';
+  calendarState?: 'idle' | 'checking' | 'available' | 'selected' | 'booked';
   crmStage?: 'new' | 'qualified' | 'booked' | 'followup';
   lead?: {
     source: string;
@@ -64,16 +66,21 @@ export type AgentStep = {
   };
   decision?: {
     input: string;
+    analysis?: string;
     intent: string;
     quality: string;
     interest: string;
+    action?: string;
   };
   messages?: {
-    sms: { state: 'preparing' | 'sending' | 'sent'; text: string };
-    email: { state: 'preparing' | 'sending' | 'sent'; text: string };
+    sms: { state: MsgState; text: string };
+    email: { state: MsgState; text: string };
+    reminder?: { state: MsgState; text: string };
   };
   voiceState?: 'listening' | 'understanding' | 'qualifying' | 'booking' | 'speaking';
-  chatLine?: { role: 'customer' | 'ai'; text: string };
+  chatLine?: ChatMessage;
+  conversation?: ChatMessage[];
+  typing?: boolean;
   systemNote?: string;
 };
 
@@ -168,21 +175,72 @@ export const agentWorkflows: AgentWorkflow[] = [
         agent: 'customer',
         status: 'executing',
         task: "I'd like to book a consultation.",
-        duration: 1100,
+        duration: 1200,
         activity: 'Customer request received',
-        preview: 'chat',
-        chatLine: { role: 'customer', text: "I'd like to book a consultation." },
+        preview: 'conversation',
+        conversation: [{ role: 'customer', text: "I'd like to book a consultation." }],
         lead: LEAD_ALEX,
+      },
+      {
+        agent: 'customer',
+        status: 'executing',
+        task: 'Awaiting response…',
+        duration: 900,
+        activity: 'AI preparing reply',
+        preview: 'conversation',
+        conversation: [{ role: 'customer', text: "I'd like to book a consultation." }],
+        typing: true,
+      },
+      {
+        agent: 'customer',
+        status: 'executing',
+        task: 'Conversation in progress',
+        duration: 1200,
+        activity: 'AI asked for preferred day',
+        preview: 'conversation',
+        conversation: [
+          { role: 'customer', text: "I'd like to book a consultation." },
+          { role: 'ai', text: 'Absolutely. What day works best for you?' },
+        ],
+      },
+      {
+        agent: 'customer',
+        status: 'executing',
+        task: 'Tomorrow',
+        duration: 1000,
+        activity: 'Customer selected tomorrow',
+        preview: 'conversation',
+        conversation: [
+          { role: 'customer', text: "I'd like to book a consultation." },
+          { role: 'ai', text: 'Absolutely. What day works best for you?' },
+          { role: 'customer', text: 'Tomorrow.' },
+        ],
       },
       {
         agent: 'customer',
         status: 'passing',
         task: 'New lead detected',
-        result: 'Passing to Intake',
-        duration: 900,
+        result: 'Passing to Intake Agent',
+        duration: 1000,
         activity: 'New lead detected',
         handoffTo: 'intake',
         handoffLabel: 'Lead packet',
+        preview: 'conversation',
+        conversation: [
+          { role: 'customer', text: "I'd like to book a consultation." },
+          { role: 'ai', text: 'Absolutely. What day works best for you?' },
+          { role: 'customer', text: 'Tomorrow.' },
+          { role: 'ai', text: 'Let me check availability.' },
+        ],
+        lead: LEAD_ALEX,
+      },
+      {
+        agent: 'intake',
+        status: 'receiving',
+        task: 'Task received',
+        duration: 900,
+        activity: 'Lead Intake Agent started',
+        completedAgents: ['customer'],
         preview: 'lead',
         lead: LEAD_ALEX,
       },
@@ -191,7 +249,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         status: 'receiving',
         task: 'Receiving lead…',
         duration: 900,
-        activity: 'Intake Agent started',
+        activity: 'Receiving lead data',
         completedAgents: ['customer'],
         preview: 'lead',
         lead: LEAD_ALEX,
@@ -199,7 +257,7 @@ export const agentWorkflows: AgentWorkflow[] = [
       {
         agent: 'intake',
         status: 'analyzing',
-        task: 'Reading lead data…',
+        task: 'Reading information…',
         duration: 1000,
         activity: 'Reading lead information',
         completedAgents: ['customer'],
@@ -209,10 +267,10 @@ export const agentWorkflows: AgentWorkflow[] = [
       {
         agent: 'intake',
         status: 'executing',
-        task: 'Identifying intent…',
+        task: 'Capturing contact…',
         result: 'Contact detected ✓',
         duration: 1000,
-        activity: 'Intent identified',
+        activity: 'Contact captured',
         completedAgents: ['customer'],
         preview: 'lead',
         lead: LEAD_ALEX,
@@ -220,13 +278,13 @@ export const agentWorkflows: AgentWorkflow[] = [
       {
         agent: 'intake',
         status: 'passing',
-        task: 'Lead accepted ✓',
-        result: 'Passing to AI Qualification',
-        duration: 1000,
-        activity: 'Lead accepted',
+        task: 'Lead captured ✓',
+        result: 'Passing to AI Qualification Agent',
+        duration: 1100,
+        activity: 'Lead captured',
         completedAgents: ['customer'],
         handoffTo: 'qualify',
-        handoffLabel: 'Qualified intake',
+        handoffLabel: 'Intake result',
         preview: 'lead',
         lead: LEAD_ALEX,
       },
@@ -234,27 +292,29 @@ export const agentWorkflows: AgentWorkflow[] = [
         agent: 'qualify',
         status: 'receiving',
         task: 'Task received',
-        duration: 800,
-        activity: 'Qualification Agent woke up',
+        duration: 850,
+        activity: 'Qualification Agent started',
         completedAgents: ['customer', 'intake'],
         preview: 'decision',
         decision: {
           input: 'New lead',
+          analysis: 'Understanding request…',
           intent: '—',
-          quality: 'Analyzing…',
+          quality: '—',
           interest: '—',
         },
       },
       {
         agent: 'qualify',
         status: 'analyzing',
-        task: 'Analyzing lead…',
-        duration: 1200,
-        activity: 'AI analyzing intent',
+        task: 'Analyzing request…',
+        duration: 1100,
+        activity: 'Analyzing request',
         completedAgents: ['customer', 'intake'],
         preview: 'decision',
         decision: {
           input: 'New lead',
+          analysis: 'Classifying intent…',
           intent: 'Consultation',
           quality: 'Evaluating…',
           interest: 'Automation',
@@ -263,43 +323,57 @@ export const agentWorkflows: AgentWorkflow[] = [
       {
         agent: 'qualify',
         status: 'executing',
-        task: 'Decision: Qualified ✓',
-        result: 'Send to Calendar Agent',
+        task: 'Classifying intent…',
+        result: 'Qualified ✓',
         duration: 1100,
         activity: 'Lead qualified',
         completedAgents: ['customer', 'intake'],
         preview: 'decision',
         decision: {
           input: 'New lead',
+          analysis: 'Complete',
           intent: 'Consultation',
           quality: 'Qualified ✓',
           interest: 'Automation',
+          action: 'Send to Calendar Agent',
         },
       },
       {
         agent: 'qualify',
         status: 'passing',
         task: 'Qualification complete ✓',
-        result: 'Passing booking request',
-        duration: 900,
+        result: 'Passing qualified lead',
+        duration: 1000,
         activity: 'Handoff to Calendar Agent',
         completedAgents: ['customer', 'intake'],
         handoffTo: 'calendar',
-        handoffLabel: 'Book consultation',
+        handoffLabel: 'Qualified lead',
         preview: 'decision',
         decision: {
           input: 'New lead',
+          analysis: 'Complete',
           intent: 'Consultation',
           quality: 'Qualified ✓',
           interest: 'Automation',
+          action: 'Send to Calendar Agent',
         },
       },
       {
         agent: 'calendar',
         status: 'receiving',
+        task: 'Receiving task',
+        duration: 850,
+        activity: 'Calendar Agent received task',
+        completedAgents: ['customer', 'intake', 'qualify'],
+        preview: 'calendar',
+        calendarState: 'available',
+      },
+      {
+        agent: 'calendar',
+        status: 'analyzing',
         task: 'Checking availability…',
-        duration: 1000,
-        activity: 'Calendar Agent checking slots',
+        duration: 1200,
+        activity: 'Calendar availability checked',
         completedAgents: ['customer', 'intake', 'qualify'],
         preview: 'calendar',
         calendarState: 'checking',
@@ -317,13 +391,13 @@ export const agentWorkflows: AgentWorkflow[] = [
       {
         agent: 'calendar',
         status: 'passing',
-        task: 'Appointment created ✓',
+        task: 'Appointment booked ✓',
         result: 'Passing to CRM Agent',
-        duration: 1000,
-        activity: 'Appointment created',
+        duration: 1100,
+        activity: 'Appointment booked',
         completedAgents: ['customer', 'intake', 'qualify'],
         handoffTo: 'crm',
-        handoffLabel: 'Booking result',
+        handoffLabel: 'Booking event',
         preview: 'calendar',
         calendarState: 'booked',
       },
@@ -331,7 +405,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         agent: 'crm',
         status: 'receiving',
         task: 'Creating contact…',
-        duration: 900,
+        duration: 1000,
         activity: 'CRM creating contact',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar'],
         preview: 'crm',
@@ -342,9 +416,21 @@ export const agentWorkflows: AgentWorkflow[] = [
         agent: 'crm',
         status: 'executing',
         task: 'Updating pipeline…',
-        result: 'New → Qualified → Booked',
-        duration: 1100,
-        activity: 'Pipeline updated',
+        result: 'New → Qualified',
+        duration: 1000,
+        activity: 'Lead moved to Qualified',
+        completedAgents: ['customer', 'intake', 'qualify', 'calendar'],
+        preview: 'crm',
+        crmStage: 'qualified',
+        lead: LEAD_ALEX,
+      },
+      {
+        agent: 'crm',
+        status: 'executing',
+        task: 'Setting stage…',
+        result: 'Qualified → Booked',
+        duration: 1000,
+        activity: 'Lead moved to Booked',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar'],
         preview: 'crm',
         crmStage: 'booked',
@@ -355,7 +441,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         status: 'passing',
         task: 'CRM updated ✓',
         result: 'Passing to Follow-Up Agent',
-        duration: 900,
+        duration: 1000,
         activity: 'CRM updated',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar'],
         handoffTo: 'followup',
@@ -368,13 +454,14 @@ export const agentWorkflows: AgentWorkflow[] = [
         agent: 'followup',
         status: 'receiving',
         task: 'Preparing confirmation…',
-        duration: 900,
+        duration: 1000,
         activity: 'Follow-Up Agent started',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar', 'crm'],
         preview: 'messages',
         messages: {
           sms: { state: 'preparing', text: 'Your consultation is confirmed for 11:30 AM.' },
           email: { state: 'preparing', text: 'Your appointment has been scheduled.' },
+          reminder: { state: 'preparing', text: 'Upcoming consultation tomorrow.' },
         },
       },
       {
@@ -388,13 +475,14 @@ export const agentWorkflows: AgentWorkflow[] = [
         messages: {
           sms: { state: 'sending', text: 'Your consultation is confirmed for 11:30 AM.' },
           email: { state: 'sending', text: 'Your appointment has been scheduled.' },
+          reminder: { state: 'preparing', text: 'Upcoming consultation tomorrow.' },
         },
       },
       {
         agent: 'followup',
         status: 'executing',
         task: 'Confirmations sent ✓',
-        result: 'Reminder scheduled',
+        result: 'Scheduling reminder…',
         duration: 1100,
         activity: 'Confirmation sent',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar', 'crm'],
@@ -402,6 +490,7 @@ export const agentWorkflows: AgentWorkflow[] = [
         messages: {
           sms: { state: 'sent', text: 'Your consultation is confirmed for 11:30 AM.' },
           email: { state: 'sent', text: 'Your appointment has been scheduled.' },
+          reminder: { state: 'scheduled', text: 'Upcoming consultation tomorrow.' },
         },
       },
       {
@@ -409,16 +498,21 @@ export const agentWorkflows: AgentWorkflow[] = [
         status: 'completed',
         task: 'Follow-up active ✓',
         result: 'Automation complete',
-        duration: 1600,
+        duration: 1700,
         activity: 'Automation complete',
         completedAgents: ['customer', 'intake', 'qualify', 'calendar', 'crm', 'followup'],
         preview: 'complete',
-        systemNote: 'System running automatically',
+        systemNote: 'Running automatically',
+        messages: {
+          sms: { state: 'sent', text: 'Your consultation is confirmed for 11:30 AM.' },
+          email: { state: 'sent', text: 'Your appointment has been scheduled.' },
+          reminder: { state: 'sent', text: 'Upcoming consultation tomorrow.' },
+        },
       },
       {
         agent: 'followup',
         status: 'completed',
-        task: 'Follow-up active ✓',
+        task: 'System running',
         result: 'Automation continues',
         duration: 1400,
         activity: 'Reminder workflow queued',
@@ -694,9 +788,9 @@ export function getAgentWorkflow(id: WorkflowId): AgentWorkflow {
   return agentWorkflows.find((w) => w.id === id) ?? agentWorkflows[0];
 }
 
-/** Demo counters — visual only */
 export const DEMO_SYSTEM = {
   agents: 5,
-  tasks: 12,
+  tasks: 3,
   label: 'LIVE DEMO',
+  system: 'RUNNING',
 };

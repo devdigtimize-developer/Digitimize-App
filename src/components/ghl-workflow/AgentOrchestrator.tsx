@@ -5,12 +5,14 @@ import type { AgentRuntimeState, FeedItem } from './useAgentOrchestrator';
 import AgentCard from './AgentCard';
 import ActivityFeed from './ActivityFeed';
 import SystemStatusBar from './SystemStatusBar';
+import OrchestratorBadge from './OrchestratorBadge';
 import HandoffParticle from './HandoffParticle';
 import CalendarPreview from './CalendarPreview';
 import CrmPreview from './CrmPreview';
 import AutomationPreview from './AutomationPreview';
 import VoiceAgentPreview from './VoiceAgentPreview';
-import MessagePreview from './MessagePreview';
+import FollowUpPanel from './FollowUpPanel';
+import ConversationPanel from './ConversationPanel';
 
 type Props = {
   agents: AgentId[];
@@ -30,6 +32,10 @@ type Props = {
 function PreviewPanel({ step }: { step: AgentStep | null }) {
   if (!step?.preview) return null;
 
+  if (step.preview === 'conversation' && step.conversation) {
+    return <ConversationPanel messages={step.conversation} typing={step.typing} />;
+  }
+
   if (step.preview === 'lead' && step.lead) {
     return (
       <div className="ghl-preview ghl-preview-lead" aria-hidden="true">
@@ -45,11 +51,17 @@ function PreviewPanel({ step }: { step: AgentStep | null }) {
   if (step.preview === 'decision' && step.decision) {
     return (
       <div className="ghl-preview ghl-preview-decision" aria-hidden="true">
-        <div className="ghl-preview-label">AI analysis</div>
+        <div className="ghl-preview-label">AI decision</div>
         <div className="ghl-decision-step"><span>Input</span><b>{step.decision.input}</b></div>
+        {step.decision.analysis ? (
+          <div className="ghl-decision-step"><span>Analysis</span><b>{step.decision.analysis}</b></div>
+        ) : null}
         <div className="ghl-decision-step"><span>Intent</span><b>{step.decision.intent}</b></div>
-        <div className="ghl-decision-step"><span>Quality</span><b>{step.decision.quality}</b></div>
+        <div className="ghl-decision-step"><span>Qualification</span><b>{step.decision.quality}</b></div>
         <div className="ghl-decision-step"><span>Interest</span><b>{step.decision.interest}</b></div>
+        {step.decision.action ? (
+          <div className="ghl-decision-step is-action"><span>Action</span><b>{step.decision.action}</b></div>
+        ) : null}
       </div>
     );
   }
@@ -59,7 +71,16 @@ function PreviewPanel({ step }: { step: AgentStep | null }) {
   }
 
   if (step.preview === 'crm') {
-    return <CrmPreview stage={step.crmStage ?? 'new'} lead={step.lead ? { name: step.lead.name, source: step.lead.source, intent: step.lead.intent } : undefined} />;
+    return (
+      <CrmPreview
+        stage={step.crmStage ?? 'new'}
+        lead={
+          step.lead
+            ? { name: step.lead.name, source: step.lead.source, intent: step.lead.intent }
+            : undefined
+        }
+      />
+    );
   }
 
   if (step.preview === 'automation') {
@@ -76,19 +97,17 @@ function PreviewPanel({ step }: { step: AgentStep | null }) {
   }
 
   if (step.preview === 'messages' && step.messages) {
-    return <MessagePreview sms={step.messages.sms} email={step.messages.email} />;
+    return (
+      <FollowUpPanel
+        sms={step.messages.sms}
+        email={step.messages.email}
+        reminder={step.messages.reminder}
+      />
+    );
   }
 
   if (step.preview === 'chat' && step.chatLine) {
-    return (
-      <div className="ghl-preview ghl-preview-chat" aria-hidden="true">
-        <div className="ghl-preview-label">Customer</div>
-        <div className={`ghl-chat-bubble is-${step.chatLine.role}`}>
-          <span>{step.chatLine.role === 'ai' ? 'AI Agent' : 'Customer'}</span>
-          <p>{step.chatLine.text}</p>
-        </div>
-      </div>
-    );
+    return <ConversationPanel messages={[step.chatLine]} typing={step.typing} />;
   }
 
   if (step.preview === 'complete') {
@@ -127,6 +146,7 @@ export default function AgentOrchestrator({
   const showHandoff = step?.status === 'passing' && step.handoffTo;
   const selectedDef = selectedAgent ? AGENT_CATALOG[selectedAgent] : null;
   const focusAgent = step?.agent ?? agents[0];
+  const nextAgent = step?.handoffTo;
 
   return (
     <div
@@ -142,6 +162,7 @@ export default function AgentOrchestrator({
       }}
     >
       <SystemStatusBar live={live} activeAgents={activeCount} />
+      <OrchestratorBadge live={live} />
 
       <div className="ghl-orchestrator-body">
         <div className="ghl-agent-rail">
@@ -171,13 +192,17 @@ export default function AgentOrchestrator({
           </div>
 
           <div className="ghl-agent-mobile-focus">
+            <p className="ghl-mobile-flow-label">
+              Active agent
+              {nextAgent ? <span> → {AGENT_CATALOG[nextAgent].shortName}</span> : null}
+            </p>
             <AgentCard
               id={focusAgent}
               state={agentStates[focusAgent] ?? { status: 'idle', task: 'Waiting' }}
               selected={selectedAgent === focusAgent}
               onSelect={onSelectAgent}
             />
-            <div className="ghl-agent-mobile-strip" aria-hidden="true">
+            <div className="ghl-agent-mobile-strip">
               {agents.map((id) => (
                 <AgentCard
                   key={id}

@@ -22,6 +22,9 @@ export default function SystemStatusBar({ live, activeAgents }: Props) {
         <span>
           Active <b>{activeAgents}</b>
         </span>
+        <span>
+          System <b>{live ? DEMO_SYSTEM.system : 'PAUSED'}</b>
+        </span>
         <em>{DEMO_SYSTEM.label}</em>
       </div>
     </div>

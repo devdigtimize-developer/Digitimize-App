@@ -2,7 +2,12 @@ type Props = {
   state: 'idle' | 'checking' | 'available' | 'selected' | 'booked';
 };
 
-const slots = ['10:00', '11:00', '11:30', '12:00', '1:00'];
+const slots = [
+  { time: '10:00', label: 'Available' },
+  { time: '11:00', label: 'Available' },
+  { time: '11:30', label: 'Available' },
+  { time: '12:00', label: 'Available' },
+];
 
 export default function CalendarPreview({ state }: Props) {
   return (
@@ -18,23 +23,24 @@ export default function CalendarPreview({ state }: Props) {
         <>
           <p className="ghl-calendar-hint">
             {state === 'checking' && 'Checking availability…'}
-            {state === 'selected' && 'Slot selected'}
+            {state === 'selected' && '11:30 selected'}
             {(state === 'idle' || state === 'available') && 'Available slots'}
           </p>
           <ul className="ghl-calendar-slots">
             {slots.map((slot) => {
-              const selected = state === 'selected' && slot === '11:30';
-              const hot = state === 'checking' && slot === '11:30';
+              const selected = state === 'selected' && slot.time === '11:30';
+              const checking = state === 'checking' && slot.time === '11:30';
               return (
                 <li
-                  key={slot}
-                  className={[selected ? 'is-selected' : '', hot ? 'is-hot' : '']
+                  key={slot.time}
+                  className={[selected ? 'is-selected' : '', checking ? 'is-hot' : '']
                     .filter(Boolean)
                     .join(' ')}
                 >
-                  {slot}
-                  {selected ? <em>Selected</em> : null}
-                  {hot ? <em>…</em> : null}
+                  <b>{slot.time}</b>
+                  <em>
+                    {selected ? 'Selected' : checking ? 'Checking…' : slot.label}
+                  </em>
                 </li>
               );
             })}

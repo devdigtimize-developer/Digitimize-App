@@ -120,7 +120,7 @@ export default function ServiceDetailPage() {
             lede={field.lede}
             image={field.image}
             brandMark={'brandMark' in field ? field.brandMark : undefined}
-            brandMarkAlt={field.theme === 'shopify' ? 'Shopify' : ''}
+            brandMarkAlt={'brandMark' in field && field.brandMark ? 'Shopify' : ''}
           />
         )}
         <WebDevStats />

@@ -27,10 +27,10 @@ const ICONS: Record<string, LucideIcon> = {
 const STATUS_LABEL: Record<AgentStatus, string> = {
   idle: 'IDLE',
   receiving: 'RECEIVING',
-  analyzing: 'ANALYZING',
-  executing: 'WORKING',
+  analyzing: 'PROCESSING',
+  executing: 'EXECUTING',
   completed: 'COMPLETED',
-  passing: 'PASSING',
+  passing: 'HANDOFF',
 };
 
 type Props = {

@@ -9,7 +9,6 @@ const stages: { id: Stage; label: string }[] = [
   { id: 'new', label: 'New' },
   { id: 'qualified', label: 'Qualified' },
   { id: 'booked', label: 'Booked' },
-  { id: 'followup', label: 'Follow-up' },
 ];
 
 const stageIndex: Record<Stage, number> = {
@@ -17,21 +16,21 @@ const stageIndex: Record<Stage, number> = {
   qualified: 1,
   booked: 2,
   confirmed: 2,
-  followup: 3,
+  followup: 2,
 };
 
 export default function CrmPreview({ stage, lead }: Props) {
   const active = stageIndex[stage];
   const name = lead?.name ?? 'Alex';
   const source = lead?.source ?? 'Website';
-  const intent = lead?.intent ?? 'Consultation';
+  const intent = lead?.intent ?? 'Automation';
 
   return (
     <div className="ghl-preview ghl-preview-crm" aria-hidden="true">
       <div className="ghl-preview-label">GHL CRM</div>
       <div className="ghl-crm-card">
         <div className="ghl-crm-row">
-          <span>Contact</span>
+          <span>Lead</span>
           <b>{name}</b>
         </div>
         <div className="ghl-crm-row">
@@ -39,7 +38,7 @@ export default function CrmPreview({ stage, lead }: Props) {
           <b>{source}</b>
         </div>
         <div className="ghl-crm-row">
-          <span>Intent</span>
+          <span>Interest</span>
           <b>{intent}</b>
         </div>
         <div className="ghl-crm-row">
@@ -47,9 +46,9 @@ export default function CrmPreview({ stage, lead }: Props) {
           <b className="ghl-crm-status">{stages[Math.min(active, stages.length - 1)].label}</b>
         </div>
       </div>
-      <ol className="ghl-crm-pipeline">
+      <ol className="ghl-crm-pipeline ghl-crm-pipeline-flow">
         {stages.map((s, i) => (
-          <li key={s.id} className={i <= active ? 'is-active' : ''}>
+          <li key={s.id} className={i === active ? 'is-current' : i < active ? 'is-active' : ''}>
             {s.label}
           </li>
         ))}
