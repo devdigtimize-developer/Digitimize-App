@@ -355,7 +355,7 @@ ol {
 h1 {
     font-size: clamp(56px, 5.2vw, 64px);
     line-height: 1.08;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h2,
@@ -364,7 +364,7 @@ h2,
 .centered h2 {
     font-size: clamp(40px, 4.2vw, 52px);
     line-height: 1.12;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h3 {
@@ -1008,7 +1008,7 @@ select {
 
 .page-hero-content h1,
 .hero h1 {
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -.045em;
     line-height: 1.08;
 }
@@ -1112,10 +1112,12 @@ select {
     }
 }
 
-/* Keep the Plus Jakarta Sans hierarchy visibly consistent across every route. */
+/* Heading weights sit on Hikasami SemiBold (600). The variable file only
+   goes to 700, so 800 was browser-synthesized and looked heavier than
+   other headings at 500–600. */
 h1,
 h2 {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 h3,
@@ -1128,7 +1130,7 @@ h4,
 .process-item h3,
 .process-detail-content h3,
 .form-heading span {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 p,
@@ -1784,8 +1786,8 @@ select {
 }
 
 body { font-size: 16px; line-height: 1.6; }
-h1, .hero h1 { font-size: clamp(56px, 5.2vw, 64px); line-height: 1.08; font-weight: 700; }
-h2, .section-head h2, .dark-section h2, .centered h2 { font-size: clamp(40px, 4.2vw, 52px); line-height: 1.12; font-weight: 700; }
+h1, .hero h1 { font-size: clamp(56px, 5.2vw, 64px); line-height: 1.08; font-weight: 600; }
+h2, .section-head h2, .dark-section h2, .centered h2 { font-size: clamp(40px, 4.2vw, 52px); line-height: 1.12; font-weight: 600; }
 h3 { font-size: 22px; line-height: 1.25; font-weight: 600; }
 p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font-weight: 400; }
 .hero .hero-sub, .page-hero-content p, .section-head > p, .intro-grid p, .dark-lead, .tech-grid p, .about-text p, .contact-copy p, .footer-brand p { font-size: 17px; line-height: 1.7; }
@@ -1998,7 +2000,7 @@ p, li, label, input, textarea, select { font-size: 16px; line-height: 1.65; font
 .page-hero-content h1 {
     font-size: clamp(42px, 4.5vw, 58px);
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 @media (max-width: 640px) {
@@ -3388,14 +3390,13 @@ select,
     box-shadow: 0 0 16px rgba(220, 201, 255, .8);
 }
 
-/* Hikasami is geometric and reads heavy at display sizes, so medium weight
-   with relaxed tracking holds together far better than the old 800. */
+/* Homepage hero uses the same SemiBold (600) as other display headings. */
 .hero-slider h1 {
     max-width: 600px;
     margin: 0 0 24px;
     color: #ffffff;
     font-size: clamp(34px, 3.7vw, 54px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.14;
     letter-spacing: -.022em;
 }
@@ -3628,7 +3629,7 @@ select,
     margin: 0;
     color: #14151c;
     font-size: clamp(30px, 3.4vw, 46px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.14;
     letter-spacing: -.03em;
 }
@@ -3830,7 +3831,7 @@ select,
     margin: 0 0 24px;
     color: #14151c;
     font-size: clamp(32px, 3.2vw, 44px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.16;
     letter-spacing: -.025em;
 }
@@ -4266,7 +4267,7 @@ select,
     margin: 0 0 22px;
     color: #ffffff;
     font-size: clamp(34px, 4vw, 52px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.14;
     letter-spacing: -.03em;
 }
@@ -4436,7 +4437,7 @@ select,
     margin: 0;
     color: #14151c;
     font-size: clamp(32px, 3.4vw, 46px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.14;
     letter-spacing: -.03em;
 }
@@ -4750,7 +4751,7 @@ select,
     margin: 0 0 22px;
     color: #ffffff;
     font-size: clamp(36px, 4.4vw, 58px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.12;
     letter-spacing: -.035em;
 }
@@ -6094,8 +6095,10 @@ select,
     top: auto;
     z-index: 1;
     display: flex;
-    min-height: min(92dvh, 860px);
-    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     color: var(--ink);
     background:
@@ -6170,9 +6173,9 @@ select,
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 88px;
-    padding-bottom: 36px;
-    column-gap: 12px;
+    padding-top: 148px;
+    padding-bottom: 64px;
+    column-gap: 40px;
 }
 
 .hero-story-inner .wd-eco {
@@ -6186,7 +6189,8 @@ select,
     position: relative;
     width: 100%;
     min-width: 0;
-    min-height: min(72vh, 560px);
+    height: 100%;
+    min-height: 0;
 }
 
 .hero-story-panel {
@@ -6246,11 +6250,11 @@ select,
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 28px;
 }
 
 .hero-story .eyebrow {
-    margin-bottom: 22px;
+    margin-bottom: 28px;
     color: #6f7380;
     font-size: 12px;
     font-weight: 500;
@@ -6264,10 +6268,10 @@ select,
 
 .hero-story h1 {
     max-width: 100%;
-    margin: 0 0 22px;
+    margin: 0 0 28px;
     color: var(--ink) !important;
     font-size: clamp(34px, 4.4vw, 64px) !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     line-height: 1.08 !important;
     letter-spacing: -.03em;
     white-space: normal;
@@ -6284,7 +6288,7 @@ select,
 
 .hero-story .hero-sub {
     max-width: min(520px, 100%);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     color: rgba(20, 19, 26, .68) !important;
     font-size: clamp(16px, 1.2vw, 18px) !important;
     line-height: 1.7;
@@ -6351,7 +6355,9 @@ select,
 
 @media (max-width: 1024px) {
     .hero-story-pin {
-        min-height: auto;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
         overflow: hidden;
     }
 
@@ -6362,9 +6368,9 @@ select,
     .hero-story-inner {
         grid-template-columns: 1fr;
         align-content: start;
-        row-gap: 12px;
-        padding-top: 96px;
-        padding-bottom: 28px;
+        row-gap: 20px;
+        padding-top: 128px;
+        padding-bottom: 48px;
     }
 
     .hero-story-stage {
@@ -6417,9 +6423,9 @@ select,
 @media (max-width: 768px) {
     .hero-story-inner {
         align-items: stretch;
-        padding-top: 88px;
-        padding-bottom: 24px;
-        row-gap: 8px;
+        padding-top: 116px;
+        padding-bottom: 40px;
+        row-gap: 16px;
     }
 
     .hero-story-copy {
@@ -6472,8 +6478,8 @@ select,
 
 @media (max-width: 480px) {
     .hero-story-inner {
-        padding-top: 78px;
-        padding-bottom: 18px;
+        padding-top: 108px;
+        padding-bottom: 32px;
     }
 
     .hero-story h1 {
@@ -6526,7 +6532,7 @@ select,
     margin: 0 0 10px !important;
     color: var(--ink) !important;
     font-size: clamp(28px, 2.5vw, 38px) !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     line-height: 1.12 !important;
     letter-spacing: -.03em;
 }
@@ -6579,7 +6585,8 @@ select,
     position: relative;
     min-width: 0;
     min-height: 0;
-    margin-right: -12px;
+    margin-right: 0;
+    overflow: hidden;
 }
 
 .cap-network:before {
@@ -6597,7 +6604,7 @@ select,
     display: block;
     width: 100%;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .cap-edge-line,
@@ -6690,7 +6697,7 @@ select,
 
 .cap-node-label {
     fill: #5f5b6e;
-    font-size: 12.5px;
+    font-size: 14.5px;
     font-weight: 600;
     letter-spacing: .04em;
     pointer-events: none;
@@ -6699,17 +6706,17 @@ select,
 
 .cap-node-hub .cap-node-label {
     fill: #fff;
-    font-size: 10.5px;
-    letter-spacing: .12em;
+    font-size: 13.5px;
+    letter-spacing: .06em;
 }
 
 .cap-node-major .cap-node-label {
-    font-size: 12px;
+    font-size: 15px;
     letter-spacing: .08em;
 }
 
 .cap-node-leaf .cap-node-label {
-    font-size: 12.5px;
+    font-size: 16px;
     letter-spacing: .01em;
     font-weight: 500;
     text-transform: none;
@@ -6818,7 +6825,7 @@ select,
     .cap-node-label,
     .cap-node-leaf .cap-node-label,
     .cap-node-major .cap-node-label {
-        font-size: 11.5px;
+        font-size: 13.5px;
     }
 }
 
@@ -6866,7 +6873,7 @@ select,
     margin: 0 !important;
     color: var(--ink) !important;
     font-size: clamp(42px, 4.6vw, 58px) !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     line-height: 1.06 !important;
     letter-spacing: -.035em;
 }
@@ -7839,7 +7846,7 @@ select,
 .wd-eco-core strong {
     margin-top: 4px;
     font-size: 18px;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: -.03em;
 }
 
@@ -7897,7 +7904,7 @@ select,
 
 .wd-eco-card b {
     font-size: 13px;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: -.02em;
 }
 
@@ -8509,7 +8516,7 @@ select,
     margin: 0 0 22px;
     color: #14131a !important;
     font-size: 24px !important;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: -.03em;
 }
 
@@ -8652,7 +8659,7 @@ select,
 
 .quote-packages button b {
     font-size: 14px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .quote-packages button small {
@@ -9048,7 +9055,7 @@ select,
 
 .work-hero-journey b {
     font-size: 16px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 @keyframes workHeroCopy {
@@ -9167,7 +9174,7 @@ select,
 .work-phase-card h3 {
     margin: 0 0 8px;
     font-size: 22px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .work-phase-card > p {
@@ -9289,7 +9296,7 @@ select,
     margin: 0 0 12px;
     color: #111827 !important;
     font-size: clamp(28px, 3.4vw, 40px);
-    font-weight: 650;
+    font-weight: 600;
     line-height: 1.2;
     letter-spacing: -.03em;
 }
@@ -9366,7 +9373,7 @@ select,
     margin: 0;
     color: #111827;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .work-profile-meta p {
@@ -9690,7 +9697,7 @@ select,
 .about-person h3 {
     margin: 8px 0 8px;
     font-size: 18px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .about-value p,
@@ -9729,7 +9736,7 @@ select,
     border-radius: 999px;
     background: #f4f1fb;
     font-size: 11px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .about-expertise-card span {
@@ -9738,7 +9745,7 @@ select,
     gap: 4px;
     color: #7a5cf0;
     font-size: 13px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .about-people-grid {
@@ -10015,7 +10022,7 @@ select,
 .about-founder-card-body h3 {
     margin: 0;
     font-size: 20px;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: -.02em;
 }
 
@@ -10065,7 +10072,7 @@ select,
     border-radius: 999px;
     background: rgba(196, 176, 244, .22);
     font-size: 11px;
-    font-weight: 650;
+    font-weight: 600;
     color: #3f3a55;
 }
 
@@ -10075,7 +10082,7 @@ select,
     gap: 6px;
     color: #7a5cf0;
     font-size: 13px;
-    font-weight: 650;
+    font-weight: 600;
     text-decoration: none;
     width: fit-content;
 }
@@ -10211,7 +10218,7 @@ select,
     margin: 0 !important;
     color: #14131a !important;
     font-size: 22px !important;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .founder-hero-name-row {
@@ -10222,7 +10229,7 @@ select,
     margin: 0 0 16px !important;
     color: #7a5cf0 !important;
     font-size: 14px !important;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .founder-hero-copy > p:last-child {
@@ -10259,7 +10266,7 @@ select,
 .founder-body-grid h2 {
     margin: 0 0 12px;
     font-size: 22px;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 .founder-body-grid p {
@@ -10289,7 +10296,7 @@ select,
     border: 1px solid rgba(120, 90, 220, .14);
     color: #1b1233;
     font-size: 14px;
-    font-weight: 650;
+    font-weight: 600;
     box-shadow: 0 8px 18px rgba(40, 30, 80, .05);
 }
 
@@ -13223,4 +13230,99 @@ label,
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+}
+
+/* Typography lock. Hikasami variable covers 400–700 (static SemiBold is 600).
+   Headings share SemiBold so hierarchy comes from size, not mixed 500/700/800.
+   font-synthesis: none stops the browser from faking weights above 700. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Hikasami', 'Hikasami Static', sans-serif;
+  font-weight: 600;
+  font-synthesis: none;
+}
+
+h1 span,
+h1 em,
+h2 span,
+h2 em,
+h3 span {
+  font-weight: inherit;
+  font-synthesis: none;
+}
+
+.button,
+.button-primary,
+.button-outline,
+.nav-cta,
+.text-link {
+  font-weight: 600 !important;
+}
+
+/* Homepage close: one centered stack instead of text left and buttons right. */
+.section.contact-section .contact-grid.contact-grid-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.contact-grid-cta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-grid-cta .section-label {
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.contact-grid-cta h2 {
+  max-width: 11em;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.contact-grid-cta > div > p:not(.section-label) {
+  width: min(100%, 34rem);
+  max-width: 34rem;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.contact-grid-cta .contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.contact-grid-cta .contact-details a,
+.contact-grid-cta .contact-details span {
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-grid-cta .cta-actions {
+  width: min(100%, 440px);
+  margin-top: 36px;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.contact-grid-cta .cta-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }

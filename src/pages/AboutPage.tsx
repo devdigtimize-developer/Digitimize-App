@@ -3,7 +3,6 @@ import FounderSection from './about/FounderSection';
 import CompanyStory from './about/CompanyStory';
 import ValuesSection from './about/ValuesSection';
 import ExpertiseOverview from './about/ExpertiseOverview';
-import TeamOverview from './about/TeamOverview';
 import WhyDigtimize from './about/WhyDigtimize';
 import WorkPreview from './about/WorkPreview';
 import AboutCTA from './about/AboutCTA';
@@ -16,7 +15,6 @@ export default function AboutPage() {
       <CompanyStory />
       <ValuesSection />
       <ExpertiseOverview />
-      <TeamOverview />
       <WhyDigtimize />
       <WorkPreview />
       <AboutCTA />

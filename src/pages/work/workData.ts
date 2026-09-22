@@ -92,7 +92,7 @@ export const SENIOR_PROFILES: SeniorProfile[] = [
     bio: 'Web and software builds shaped around usability, performance, and clear delivery.',
     tags: ['React', 'Next.js', 'Software'],
     initials: 'AQ',
-    linkedin: 'https://www.linkedin.com/in/abdullahqaisar-',
+    linkedin: '',
     photo: '/images/Abdullah.png',
     placeholder: false,
   },

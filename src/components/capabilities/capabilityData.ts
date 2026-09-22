@@ -110,7 +110,7 @@ export const CAPABILITY_BRANCHES: CapabilityBranch[] = [
   },
 ];
 
-export const CAPABILITY_VIEWBOX = '-60 -30 1040 760';
+export const CAPABILITY_VIEWBOX = '-110 -55 1100 800';
 export const CAPABILITY_HUB_POINT = { x: CX, y: CY };
 
 export function curvePath(
