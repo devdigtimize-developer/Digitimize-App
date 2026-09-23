@@ -96,17 +96,32 @@ export default function HomePage() {
       return;
     }
 
+    const reveal = () => setServicesInView(true);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
-        setServicesInView(true);
+        reveal();
         observer.disconnect();
       },
-      { threshold: 0.18, rootMargin: '0px 0px -10% 0px' },
+      { threshold: 0.05, rootMargin: '0px 0px 15% 0px' },
     );
 
     observer.observe(grid);
-    return () => observer.disconnect();
+
+    // Short mobile viewports can miss the first paint intersection.
+    const rect = grid.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      reveal();
+      observer.disconnect();
+    }
+
+    const fallback = window.setTimeout(reveal, 1200);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   useEffect(() => {
