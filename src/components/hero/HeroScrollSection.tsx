@@ -53,7 +53,9 @@ export default function HeroScrollSection() {
               />
             ))}
           </div>
-          <WebDevelopmentHeroVisual scope="home" />
+          <div className="hero-story-visual">
+            <WebDevelopmentHeroVisual scope="home" />
+          </div>
         </div>
         <p className="sr-only">{active.eyebrow}. {active.title}</p>
       </div>
