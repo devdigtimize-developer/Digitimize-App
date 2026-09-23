@@ -1,18 +1,21 @@
 type TrustedBrand = {
   name: string;
-  slug: string;
+  file: string;
 };
 
-/** Platforms Digtimize builds with shown as a selected-clients style grid. */
 const brands: TrustedBrand[] = [
-  { name: 'Shopify', slug: 'shopify' },
-  { name: 'WordPress', slug: 'wordpress' },
-  { name: 'Stripe', slug: 'stripe' },
-  { name: 'HubSpot', slug: 'hubspot' },
-  { name: 'Meta', slug: 'meta' },
-  { name: 'Google', slug: 'google' },
-  { name: 'Notion', slug: 'notion' },
-  { name: 'Figma', slug: 'figma' },
+  { name: 'Reception Remote', file: 'reception-remote.png' },
+  { name: 'DiscoverU', file: 'discoveru.png' },
+  { name: 'Dr. Rashieda Timpson', file: 'dr-rashieda-timpson.png' },
+  { name: 'Roadsense', file: 'roadsense-mark.png' },
+  { name: 'FI Braids & Scalp Care', file: 'fi-braids.png' },
+  { name: 'Dream Esthetiques MD', file: 'dream-esthetiques.png' },
+  { name: 'American Heroes Medical Services', file: 'ahms.png' },
+  { name: 'Chosen Family Home Care', file: 'chosen-family.png' },
+  { name: 'Modern Day Monk', file: 'modern-day-monk.png' },
+  { name: 'Pinpoint Property Purchases', file: 'pinpoint.png' },
+  { name: 'Magnetic Fitness Coach', file: 'magnetic-fitness-coach.png' },
+  { name: "She's The Total Package", file: 'shes-the-total-package.png' },
 ];
 
 export default function TrustedBy() {
@@ -30,13 +33,13 @@ export default function TrustedBy() {
         <ul className="trusted-grid">
           {brands.map((brand) => (
             <li key={brand.name}>
-              <article className="trusted-card" aria-label={brand.name}>
+              <article className="trusted-card">
                 <img
                   className="trusted-logo-img"
-                  src={`https://cdn.simpleicons.org/${brand.slug}`}
-                  alt={brand.name}
-                  width={48}
-                  height={48}
+                  src={`/images/clientslogo/${brand.file}`}
+                  alt=""
+                  width={220}
+                  height={88}
                   loading="lazy"
                   decoding="async"
                 />
