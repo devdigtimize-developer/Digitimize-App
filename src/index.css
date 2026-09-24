@@ -4402,6 +4402,11 @@ select,
     line-height: 1;
 }
 
+.stats-section .stat-unit {
+    font-size: .42em;
+    letter-spacing: -.01em;
+}
+
 .stats-section .stat-label {
     color: #b7b0cf !important;
     font-size: 12px;

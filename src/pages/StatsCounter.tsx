@@ -1,20 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
 
 const statsData = [
-  { value: 6, suffix: '+', label: 'Core capabilities', comma: false },
-  { value: 3, suffix: '', label: 'Markets served', comma: false },
-  { value: 4, suffix: '', label: 'Step delivery process', comma: false },
-  { value: 100, suffix: '%', label: 'Fixed scope before build', comma: false },
+  { value: 5, suffix: '+', unit: 'Years', label: 'Experience & Credibility', comma: false },
+  { value: 150, suffix: '+', label: 'Projects Completed', comma: false },
+  { value: 100, suffix: '%', label: "Client's Satisfaction", comma: false },
+  { value: 25, suffix: '+', label: 'Active Clients', comma: false },
 ];
 
 type CounterItemProps = {
   target: number;
   suffix: string;
+  unit?: string;
   label: string;
   comma: boolean;
 };
 
-function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
+function CounterItem({ target, suffix, unit, label, comma }: CounterItemProps) {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const itemRef = useRef<HTMLDivElement | null>(null);
@@ -64,6 +65,7 @@ function CounterItem({ target, suffix, label, comma }: CounterItemProps) {
     <div ref={itemRef} className="stat-card">
       <div className="stat-number">
         {formattedCount}{suffix}
+        {unit ? <span className="stat-unit"> {unit}</span> : null}
       </div>
       <div className="stat-label">{label}</div>
     </div>
@@ -84,6 +86,7 @@ export default function StatsCounter() {
               key={stat.label}
               target={stat.value}
               suffix={stat.suffix}
+              unit={stat.unit}
               label={stat.label}
               comma={stat.comma}
             />
