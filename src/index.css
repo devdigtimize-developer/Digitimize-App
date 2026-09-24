@@ -2702,6 +2702,8 @@ canvas {
 }
 
 .capability {
+    grid-template-columns: 32px 46px minmax(0, 1fr) 20px;
+    column-gap: 18px;
     padding: 20px 0;
 }
 
@@ -11300,6 +11302,11 @@ body.nav-menu-open .nav {
 
     .capability-list .capability > svg:last-child {
         display: none;
+    }
+
+    .capability-list .capability {
+        grid-template-columns: 24px 46px minmax(0, 1fr);
+        column-gap: 14px;
     }
 
     .faq-grid {
