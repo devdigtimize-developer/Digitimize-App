@@ -8277,6 +8277,16 @@ body.nav-menu-open .nav {
     text-transform: uppercase;
 }
 
+.webdev-stat strong .webdev-stat-unit {
+    display: inline;
+    margin: 0;
+    color: inherit;
+    font-size: .42em;
+    font-weight: inherit;
+    letter-spacing: -.01em;
+    text-transform: none;
+}
+
 @media (max-width: 1100px) {
     .wd-eco-card:not(.is-priority),
     .wd-eco-path-group:not(.is-priority) {

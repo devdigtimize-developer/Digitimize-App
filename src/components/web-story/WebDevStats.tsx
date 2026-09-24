@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 6, suffix: '+', label: 'Core capabilities' },
-  { value: 3, suffix: '', label: 'Markets served' },
-  { value: 4, suffix: '', label: 'Step delivery process' },
-  { value: 100, suffix: '%', label: 'Fixed scope before build' },
+  { value: 5, suffix: '+', unit: 'Years', label: 'Experience & Credibility' },
+  { value: 150, suffix: '+', label: 'Projects Completed' },
+  { value: 100, suffix: '%', label: "Client's Satisfaction" },
+  { value: 25, suffix: '+', label: 'Active Clients' },
 ];
 
-function Stat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+function Stat({ value, suffix, unit, label }: { value: number; suffix: string; unit?: string; label: string }) {
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -55,6 +55,7 @@ function Stat({ value, suffix, label }: { value: number; suffix: string; label: 
       <strong>
         {count}
         {suffix}
+        {unit ? <span className="webdev-stat-unit"> {unit}</span> : null}
       </strong>
       <span>{label}</span>
     </div>
