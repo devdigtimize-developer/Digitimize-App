@@ -11,7 +11,6 @@ const brands: TrustedBrand[] = [
   { name: 'Reception Remote', file: 'reception-remote.png' },
   { name: 'DiscoverU', file: 'discoveru.png' },
   { name: 'Dr. Rashieda Timpson', file: 'dr-rashieda-timpson.png' },
-  { name: 'Roadsense', file: 'roadsense-mark.png' },
   { name: 'Dream Esthetiques MD', file: 'dream-esthetiques.png' },
   { name: 'Chosen Family Home Care', file: 'chosen-family.png' },
   { name: 'Pinpoint Property Purchases', file: 'pinpoint.png' },
