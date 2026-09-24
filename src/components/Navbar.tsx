@@ -10,7 +10,6 @@ const navItems = [
   { label: 'Work', path: '/work' },
   { label: 'About', path: '/about' },
   { label: 'Process', path: '/process' },
-  { label: 'FAQ', path: '/faq' },
 ];
 
 const serviceItems = [
