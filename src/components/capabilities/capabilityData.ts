@@ -111,6 +111,8 @@ export const CAPABILITY_BRANCHES: CapabilityBranch[] = [
 ];
 
 export const CAPABILITY_VIEWBOX = '-110 -55 1100 800';
+/** Phone frame — hub + majors; side labels sit under nodes so they stay in-bounds. */
+export const CAPABILITY_PHONE_VIEWBOX = '170 40 580 640';
 export const CAPABILITY_HUB_POINT = { x: CX, y: CY };
 
 export function curvePath(

@@ -35,7 +35,10 @@ export default function ConnectedCapabilities() {
       <div className="container">
         <div className="cap-mobile-head">
           <SectionLabel>Connected capabilities</SectionLabel>
-          <h2>How Digtimize connects the stack.</h2>
+          <h2 className="cap-mobile-title">
+            <span className="cap-title-line">How Digtimize</span>
+            <span className="cap-title-line">connects the stack.</span>
+          </h2>
         </div>
         <div className="cap-layout">
           <CapabilityDetails branch={branch} showHeading />

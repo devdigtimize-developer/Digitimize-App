@@ -4,18 +4,17 @@ type TrustedBrand = {
 };
 
 const brands: TrustedBrand[] = [
+  { name: "She's The Total Package", file: 'shes-the-total-package.png' },
+  { name: 'Magnetic Fitness Coach', file: 'magnetic-fitness-coach.png' },
+  { name: 'Altius Financing', file: 'altius-financing.webp' },
+  { name: 'CK Consulting', file: 'ck-consulting.webp' },
   { name: 'Reception Remote', file: 'reception-remote.png' },
   { name: 'DiscoverU', file: 'discoveru.png' },
   { name: 'Dr. Rashieda Timpson', file: 'dr-rashieda-timpson.png' },
   { name: 'Roadsense', file: 'roadsense-mark.png' },
-  { name: 'FI Braids & Scalp Care', file: 'fi-braids.png' },
   { name: 'Dream Esthetiques MD', file: 'dream-esthetiques.png' },
-  { name: 'American Heroes Medical Services', file: 'ahms.png' },
   { name: 'Chosen Family Home Care', file: 'chosen-family.png' },
-  { name: 'Modern Day Monk', file: 'modern-day-monk.png' },
   { name: 'Pinpoint Property Purchases', file: 'pinpoint.png' },
-  { name: 'Magnetic Fitness Coach', file: 'magnetic-fitness-coach.png' },
-  { name: "She's The Total Package", file: 'shes-the-total-package.png' },
 ];
 
 export default function TrustedBy() {
