@@ -13042,6 +13042,8 @@ body.nav-menu-open .nav {
   height: 72px;
   object-fit: contain;
   background: transparent;
+  /* Some logo files ship with a baked-in white box; multiply drops it into the card colour. */
+  mix-blend-mode: multiply;
   filter: grayscale(1) contrast(.95);
   opacity: .55;
   transition: filter .28s ease, opacity .28s ease, transform .28s var(--motion-ease);
