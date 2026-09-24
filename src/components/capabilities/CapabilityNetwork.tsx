@@ -5,6 +5,8 @@ import {
   CAPABILITY_BRANCHES,
   CAPABILITY_HUB,
   CAPABILITY_HUB_POINT,
+  CAPABILITY_PHONE_ORBIT,
+  CAPABILITY_PHONE_POSITIONS,
   CAPABILITY_PHONE_VIEWBOX,
   CAPABILITY_VIEWBOX,
   curvePath,
@@ -58,10 +60,21 @@ export default function CapabilityNetwork({
           </filter>
         </defs>
 
+        {isPhone ? (
+          <ellipse
+            className="cap-orbit"
+            cx={CAPABILITY_HUB.x}
+            cy={CAPABILITY_HUB.y}
+            rx={CAPABILITY_PHONE_ORBIT.rx}
+            ry={CAPABILITY_PHONE_ORBIT.ry}
+          />
+        ) : null}
+
         {CAPABILITY_BRANCHES.map((branch) => {
           const active = activeId === branch.id;
           const dimmed = Boolean(activeId) && !active;
-          const hubPath = curvePath(CAPABILITY_HUB_POINT, branch, 0.12);
+          const point = isPhone ? CAPABILITY_PHONE_POSITIONS[branch.id] ?? branch : branch;
+          const hubPath = curvePath(CAPABILITY_HUB_POINT, point, 0.12);
           return (
             <g key={branch.id} className={`cap-branch${active ? ' is-active' : ''}${dimmed ? ' is-dim' : ''}`}>
               <CapabilityEdge
@@ -94,6 +107,7 @@ export default function CapabilityNetwork({
         {CAPABILITY_BRANCHES.map((branch) => {
           const active = activeId === branch.id;
           const dimmed = Boolean(activeId) && !active;
+          const point = isPhone ? CAPABILITY_PHONE_POSITIONS[branch.id] ?? branch : branch;
           return (
             <g key={`${branch.id}-nodes`}>
               {!isPhone
@@ -115,8 +129,8 @@ export default function CapabilityNetwork({
                 : null}
               <CapabilityNode
                 kind="major"
-                x={branch.x}
-                y={branch.y}
+                x={point.x}
+                y={point.y}
                 label={branch.label}
                 lines={branch.lines}
                 anchor={branch.anchor}

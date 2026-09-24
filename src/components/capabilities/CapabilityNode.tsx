@@ -33,9 +33,8 @@ function labelOffset(
   }
   /* Phone: keep major labels under/above the node so side text never clips. */
   if (phone) {
-    if (anchor === 'top') return { x: 0, y: -28, anchor: 'middle' as const };
-    if (anchor === 'bottom') return { x: 0, y: 34, anchor: 'middle' as const };
-    return { x: 0, y: 32, anchor: 'middle' as const };
+    if (anchor === 'top') return { x: 0, y: -30, anchor: 'middle' as const };
+    return { x: 0, y: 40, anchor: 'middle' as const };
   }
   if (anchor === 'left') return { x: -majorGap, y: 4, anchor: 'end' as const };
   if (anchor === 'right') return { x: majorGap, y: 4, anchor: 'start' as const };
@@ -59,7 +58,7 @@ export default function CapabilityNode({
   onSelect,
 }: CapabilityNodeProps) {
   const radius =
-    kind === 'hub' ? (phone ? 56 : 44) : kind === 'major' ? (phone ? 15 : 12.5) : 5.2;
+    kind === 'hub' ? (phone ? 58 : 44) : kind === 'major' ? (phone ? 18 : 12.5) : 5.2;
   const text = labelOffset(anchor, kind, phone);
   const className = `cap-node cap-node-${kind}${active ? ' is-active' : ''}${dimmed ? ' is-dim' : ''}${phone ? ' is-phone' : ''}`;
 
@@ -85,11 +84,12 @@ export default function CapabilityNode({
       aria-label={label}
       aria-pressed={kind === 'major' ? active : undefined}
     >
-      {kind === 'hub' ? <circle className="cap-node-pulse" r={phone ? 68 : 54} /> : null}
-      {kind === 'hub' ? <circle className="cap-node-halo" r={phone ? 60 : 48} /> : null}
-      <circle className="cap-node-hit" r={kind === 'hub' ? (phone ? 70 : 56) : kind === 'major' ? (phone ? 36 : 28) : 16} />
+      {kind === 'hub' ? <circle className="cap-node-pulse" r={phone ? 70 : 54} /> : null}
+      {kind === 'hub' ? <circle className="cap-node-halo" r={phone ? 63 : 48} /> : null}
+      <circle className="cap-node-hit" r={kind === 'hub' ? (phone ? 72 : 56) : kind === 'major' ? (phone ? 40 : 28) : 16} />
       <g className="cap-node-motion">
         <circle className="cap-node-core" r={radius} />
+        {kind === 'major' && phone ? <circle className="cap-node-dot" r={6} /> : null}
         {kind === 'hub' ? (
           <text className="cap-node-label" textAnchor="middle" dy="0.35em">{label}</text>
         ) : kind === 'major' && lines ? (

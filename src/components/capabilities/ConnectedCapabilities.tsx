@@ -36,8 +36,9 @@ export default function ConnectedCapabilities() {
         <div className="cap-mobile-head">
           <SectionLabel>Connected capabilities</SectionLabel>
           <h2 className="cap-mobile-title">
-            <span className="cap-title-line">How Digtimize</span>
-            <span className="cap-title-line">connects the stack.</span>
+            <span className="cap-title-line">How Digtimize</span>{' '}
+            <span className="cap-title-line">connects</span>{' '}
+            <span className="cap-title-line cap-title-accent">the stack.</span>
           </h2>
         </div>
         <div className="cap-layout">

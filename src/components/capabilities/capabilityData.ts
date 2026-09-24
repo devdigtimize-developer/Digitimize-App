@@ -111,8 +111,16 @@ export const CAPABILITY_BRANCHES: CapabilityBranch[] = [
 ];
 
 export const CAPABILITY_VIEWBOX = '-110 -55 1100 800';
-/** Phone frame — hub + majors; side labels sit under nodes so they stay in-bounds. */
-export const CAPABILITY_PHONE_VIEWBOX = '170 40 580 640';
+/** Phone frame — hub + majors only, cropped tight so labels render at a readable size. */
+export const CAPABILITY_PHONE_VIEWBOX = '266 138 388 428';
+export const CAPABILITY_PHONE_ORBIT = { rx: 126, ry: 150 };
+/** Phone positions sit on the orbit ellipse; side labels go under their nodes to stay in-bounds. */
+export const CAPABILITY_PHONE_POSITIONS: Record<string, { x: number; y: number }> = {
+  ai: { x: CX, y: CY - CAPABILITY_PHONE_ORBIT.ry },
+  web: { x: CX + CAPABILITY_PHONE_ORBIT.rx, y: CY },
+  custom: { x: CX, y: CY + CAPABILITY_PHONE_ORBIT.ry },
+  ghl: { x: CX - CAPABILITY_PHONE_ORBIT.rx, y: CY },
+};
 export const CAPABILITY_HUB_POINT = { x: CX, y: CY };
 
 export function curvePath(
