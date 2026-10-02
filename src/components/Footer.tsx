@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Digtimize. Built with intention.</span>
+          <span>© 2026 Digtimize.All rights reserved.</span>
           <span>Websites · Automation · Growth</span>
         </div>
       </div>
