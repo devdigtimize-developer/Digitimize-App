@@ -8,9 +8,13 @@ export default function CTASection() {
     <section className="section contact-section" id="contact-cta">
       <div className="contact-glow" />
       <div className="container contact-grid contact-grid-cta">
-        <div>
+        <div className="cta-close-copy">
           <SectionLabel>Let's build something useful</SectionLabel>
-          <h2>Ready to take the <span>next clear step?</span></h2>
+          <h2>
+            Ready to take the
+            <br />
+            <span>next clear step?</span>
+          </h2>
           <p>Tell us about your business goals. We will reply with a simple next step, no pressure, no technical homework required.</p>
           <div className="contact-details">
             {CONTACT.emails.map((email) => (
@@ -23,8 +27,14 @@ export default function CTASection() {
           </div>
         </div>
         <div className="cta-actions">
-          <Link className="button button-primary" to="/contact">Tell us about your business <ArrowUpRight size={17} /></Link>
-          <Link className="button button-outline-light" to="/services">Explore our services <ArrowUpRight size={17} /></Link>
+          <Link className="button button-primary" to="/contact">
+            <span>Tell us about your business</span>
+            <ArrowUpRight size={17} />
+          </Link>
+          <Link className="button button-outline-light" to="/services">
+            <span>Explore our services</span>
+            <ArrowUpRight size={17} />
+          </Link>
         </div>
       </div>
     </section>

@@ -53,7 +53,7 @@ const PATHS: { id: string; d: string; delay: string }[] = [
   { id: 'stack', delay: '0.9s', d: 'M 48 248 C 110 220, 168 280, 230 272 C 276 266, 300 278, 318 282' },
 ];
 
-const PULSES = ['frontend', 'ecom', 'perf', 'analytics', 'cms'];
+const PULSES = ['frontend', 'ecom', 'perf', 'analytics', 'cms', 'responsive', 'stack'];
 
 type Props = {
   scope?: 'home' | 'web';

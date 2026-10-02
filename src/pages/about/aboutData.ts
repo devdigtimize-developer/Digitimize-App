@@ -23,43 +23,43 @@ export const ABOUT_VALUES = [
 
 export const ABOUT_EXPERTISE = [
   {
-    title: 'GHL & business automation',
+    title: 'Leadflow Systems',
     text: 'Lead capture and follow-up systems so enquiries get a timely response.',
     tags: ['GoHighLevel', 'Follow-up', 'Lead stages'],
     to: '/services/gohighlevel-automation',
   },
   {
-    title: 'Web development',
+    title: 'Web Experience Studio',
     text: 'Business websites that explain what you do and guide visitors to the next step.',
     tags: ['WordPress', 'Custom sites'],
     to: '/services/web-development',
   },
   {
-    title: 'Mobile apps',
+    title: 'Mobile Product Lab',
     text: 'Phone apps for customers or teams, connected to systems you already use.',
     tags: ['iOS', 'Android'],
     to: '/services/mobile-app-development',
   },
   {
-    title: 'Ecommerce',
+    title: 'Commerce Architecture',
     text: 'Online shops designed to make browsing and buying feel simple.',
     tags: ['Stores', 'Checkout'],
     to: '/services/ecommerce-development',
   },
   {
-    title: 'Shopify',
+    title: 'Shopify Scale',
     text: 'Shopify stores with clear product pages and room to grow.',
     tags: ['Shopify', 'Online retail'],
     to: '/services/shopify-development',
   },
   {
-    title: 'AI tools',
+    title: 'AI Site Agents',
     text: 'Helpful assistants and smart search that answer common questions using your information.',
     tags: ['Assistants', 'Smart search'],
     to: '/services',
   },
   {
-    title: 'Custom software',
+    title: 'Custom Systems',
     text: 'Internal tools and dashboards built around how your team actually works.',
     tags: ['Dashboards', 'Internal tools'],
     to: '/services/custom-software',
